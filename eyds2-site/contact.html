@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>In-Person Interior Design Toronto — Erica Yolevski Design Studio</title>
-<meta name="description" content="White-glove in-person interior design in Midtown Toronto. In-Person Room Design and Full Home Transformation with trade access, contractor coordination, and 6-month support.">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get in Touch — Erica Yolevski Design Studio</title>
 <style>
 /* ═══════════════════════════════════════════════════════
    ERICA YOLEVSKI DESIGN STUDIO — SHARED STYLESHEET v2
@@ -492,257 +490,157 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
 
 </style>
 <style>
-.ip-hero .hb-img{
-  background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/7986c54c-2fcd-4752-84d2-b0a0665cb28f/Erica+Yolevski+Interior+Designer+Toronto+Midtown+Decorator+Redesign+Living+Room+Virtual.jpg');
+.contact-page{padding:var(--sp) var(--px);background:var(--off);min-height:calc(100vh - 64px)}
+.contact-inner{max-width:var(--mw);margin:0 auto}
+.service-options{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--warm);margin-bottom:4px}
+@media(max-width:640px){.service-options{grid-template-columns:1fr}}
+.svc-opt-card{
+  background:var(--white);padding:20px;cursor:pointer;
+  transition:background .2s;border:2px solid transparent;
 }
-.svc-detail{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--warm);margin-bottom:3px}
-@media(max-width:768px){.svc-detail{grid-template-columns:1fr}}
-.svc-detail-content{background:var(--white);padding:clamp(32px,4vw,60px)}
-.svc-detail-img{background-size:cover;background-position:center;min-height:440px}
-.svc-detail.dark .svc-detail-content{background:var(--ink)}
-.svc-detail.dark h3{color:var(--white)}
-.svc-detail.dark .body-md{color:rgba(255,255,255,.55)}
-.svc-detail.dark .eyebrow{color:var(--alt)}
-.svc-detail.reverse .svc-detail-content{order:2}
-.svc-detail.reverse .svc-detail-img{order:1}
-@media(max-width:768px){.svc-detail.reverse .svc-detail-content,.svc-detail.reverse .svc-detail-img{order:unset}}
-.includes-col{list-style:none;margin:20px 0}
-.includes-col li{font-size:13px;font-weight:300;padding:9px 0;border-bottom:1px solid var(--linen);color:var(--ink);display:flex;gap:10px;line-height:1.5}
-.svc-detail.dark .includes-col li{border-color:rgba(255,255,255,.08);color:rgba(255,255,255,.65)}
-.includes-col li::before{content:'—';color:var(--stone);font-size:10px;flex-shrink:0;margin-top:2px}
-.svc-detail.dark .includes-col li::before{color:rgba(255,255,255,.2)}
-.bonus-tag{font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;background:var(--ink);color:var(--alt);display:inline-block;padding:4px 10px;margin:8px 0 4px}
-.svc-detail.dark .bonus-tag{background:rgba(255,255,255,.08)}
-.price-row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:16px 0}
-.price-big{font-family:var(--serif);font-size:44px;font-weight:400;color:var(--ink);line-height:1}
-.svc-detail.dark .price-big{color:var(--white)}
-.price-was{font-size:13px;font-weight:300;color:var(--stone);text-decoration:line-through}
-.badge-exclusive{
-  display:inline-block;font-size:9px;font-weight:500;
-  letter-spacing:.16em;text-transform:uppercase;
-  background:var(--linen);color:var(--accent);
-  border:1px solid var(--warm);padding:5px 12px;
-  margin-bottom:16px;
+.svc-opt-card:hover{background:var(--linen)}
+.svc-opt-card.selected{border-color:var(--accent);background:var(--linen)}
+.svc-opt-card input[type=radio]{display:none}
+.soc-name{font-size:13px;font-weight:500;color:var(--ink);display:block;margin-bottom:2px}
+.soc-price{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--mid)}
+.contact-left h1{margin-bottom:16px}
+.contact-direct{list-style:none;margin-top:32px}
+.contact-direct li{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:16px 0;border-bottom:1px solid var(--warm);
 }
+.contact-direct li:first-child{border-top:1px solid var(--warm)}
+.cd-label{font-size:10px;font-weight:400;letter-spacing:.16em;text-transform:uppercase;color:var(--stone)}
+.cd-val{font-family:var(--serif);font-size:18px;font-weight:400;color:var(--ink);transition:color .2s}
+.cd-val:hover{color:var(--accent)}
+.service-area-note{background:var(--linen);padding:20px 24px;margin-top:24px}
+.service-area-note h4{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:6px}
+.service-area-note p{font-size:12px;font-weight:300;line-height:1.7;color:var(--mid)}
 </style>
 </head>
 <body>
-
 <nav class="nav">
   <a href="index.html" class="nav-logo"><img src="logo-dark.png" alt="Erica Yolevski Design Studio"></a>
   <ul class="nav-menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="room-kits.html">Room Kits</a></li>
-    <li><a href="virtual.html">Virtual Design</a></li>
-    <li><a href="inperson.html" class="active">In-Person</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="reviews.html">Reviews</a></li>
-    <li><a href="contact.html" class="nav-cta">Work With Me</a></li>
+    <li><a href="index.html">Home</a></li><li><a href="room-kits.html">Room Kits</a></li>
+    <li><a href="virtual.html">Virtual Design</a></li><li><a href="inperson.html">In-Person</a></li>
+    <li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta active">Work With Me</a></li>
   </ul>
   <div class="nav-hamburger"><span></span><span></span><span></span></div>
 </nav>
 
-<!-- HERO -->
-<section class="hero-banner ip-hero">
-  <div class="hb-img"></div>
-  <div class="hb-content">
-    <span class="eyebrow" style="color:var(--alt)">In-Person Design · Midtown Toronto</span>
-    <h1 class="serif">White-glove design.<br><em>In your home. In your space.<br>With your light.</em></h1>
-    <p class="body-lg" style="color:rgba(255,255,255,.75)">Some decisions cannot be made from a screen. For those, I come to you.</p><p style="font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:12px">Done FOR you — white-glove full service</p>
-    <div class="hero-btn-row">
-      <a href="#services" class="btn btn-accent btn-lg">See Services ↓</a>
-      <a href="contact.html" class="btn btn-white btn-lg">Book In-Person</a>
+<div class="contact-page page-top">
+  <div class="contact-inner">
+    <div class="contact-grid">
+
+      <!-- LEFT -->
+      <div class="contact-left">
+        <span class="eyebrow">Get in Touch</span>
+        <h1 class="serif">Let's begin building<br><em>your home.</em></h1>
+        <p class="body-md mt-6">Whether you are ready to book a service or you want to talk through what you are imagining — this is where to start. No pressure. No hard sell. Just a conversation.</p>
+        <p class="body-md mt-4">Tell me what has been running through your mind. What room is bothering you. What your home feels like right now and what you wish it felt like. I read every message personally.</p>
+
+        <ul class="contact-direct">
+          <li><span class="cd-label">Email</span><a href="mailto:erica@yolevski.com"><span class="cd-val">erica@yolevski.com</span></a></li>
+          <li><span class="cd-label">Phone &amp; Text</span><a href="tel:4167320838"><span class="cd-val">(416) 732-0838</span></a></li>
+          <li><span class="cd-label">Instagram</span><a href="https://instagram.com/ericayolevski" target="_blank"><span class="cd-val">@ericayolevski</span></a></li>
+        </ul>
+
+        <div class="service-area-note">
+          <h4>Where I work</h4>
+          <p>In-person services: Midtown Toronto — Lytton Park, Lawrence Park, Davisville, Forest Hill, Rosedale, Moore Park, Leaside, Bedford Park, and surrounding neighbourhoods.<br><br>Virtual services: available anywhere in the world.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT: FORM -->
+      <div>
+        <h2 class="serif mb-8">Send a message.<br><em>I respond within 24 hours.</em></h2>
+
+        <p class="body-sm mb-6" style="color:var(--mid)">Which service are you interested in?</p>
+        <div class="service-options">
+          <label class="svc-opt-card">
+            <input type="radio" name="service" value="kits">
+            <span class="soc-name">Designer Room Kits</span>
+            <span class="soc-price">$49</span>
+          </label>
+          <label class="svc-opt-card">
+            <input type="radio" name="service" value="direction">
+            <span class="soc-name">Design Direction Session</span>
+            <span class="soc-price">$297</span>
+          </label>
+          <label class="svc-opt-card">
+            <input type="radio" name="service" value="room-design">
+            <span class="soc-name">Virtual Room Design</span>
+            <span class="soc-price">$1,497</span>
+          </label>
+          <label class="svc-opt-card">
+            <input type="radio" name="service" value="whole-home">
+            <span class="soc-name">Virtual Whole Home System</span>
+            <span class="soc-price">$3,497</span>
+          </label>
+          <label class="svc-opt-card">
+            <input type="radio" name="service" value="inperson-room">
+            <span class="soc-name">In-Person Room Design</span>
+            <span class="soc-price">$2,495</span>
+          </label>
+          <label class="svc-opt-card">
+            <input type="radio" name="service" value="inperson-full">
+            <span class="soc-name">In-Person Full Home</span>
+            <span class="soc-price">$7,500</span>
+          </label>
+        </div>
+
+        <form action="mailto:erica@yolevski.com" method="post" enctype="text/plain" style="margin-top:24px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div class="contact-field">
+              <label>First Name</label>
+              <input type="text" name="first" placeholder="Your first name">
+            </div>
+            <div class="contact-field">
+              <label>Last Name</label>
+              <input type="text" name="last" placeholder="Your last name">
+            </div>
+          </div>
+          <div class="contact-field">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="your@email.com">
+          </div>
+          <div class="contact-field">
+            <label>Phone (optional)</label>
+            <input type="tel" name="phone" placeholder="(416) 000-0000">
+          </div>
+          <div class="contact-field">
+            <label>Tell me about your home and what you're hoping to change</label>
+            <textarea name="message" placeholder="What room is bothering you? What does it feel like right now? What do you wish it felt like? Any timeline, budget range, or context is helpful."></textarea>
+          </div>
+          <button type="submit" class="btn btn-filled" style="width:100%;padding:17px">Send Message →</button>
+          <p class="body-sm mt-4 text-center" style="color:var(--stone);font-style:italic">I read every message personally and respond within 24 hours. No automated replies.</p>
+        </form>
+      </div>
+
     </div>
   </div>
-</section>
-
-<!-- PROOF BAR -->
-<div class="proof-bar">
-  <div class="proof-stat text-center"><span class="num">Midtown</span><span class="lbl">Toronto Exclusive</span></div>
-  <div class="proof-stat text-center"><span class="num">2</span><span class="lbl">Full Design Days</span></div>
-  <div class="proof-stat text-center"><span class="num">6 mo</span><span class="lbl">Ongoing Support</span></div>
-  <div class="proof-stat text-center"><span class="num">Trade</span><span class="lbl">Access Included</span></div>
 </div>
-
-<!-- HANDS OFF STRIP -->
-<section style="background:var(--ink);padding:clamp(28px,3vw,44px) var(--px)">
-  <div style="max-width:var(--mw);margin:0 auto">
-    <p style="font-family:var(--serif);font-size:clamp(18px,2.5vw,28px);font-weight:300;font-style:italic;color:var(--white);text-align:center;line-height:1.45;max-width:800px;margin:0 auto 20px">The easiest way to completely transform your home. You hand me the keys, I handle everything.</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,.06);max-width:900px;margin:0 auto">
-      <div style="background:var(--ink);padding:24px;text-align:center">
-        <div style="font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--alt);margin-bottom:8px">Completely hands-off</div>
-        <p style="font-size:12.5px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.65">You live your life. I design your home. No decisions waiting for you. No confusion. No managing contractors alone.</p>
-      </div>
-      <div style="background:var(--dark2);padding:24px;text-align:center">
-        <div style="font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--alt);margin-bottom:8px">I come to you</div>
-        <p style="font-size:12.5px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.65">I work inside your actual home, with your actual light and space. Every decision made in context — not estimated from photos on a screen.</p>
-      </div>
-      <div style="background:var(--ink);padding:24px;text-align:center">
-        <div style="font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--alt);margin-bottom:8px">Six months of support</div>
-        <p style="font-size:12.5px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.65">I stay with you until the vision is real. Not just during the design phase — through the execution, the contractors, and every decision along the way.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- INTRO -->
-<section class="section" style="background:var(--white)">
-  <div class="section-inner two-col" style="max-width:var(--mw)">
-    <div>
-      <span class="eyebrow">Why in-person design is different</span>
-      <h2 class="serif mb-8">Some things virtual<br>design <em>cannot capture.</em></h2>
-      <ul class="pain-list">
-        <li>The way afternoon light moves through your west-facing room and turns that wall colour from warm to orange at 4pm.</li>
-        <li>How your existing furniture actually reads in the space — what can stay, what needs to go, and what needs to be repositioned.</li>
-        <li>The real scale of your rooms versus how they appear in photos — which changes every layout, proportion, and furniture sizing decision.</li>
-        <li>The architectural details unique to your home that a generic design brief would miss entirely.</li>
-      </ul>
-    </div>
-    <div>
-      <div class="pull-quote mb-8">"The best design decisions are made in context. In the actual space. With the actual light. With an eye that can read what a photo never captures — and that's what I bring."</div>
-      <p class="body-md">My in-person services are reserved for Midtown Toronto and surrounding neighbourhoods. I limit the number of projects I take on each month — because every engagement deserves my full preparation, presence, and follow-through.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-
-  <!-- SERVICE 1: IN-PERSON ROOM -->
-  <div class="svc-detail">
-    <div class="svc-detail-content">
-      <div class="badge-exclusive">Midtown Toronto Only</div>
-      <span class="eyebrow">Service 01</span>
-      <h3 class="serif mb-4">In-Person Room Design</h3>
-      <p class="body-md mb-6">One room. One in-person session inside your actual space. Every decision made where it matters — your light, your proportions, your existing pieces. Not estimated from photos. Made in the room.</p>
-      <ul class="includes-col">
-        <li><strong>Full in-person session at your home</strong> — 2 to 3 hours on-site</li>
-        <li><strong>Complete room concept developed on-site</strong> — direction decided in the real space</li>
-        <li><strong>Full mood board and sourced shopping list</strong> — delivered within 7–10 business days</li>
-        <li><strong>In-context paint and finish palette</strong> — colours chosen in your actual light</li>
-        <li><strong>Furniture layout and traffic flow plan</strong> — developed in the room, not estimated</li>
-        <li><strong>Contractor-ready finish brief</strong> — hand it to any tradesperson</li>
-        <li><strong>30-day email follow-up window</strong></li>
-      </ul>
-      <div class="guarantee-block" style="margin-top:24px">
-        <span class="gb-label">Guarantee</span>
-        <p class="gb-body">If the direction doesn't feel right after our session, you don't pay for the follow-up package. Your risk is capped at the time I've already spent in your home.</p>
-      </div>
-      <div class="price-row">
-        <div class="price-big">$2,495</div>
-      </div>
-      <a href="contact.html" class="btn btn-filled">Book In-Person →</a>
-    </div>
-    <div class="svc-detail-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/2658fa0b-6089-42a1-80dc-8a1e9208fe77/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Midtown+Toronto+Lytton+Lawrence+Park.jpg')"></div>
-  </div>
-
-  <!-- SERVICE 2: FULL HOME TRANSFORMATION -->
-  <div class="svc-detail dark">
-    <div class="svc-detail-content">
-      <div class="badge-exclusive" style="background:rgba(255,255,255,.08);color:var(--alt);border-color:rgba(255,255,255,.1)">Midtown Toronto Only · Grand Slam</div>
-      <span class="eyebrow">Service 02</span>
-      <h3 class="serif mb-4">In-Person Full Home<br>Transformation</h3>
-      <p class="body-md mb-6">Two full design days in your home. Every room. Every decision made together, in the space — with trade access to products you can't find yourself, full contractor coordination, and six months of me in your corner while you execute.</p>
-      <ul class="includes-col">
-        <li><strong>Two full in-person design days</strong> — Day 1: discovery. Day 2: full design presentation in your home</li>
-        <li><strong>Complete whole-home design — every room</strong></li>
-        <li><strong>2D floor plans and layouts for every room</strong></li>
-        <li><strong>Full sourced shopping lists — every room</strong></li>
-        <li><strong>Whole-home paint and finish palette</strong></li>
-        <div class="bonus-tag">Bonuses Included</div>
-        <li><em>Trade-access sourcing session — products not publicly available ($997 value)</em></li>
-        <li><em>Contractor Coordination Brief for all trades ($497 value)</em></li>
-        <li><em>Six-Month Priority Design Hotline ($994 value)</em></li>
-        <li><em>Final in-person reveal walkthrough — I come back when complete ($495 value)</em></li>
-        <li><em>Full digital reference package — yours to keep forever</em></li>
-      </ul>
-      <div class="price-row">
-        <div class="price-big">$7,500</div>
-        <div class="price-was">$8,773+ in stated value</div>
-      </div>
-      <a href="contact.html" class="btn btn-white-filled">Apply for This Program →</a>
-      <p class="body-sm mt-4" style="color:rgba(255,255,255,.3)">Limited availability. Day-one satisfaction guarantee.</p>
-    </div>
-    <div class="svc-detail-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/bbd67001-174e-41e5-b8c2-9eb8aa9b51cd/Erica+Yolevski+Design+Studio+Interior+Design+Virtual+E-Design+Toronto+Midtown+Leaside+Lawrence+Park+Whole+Home+White+Glove+Midtown+Toronto.jpg')"></div>
-  </div>
-
-</section>
-
-<!-- TESTIMONIAL -->
-<section class="linen-block">
-  <div class="section-inner text-center" style="max-width:760px;margin:0 auto">
-    <div class="testimonial">
-      <p class="t-quote">"Getting Erica to design the interior of our home was one of the best decisions we ever made. She was professional, creative, and opened our eyes to all the possibilities. She always had our best interest at heart as she stayed within our budget. The results speak for themselves."</p>
-      <span class="t-cite">— North Toronto, In-Person Design Client</span>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY SAMPLE -->
-<section class="section" style="background:var(--off)">
-  <div class="section-inner">
-    <span class="eyebrow">In-person project work</span>
-    <h2 class="serif mb-8">The results.</h2>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
-      <div style="overflow:hidden;aspect-ratio:4/3;background:var(--linen)"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/39073b5e-bc92-4c57-a473-88db609572de/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Art+Wall.jpg" alt="" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div>
-      <div style="overflow:hidden;aspect-ratio:4/3;background:var(--linen)"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/7202f477-b063-46fa-8f96-12d2154f6f38/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Bathroom+Edesign+Room+Redecorate.jpg" alt="" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div>
-      <div style="overflow:hidden;aspect-ratio:4/3;background:var(--linen)"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/a221fc24-4aa7-46bd-a05c-ca9ee348d777/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Dining+Leaside.jpg" alt="" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div>
-    </div>
-    <div style="margin-top:20px;text-align:right"><a href="gallery.html" class="btn">View Full Gallery →</a></div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="section" style="background:var(--white)">
-  <div class="section-inner" style="max-width:720px;margin:0 auto">
-    <span class="eyebrow">In-Person FAQ</span>
-    <h2 class="serif mb-8">Questions about in-person design.</h2>
-    <div class="faq-item">
-      <div class="faq-q">What areas do you service?</div>
-      <div class="faq-a">Midtown Toronto and surrounding neighbourhoods — Lytton Park, Lawrence Park, Davisville, Forest Hill, Rosedale, Moore Park, Mount Pleasant, Leaside, Bedford Park. If you are unsure whether your area is covered, reach out via the contact page and we will confirm.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What does "trade access" mean in the Full Home Transformation?</div>
-      <div class="faq-a">Access to showrooms, suppliers, and product lines that are not available to the general public. Better quality construction, materials not sold through retail channels, and pricing that is frequently below what you would pay in a store. For clients furnishing an entire home, this access often saves more than the cost of the service itself.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How far in advance do I need to book?</div>
-      <div class="faq-a">I take a limited number of in-person projects each month. Typically 3 to 4 weeks lead time for the In-Person Room Design, and 4 to 6 weeks for the Full Home Transformation. For large projects or renovations with specific timelines, the earlier you get in touch the better.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">I'm mid-renovation. Is it too late to bring you in?</div>
-      <div class="faq-a">Mid-renovation is actually the most valuable time to bring in a designer. Decisions are being made under time pressure and the cost of a wrong call is high. Having clarity on finishes, fixtures, and furniture before the trades need the answers — rather than after — is where the most expensive mistakes are avoided.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What if I'm outside the service area but want in-person design?</div>
-      <div class="faq-a">The Virtual Whole Home Design System ($3,497) delivers the same depth of design — every room, every decision, with all the bonuses — remotely. For clients outside Toronto, this is the equivalent service at the same level of completeness.</div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BAND -->
-<section class="cta-band">
-  <div class="cta-band-inner">
-    <div>
-      <span class="eyebrow eyebrow-light">Ready to begin</span>
-      <h2 class="serif">Your home.<br>Your space. Your light.<br><em>Let's begin.</em></h2>
-    </div>
-    <div class="cta-band-btns">
-      <a href="contact.html" class="btn btn-accent btn-lg">Apply for In-Person →</a>
-      <a href="virtual.html" class="btn btn-white btn-lg">Outside Toronto? See Virtual →</a>
-    </div>
-  </div>
-</section>
 
 <footer class="footer">
   <div class="footer-grid">
-    <div><div class="footer-logo"><img src="logo-white.png" alt="Erica Yolevski Design Studio"></a><p class="footer-tagline">Timeless interior design for Midtown Toronto homes and beyond.</p></div>
-    <div class="footer-col"><h4>Services</h4><ul><li><a href="room-kits.html">Designer Room Kits</a></li><li><a href="virtual.html">Virtual Design</a></li><li><a href="inperson.html">In-Person Design</a></li></ul></div>
+    <div><div class="footer-logo"><img src="logo-white.png" alt="Erica Yolevski"></div><p class="footer-tagline">Timeless interior design for Midtown Toronto homes and beyond.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="room-kits.html">Room Kits</a></li><li><a href="virtual.html">Virtual Design</a></li><li><a href="inperson.html">In-Person</a></li></ul></div>
     <div class="footer-col"><h4>Studio</h4><ul><li><a href="about.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:erica@yolevski.com">erica@yolevski.com</a></li><li><a href="tel:4167320838">(416) 732-0838</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span class="footer-copy">© 2025 Erica Yolevski Design Studio</span><span class="footer-contact">Midtown Toronto</span></div>
+  <div class="footer-bottom"><span class="footer-copy">© 2025 Erica Yolevski Design Studio</span></div>
 </footer>
+
+<script>
+// Service option highlight on click
+document.querySelectorAll('.svc-opt-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('.svc-opt-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+  });
+});
+</script>
 </body>
 </html>

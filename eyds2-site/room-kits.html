@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>In-Person Interior Design Toronto — Erica Yolevski Design Studio</title>
-<meta name="description" content="White-glove in-person interior design in Midtown Toronto. In-Person Room Design and Full Home Transformation with trade access, contractor coordination, and 6-month support.">
+<title>DIY Designer Room Kits — Erica Yolevski Design Studio</title>
+<meta name="description" content="Professional interior design for $49. Pre-designed room kits with shopping lists, floor plans, paint palettes and implementation guides. Erica Yolevski.">
 <style>
 /* ═══════════════════════════════════════════════════════
    ERICA YOLEVSKI DESIGN STUDIO — SHARED STYLESHEET v2
@@ -492,38 +492,74 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
 
 </style>
 <style>
-.ip-hero .hb-img{
-  background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/7986c54c-2fcd-4752-84d2-b0a0665cb28f/Erica+Yolevski+Interior+Designer+Toronto+Midtown+Decorator+Redesign+Living+Room+Virtual.jpg');
+.kit-hero .hb-img{
+  background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/a34804a5-cec0-4361-aa2d-eac9c1916ab8/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+.jpg');
 }
-.svc-detail{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--warm);margin-bottom:3px}
-@media(max-width:768px){.svc-detail{grid-template-columns:1fr}}
-.svc-detail-content{background:var(--white);padding:clamp(32px,4vw,60px)}
-.svc-detail-img{background-size:cover;background-position:center;min-height:440px}
-.svc-detail.dark .svc-detail-content{background:var(--ink)}
-.svc-detail.dark h3{color:var(--white)}
-.svc-detail.dark .body-md{color:rgba(255,255,255,.55)}
-.svc-detail.dark .eyebrow{color:var(--alt)}
-.svc-detail.reverse .svc-detail-content{order:2}
-.svc-detail.reverse .svc-detail-img{order:1}
-@media(max-width:768px){.svc-detail.reverse .svc-detail-content,.svc-detail.reverse .svc-detail-img{order:unset}}
-.includes-col{list-style:none;margin:20px 0}
-.includes-col li{font-size:13px;font-weight:300;padding:9px 0;border-bottom:1px solid var(--linen);color:var(--ink);display:flex;gap:10px;line-height:1.5}
-.svc-detail.dark .includes-col li{border-color:rgba(255,255,255,.08);color:rgba(255,255,255,.65)}
-.includes-col li::before{content:'—';color:var(--stone);font-size:10px;flex-shrink:0;margin-top:2px}
-.svc-detail.dark .includes-col li::before{color:rgba(255,255,255,.2)}
-.bonus-tag{font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;background:var(--ink);color:var(--alt);display:inline-block;padding:4px 10px;margin:8px 0 4px}
-.svc-detail.dark .bonus-tag{background:rgba(255,255,255,.08)}
-.price-row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:16px 0}
-.price-big{font-family:var(--serif);font-size:44px;font-weight:400;color:var(--ink);line-height:1}
-.svc-detail.dark .price-big{color:var(--white)}
-.price-was{font-size:13px;font-weight:300;color:var(--stone);text-decoration:line-through}
-.badge-exclusive{
-  display:inline-block;font-size:9px;font-weight:500;
-  letter-spacing:.16em;text-transform:uppercase;
-  background:var(--linen);color:var(--accent);
-  border:1px solid var(--warm);padding:5px 12px;
-  margin-bottom:16px;
+.kit-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:2px;background:var(--warm);
+  margin-top:40px;
 }
+.kit-card{
+  background:var(--white);padding:40px 32px;
+  display:flex;flex-direction:column;
+  transition:background .2s;position:relative;
+  cursor:pointer;
+}
+.kit-card:hover{background:var(--linen)}
+.kit-room-type{
+  font-size:9px;font-weight:500;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--mid);margin-bottom:14px;
+}
+.kit-style{
+  font-family:var(--serif);font-size:22px;font-weight:500;
+  color:var(--ink);margin-bottom:6px;letter-spacing:-.01em;
+}
+.kit-desc{font-size:13px;font-weight:300;color:var(--mid);line-height:1.7;margin-bottom:24px;flex:1}
+.kit-price{
+  font-family:var(--serif);font-size:28px;font-weight:400;
+  color:var(--ink);margin-bottom:14px;
+}
+.kit-includes{list-style:none;margin-bottom:24px}
+.kit-includes li{
+  font-size:11.5px;font-weight:300;padding:6px 0;
+  border-bottom:1px solid var(--linen);
+  color:var(--mid);display:flex;gap:8px;
+}
+.kit-includes li::before{content:'—';color:var(--stone);font-size:10px}
+.kit-coming{
+  position:absolute;top:12px;right:12px;
+  background:var(--warm);color:var(--mid);
+  font-size:9px;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;padding:5px 10px;
+}
+.kit-new{
+  position:absolute;top:12px;right:12px;
+  background:var(--accent);color:var(--white);
+  font-size:9px;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;padding:5px 10px;
+}
+.what-inside{
+  background:var(--ink);
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:2px;
+  margin:var(--sp) 0 0;
+}
+@media(max-width:700px){.what-inside{grid-template-columns:1fr}}
+.wi-item{
+  background:#221e1b;padding:32px 28px;
+  display:flex;gap:20px;align-items:flex-start;
+}
+.wi-num{
+  font-family:var(--serif);font-size:32px;font-weight:300;
+  color:var(--alt);flex-shrink:0;line-height:1;
+}
+.wi-title{
+  font-family:var(--serif);font-size:17px;font-weight:500;
+  color:var(--white);margin-bottom:6px;
+}
+.wi-desc{font-size:12px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.45)}
 </style>
 </head>
 <body>
@@ -532,9 +568,9 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
   <a href="index.html" class="nav-logo"><img src="logo-dark.png" alt="Erica Yolevski Design Studio"></a>
   <ul class="nav-menu">
     <li><a href="index.html">Home</a></li>
-    <li><a href="room-kits.html">Room Kits</a></li>
+    <li><a href="room-kits.html" class="active">Room Kits</a></li>
     <li><a href="virtual.html">Virtual Design</a></li>
-    <li><a href="inperson.html" class="active">In-Person</a></li>
+    <li><a href="inperson.html">In-Person</a></li>
     <li><a href="gallery.html">Gallery</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="reviews.html">Reviews</a></li>
@@ -544,179 +580,205 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
 </nav>
 
 <!-- HERO -->
-<section class="hero-banner ip-hero">
+<section class="hero-banner kit-hero">
   <div class="hb-img"></div>
   <div class="hb-content">
-    <span class="eyebrow" style="color:var(--alt)">In-Person Design · Midtown Toronto</span>
-    <h1 class="serif">White-glove design.<br><em>In your home. In your space.<br>With your light.</em></h1>
-    <p class="body-lg" style="color:rgba(255,255,255,.75)">Some decisions cannot be made from a screen. For those, I come to you.</p><p style="font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:12px">Done FOR you — white-glove full service</p>
+    <span class="eyebrow" style="color:var(--alt)">Designer Room Kits · From $49</span>
+    <h1 class="serif">A professionally designed room.<br><em>Yours to own for $49.</em></h1>
+    <p class="body-lg" style="color:rgba(255,255,255,.75)">Real projects. Real clients who invested significantly in their homes. Pre-packaged so you can get the exact same result — every product sourced, every decision made — and execute it yourself.</p><p style="font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:12px">DIY — you execute it yourself</p>
     <div class="hero-btn-row">
-      <a href="#services" class="btn btn-accent btn-lg">See Services ↓</a>
-      <a href="contact.html" class="btn btn-white btn-lg">Book In-Person</a>
+      <a href="#kits" class="btn btn-accent btn-lg">Browse Kits ↓</a>
     </div>
   </div>
 </section>
 
 <!-- PROOF BAR -->
 <div class="proof-bar">
-  <div class="proof-stat text-center"><span class="num">Midtown</span><span class="lbl">Toronto Exclusive</span></div>
-  <div class="proof-stat text-center"><span class="num">2</span><span class="lbl">Full Design Days</span></div>
-  <div class="proof-stat text-center"><span class="num">6 mo</span><span class="lbl">Ongoing Support</span></div>
-  <div class="proof-stat text-center"><span class="num">Trade</span><span class="lbl">Access Included</span></div>
+  <div class="proof-stat text-center"><span class="num">$49</span><span class="lbl">Per Room Kit</span></div>
+  <div class="proof-stat text-center"><span class="num">6</span><span class="lbl">Sections Per Kit</span></div>
+  <div class="proof-stat text-center"><span class="num">Instant</span><span class="lbl">Digital Download</span></div>
+  <div class="proof-stat text-center"><span class="num">100%</span><span class="lbl">Money-Back Guarantee</span></div>
 </div>
 
-<!-- HANDS OFF STRIP -->
-<section style="background:var(--ink);padding:clamp(28px,3vw,44px) var(--px)">
-  <div style="max-width:var(--mw);margin:0 auto">
-    <p style="font-family:var(--serif);font-size:clamp(18px,2.5vw,28px);font-weight:300;font-style:italic;color:var(--white);text-align:center;line-height:1.45;max-width:800px;margin:0 auto 20px">The easiest way to completely transform your home. You hand me the keys, I handle everything.</p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,.06);max-width:900px;margin:0 auto">
-      <div style="background:var(--ink);padding:24px;text-align:center">
-        <div style="font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--alt);margin-bottom:8px">Completely hands-off</div>
-        <p style="font-size:12.5px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.65">You live your life. I design your home. No decisions waiting for you. No confusion. No managing contractors alone.</p>
-      </div>
-      <div style="background:var(--dark2);padding:24px;text-align:center">
-        <div style="font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--alt);margin-bottom:8px">I come to you</div>
-        <p style="font-size:12.5px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.65">I work inside your actual home, with your actual light and space. Every decision made in context — not estimated from photos on a screen.</p>
-      </div>
-      <div style="background:var(--ink);padding:24px;text-align:center">
-        <div style="font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--alt);margin-bottom:8px">Six months of support</div>
-        <p style="font-size:12.5px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.65">I stay with you until the vision is real. Not just during the design phase — through the execution, the contractors, and every decision along the way.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- INTRO -->
+<!-- PAIN + BRIDGE -->
 <section class="section" style="background:var(--white)">
   <div class="section-inner two-col" style="max-width:var(--mw)">
     <div>
-      <span class="eyebrow">Why in-person design is different</span>
-      <h2 class="serif mb-8">Some things virtual<br>design <em>cannot capture.</em></h2>
+      <span class="eyebrow">The problem</span>
+      <h2 class="serif mb-8">You keep almost finishing<br>the room and then <em>stopping.</em></h2>
       <ul class="pain-list">
-        <li>The way afternoon light moves through your west-facing room and turns that wall colour from warm to orange at 4pm.</li>
-        <li>How your existing furniture actually reads in the space — what can stay, what needs to go, and what needs to be repositioned.</li>
-        <li>The real scale of your rooms versus how they appear in photos — which changes every layout, proportion, and furniture sizing decision.</li>
-        <li>The architectural details unique to your home that a generic design brief would miss entirely.</li>
+        <li>You have saved hundreds of inspiration photos and still cannot decide — because nothing feels cohesive enough to commit to and you're terrified of making a $1,000 mistake.</li>
+        <li>You've bought pieces you loved individually that somehow look wrong together in the actual room.</li>
+        <li>You've tried to DIY the design and it's "fine" but it's not what you imagined.</li>
+        <li>You don't have the budget for a full designer but you don't want another generic room from a catalogue either.</li>
       </ul>
     </div>
     <div>
-      <div class="pull-quote mb-8">"The best design decisions are made in context. In the actual space. With the actual light. With an eye that can read what a photo never captures — and that's what I bring."</div>
-      <p class="body-md">My in-person services are reserved for Midtown Toronto and surrounding neighbourhoods. I limit the number of projects I take on each month — because every engagement deserves my full preparation, presence, and follow-through.</p>
+      <div class="pull-quote mb-8">"I spent months obsessing over this exact room for a client who paid significantly. You get the same result for $49."</div>
+      <p class="body-md mb-6">Each kit is built directly from a real project. Not a hypothetical. A real home, a real client, a real outcome. Every product was chosen for a specific reason. Every paint code was tested in the actual space. The floor plan was solved for the real dimensions.</p>
+      <p class="body-md">You are buying the output of months of professional thinking. For $49. And everything you need to execute it yourself is included.</p>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
-
-  <!-- SERVICE 1: IN-PERSON ROOM -->
-  <div class="svc-detail">
-    <div class="svc-detail-content">
-      <div class="badge-exclusive">Midtown Toronto Only</div>
-      <span class="eyebrow">Service 01</span>
-      <h3 class="serif mb-4">In-Person Room Design</h3>
-      <p class="body-md mb-6">One room. One in-person session inside your actual space. Every decision made where it matters — your light, your proportions, your existing pieces. Not estimated from photos. Made in the room.</p>
-      <ul class="includes-col">
-        <li><strong>Full in-person session at your home</strong> — 2 to 3 hours on-site</li>
-        <li><strong>Complete room concept developed on-site</strong> — direction decided in the real space</li>
-        <li><strong>Full mood board and sourced shopping list</strong> — delivered within 7–10 business days</li>
-        <li><strong>In-context paint and finish palette</strong> — colours chosen in your actual light</li>
-        <li><strong>Furniture layout and traffic flow plan</strong> — developed in the room, not estimated</li>
-        <li><strong>Contractor-ready finish brief</strong> — hand it to any tradesperson</li>
-        <li><strong>30-day email follow-up window</strong></li>
-      </ul>
-      <div class="guarantee-block" style="margin-top:24px">
-        <span class="gb-label">Guarantee</span>
-        <p class="gb-body">If the direction doesn't feel right after our session, you don't pay for the follow-up package. Your risk is capped at the time I've already spent in your home.</p>
-      </div>
-      <div class="price-row">
-        <div class="price-big">$2,495</div>
-      </div>
-      <a href="contact.html" class="btn btn-filled">Book In-Person →</a>
-    </div>
-    <div class="svc-detail-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/2658fa0b-6089-42a1-80dc-8a1e9208fe77/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Midtown+Toronto+Lytton+Lawrence+Park.jpg')"></div>
-  </div>
-
-  <!-- SERVICE 2: FULL HOME TRANSFORMATION -->
-  <div class="svc-detail dark">
-    <div class="svc-detail-content">
-      <div class="badge-exclusive" style="background:rgba(255,255,255,.08);color:var(--alt);border-color:rgba(255,255,255,.1)">Midtown Toronto Only · Grand Slam</div>
-      <span class="eyebrow">Service 02</span>
-      <h3 class="serif mb-4">In-Person Full Home<br>Transformation</h3>
-      <p class="body-md mb-6">Two full design days in your home. Every room. Every decision made together, in the space — with trade access to products you can't find yourself, full contractor coordination, and six months of me in your corner while you execute.</p>
-      <ul class="includes-col">
-        <li><strong>Two full in-person design days</strong> — Day 1: discovery. Day 2: full design presentation in your home</li>
-        <li><strong>Complete whole-home design — every room</strong></li>
-        <li><strong>2D floor plans and layouts for every room</strong></li>
-        <li><strong>Full sourced shopping lists — every room</strong></li>
-        <li><strong>Whole-home paint and finish palette</strong></li>
-        <div class="bonus-tag">Bonuses Included</div>
-        <li><em>Trade-access sourcing session — products not publicly available ($997 value)</em></li>
-        <li><em>Contractor Coordination Brief for all trades ($497 value)</em></li>
-        <li><em>Six-Month Priority Design Hotline ($994 value)</em></li>
-        <li><em>Final in-person reveal walkthrough — I come back when complete ($495 value)</em></li>
-        <li><em>Full digital reference package — yours to keep forever</em></li>
-      </ul>
-      <div class="price-row">
-        <div class="price-big">$7,500</div>
-        <div class="price-was">$8,773+ in stated value</div>
-      </div>
-      <a href="contact.html" class="btn btn-white-filled">Apply for This Program →</a>
-      <p class="body-sm mt-4" style="color:rgba(255,255,255,.3)">Limited availability. Day-one satisfaction guarantee.</p>
-    </div>
-    <div class="svc-detail-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/bbd67001-174e-41e5-b8c2-9eb8aa9b51cd/Erica+Yolevski+Design+Studio+Interior+Design+Virtual+E-Design+Toronto+Midtown+Leaside+Lawrence+Park+Whole+Home+White+Glove+Midtown+Toronto.jpg')"></div>
-  </div>
-
-</section>
-
-<!-- TESTIMONIAL -->
-<section class="linen-block">
-  <div class="section-inner text-center" style="max-width:760px;margin:0 auto">
-    <div class="testimonial">
-      <p class="t-quote">"Getting Erica to design the interior of our home was one of the best decisions we ever made. She was professional, creative, and opened our eyes to all the possibilities. She always had our best interest at heart as she stayed within our budget. The results speak for themselves."</p>
-      <span class="t-cite">— North Toronto, In-Person Design Client</span>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY SAMPLE -->
-<section class="section" style="background:var(--off)">
+<!-- WHAT'S INSIDE EVERY KIT -->
+<section class="dark-block">
   <div class="section-inner">
-    <span class="eyebrow">In-person project work</span>
-    <h2 class="serif mb-8">The results.</h2>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
-      <div style="overflow:hidden;aspect-ratio:4/3;background:var(--linen)"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/39073b5e-bc92-4c57-a473-88db609572de/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Art+Wall.jpg" alt="" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div>
-      <div style="overflow:hidden;aspect-ratio:4/3;background:var(--linen)"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/7202f477-b063-46fa-8f96-12d2154f6f38/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Bathroom+Edesign+Room+Redecorate.jpg" alt="" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div>
-      <div style="overflow:hidden;aspect-ratio:4/3;background:var(--linen)"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/a221fc24-4aa7-46bd-a05c-ca9ee348d777/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Dining+Leaside.jpg" alt="" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy"></div>
+    <div class="text-center mb-10">
+      <span class="eyebrow" style="color:var(--alt)">Every kit includes</span>
+      <h2 class="serif text-white">Six sections. Everything you need.<br><em>Nothing you don't.</em></h2>
     </div>
-    <div style="margin-top:20px;text-align:right"><a href="gallery.html" class="btn">View Full Gallery →</a></div>
+    <div class="what-inside">
+      <div class="wi-item"><div class="wi-num">01</div><div><div class="wi-title">Paint &amp; Finish Palette</div><div class="wi-desc">Every colour code (Benjamin Moore or Farrow &amp; Ball), finish type for every surface, and where to buy. Hand it to your painter. Done.</div></div></div>
+      <div class="wi-item"><div class="wi-num">02</div><div><div class="wi-title">Floor Plan &amp; Layout</div><div class="wi-desc">The exact furniture arrangement that makes the room work spatially. Two options so you can choose what fits your dimensions.</div></div></div>
+      <div class="wi-item"><div class="wi-num">03</div><div><div class="wi-title">Complete Shopping List</div><div class="wi-desc">Every piece — furniture, lighting, textiles, hardware. Two price points per category. Direct purchase links. No searching required.</div></div></div>
+      <div class="wi-item"><div class="wi-num">04</div><div><div class="wi-title">Decor &amp; Styling Options</div><div class="wi-desc">Art, objects, plants — the layer that makes it personal. What to look for, where to find it, and exactly how to style it.</div></div></div>
+      <div class="wi-item"><div class="wi-num">05</div><div><div class="wi-title">Implementation Guide</div><div class="wi-desc">What to do first, second, and last. The sequencing that stops you from buying the wrong things in the wrong order and wasting money.</div></div></div>
+      <div class="wi-item"><div class="wi-num">06</div><div><div class="wi-title">Sourcing with Links</div><div class="wi-desc">Every source named. Every link active. Retailers, trade sources where accessible, and budget-conscious alternatives for every single item.</div></div></div>
+    </div>
   </div>
 </section>
+
+<!-- KIT LISTINGS -->
+<section class="section" id="kits">
+  <div class="section-inner">
+    <span class="eyebrow">Available Kits</span>
+    <h2 class="serif">Browse the collection.</h2>
+    <div class="kit-grid">
+
+      <div class="kit-card">
+        <div class="kit-new">Available Now</div>
+        <div class="kit-room-type">Living Room</div>
+        <div class="kit-style">Warm Transitional</div>
+        <p class="kit-desc">Layered, collected, and built to last. Anchored by a warm neutral palette, boucle and linen textiles, and mixed wood tones that feel curated rather than matched.</p>
+        <ul class="kit-includes">
+          <li>All 6 sections included</li>
+          <li>3 wall colours + trim palette</li>
+          <li>2 furniture layout options</li>
+          <li>18 sourced products with links</li>
+        </ul>
+        <div class="kit-price">$49</div>
+        <a href="contact.html" class="btn btn-filled">Get This Kit →</a>
+      </div>
+
+      <div class="kit-card">
+        <div class="kit-new">Available Now</div>
+        <div class="kit-room-type">Primary Bedroom</div>
+        <div class="kit-style">Quiet Luxury</div>
+        <p class="kit-desc">Calm, considered, and deeply restful. Soft palette, layered bedding, blackout linen curtains floor to ceiling, and the kind of proportions that make a bedroom feel like a retreat.</p>
+        <ul class="kit-includes">
+          <li>All 6 sections included</li>
+          <li>Bedding and textile layering guide</li>
+          <li>Lighting for ambience, not just function</li>
+          <li>16 sourced products with links</li>
+        </ul>
+        <div class="kit-price">$49</div>
+        <a href="contact.html" class="btn btn-filled">Get This Kit →</a>
+      </div>
+
+      <div class="kit-card">
+        <div class="kit-new">Available Now</div>
+        <div class="kit-room-type">Dining Room</div>
+        <div class="kit-style">Moody &amp; Classic</div>
+        <p class="kit-desc">Deep, rich walls. A statement light fixture. A table that seats people properly. The dining room that makes dinner feel like an occasion even on a Tuesday.</p>
+        <ul class="kit-includes">
+          <li>All 6 sections included</li>
+          <li>Statement lighting guide</li>
+          <li>Table + chair sourcing at 3 price points</li>
+          <li>14 sourced products with links</li>
+        </ul>
+        <div class="kit-price">$49</div>
+        <a href="contact.html" class="btn btn-filled">Get This Kit →</a>
+      </div>
+
+      <div class="kit-card">
+        <div class="kit-coming">Coming Soon</div>
+        <div class="kit-room-type">Home Office</div>
+        <div class="kit-style">Refined &amp; Functional</div>
+        <p class="kit-desc">A workspace that takes your work seriously. Storage that doesn't look like it came from a container store. The difference between a room you avoid and a room you actually want to work in.</p>
+        <ul class="kit-includes">
+          <li>All 6 sections included</li>
+          <li>Ergonomic + aesthetic balance guide</li>
+          <li>Storage solutions that look intentional</li>
+          <li>Links updated quarterly</li>
+        </ul>
+        <div class="kit-price">$49</div>
+        <a href="contact.html" class="btn">Join Waitlist →</a>
+      </div>
+
+      <div class="kit-card">
+        <div class="kit-coming">Coming Soon</div>
+        <div class="kit-room-type">Nursery</div>
+        <div class="kit-style">Timeless &amp; Grows With Them</div>
+        <p class="kit-desc">Beautiful enough for the parents. Practical enough for the child. Built to transition past the nursery phase without a full redesign. The room that still looks good in the photos five years from now.</p>
+        <ul class="kit-includes">
+          <li>All 6 sections included</li>
+          <li>Non-toxic finish specifications</li>
+          <li>Transition guide for ages 0–6</li>
+          <li>Links updated quarterly</li>
+        </ul>
+        <div class="kit-price">$49</div>
+        <a href="contact.html" class="btn">Join Waitlist →</a>
+      </div>
+
+      <div class="kit-card">
+        <div class="kit-coming">Coming Soon</div>
+        <div class="kit-room-type">Kitchen Refresh</div>
+        <div class="kit-style">Timeless &amp; Warm</div>
+        <p class="kit-desc">Not a full renovation — a refresh. Hardware, lighting, paint, and styling that transforms a dated kitchen into one that feels intentional and expensive without touching a single cabinet.</p>
+        <ul class="kit-includes">
+          <li>All 6 sections included</li>
+          <li>No-renovation transformation guide</li>
+          <li>Hardware + lighting sourcing</li>
+          <li>Links updated quarterly</li>
+        </ul>
+        <div class="kit-price">$49</div>
+        <a href="contact.html" class="btn">Join Waitlist →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VALUE GRID -->
+<section class="linen-block">
+  <div class="section-inner">
+    <div class="text-center mb-10">
+      <span class="eyebrow">Why this works</span>
+      <h2 class="serif">The value equation.</h2>
+    </div>
+    <div class="value-grid" style="max-width:var(--mw);margin:0 auto">
+      <div class="vg-cell"><span class="vg-arrow">↑</span><div class="vg-title">Dream Outcome</div><div class="vg-body">A finished room that looks like it came from a design magazine — without hiring a designer, without booking a single appointment, without months of research.</div></div>
+      <div class="vg-cell linen"><span class="vg-arrow">↑</span><div class="vg-title">Likelihood of Success</div><div class="vg-body">Every decision has already been made and proven in a real project. You are not guessing. You are executing a result that already worked.</div></div>
+      <div class="vg-cell linen"><span class="vg-arrow">↓</span><div class="vg-title">Time to Results</div><div class="vg-body">Instant download. No consultation. No waitlist. You could have your shopping list open within ten minutes of purchase.</div></div>
+      <div class="vg-cell"><span class="vg-arrow">↓</span><div class="vg-title">Effort &amp; Sacrifice</div><div class="vg-body">No measurements. No questionnaires. No mood boards to build. Open the kit, follow the guide, buy what's on the list. That is it.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+
 
 <!-- FAQ -->
-<section class="section" style="background:var(--white)">
+<section class="section" style="background:var(--off)">
   <div class="section-inner" style="max-width:720px;margin:0 auto">
-    <span class="eyebrow">In-Person FAQ</span>
-    <h2 class="serif mb-8">Questions about in-person design.</h2>
+    <span class="eyebrow">Room Kit FAQ</span>
+    <h2 class="serif mb-8">Questions about the kits.</h2>
     <div class="faq-item">
-      <div class="faq-q">What areas do you service?</div>
-      <div class="faq-a">Midtown Toronto and surrounding neighbourhoods — Lytton Park, Lawrence Park, Davisville, Forest Hill, Rosedale, Moore Park, Mount Pleasant, Leaside, Bedford Park. If you are unsure whether your area is covered, reach out via the contact page and we will confirm.</div>
+      <div class="faq-q">What format do I receive?</div>
+      <div class="faq-a">A high-quality PDF download. You receive it immediately after purchase. Every page is designed to be easy to follow — the shopping list has active links, the paint palette has exact codes, and the implementation guide reads like clear instructions, not design theory.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">What does "trade access" mean in the Full Home Transformation?</div>
-      <div class="faq-a">Access to showrooms, suppliers, and product lines that are not available to the general public. Better quality construction, materials not sold through retail channels, and pricing that is frequently below what you would pay in a store. For clients furnishing an entire home, this access often saves more than the cost of the service itself.</div>
+      <div class="faq-q">What if my room dimensions are different from the kit?</div>
+      <div class="faq-a">Every kit includes two furniture arrangement options to accommodate different room sizes. The paint palette and shopping list apply regardless of dimensions. If your space is unusual or you want guidance on adapting the layout, a $297 Design Direction Session is the right next step.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">How far in advance do I need to book?</div>
-      <div class="faq-a">I take a limited number of in-person projects each month. Typically 3 to 4 weeks lead time for the In-Person Room Design, and 4 to 6 weeks for the Full Home Transformation. For large projects or renovations with specific timelines, the earlier you get in touch the better.</div>
+      <div class="faq-q">Can I mix kits from different rooms?</div>
+      <div class="faq-a">Yes. Each kit is designed with a consistent style language — warm, timeless, character-driven. They are complementary by design. Living Room + Primary Bedroom kits from the same collection will feel cohesive in the same home.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">I'm mid-renovation. Is it too late to bring you in?</div>
-      <div class="faq-a">Mid-renovation is actually the most valuable time to bring in a designer. Decisions are being made under time pressure and the cost of a wrong call is high. Having clarity on finishes, fixtures, and furniture before the trades need the answers — rather than after — is where the most expensive mistakes are avoided.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What if I'm outside the service area but want in-person design?</div>
-      <div class="faq-a">The Virtual Whole Home Design System ($3,497) delivers the same depth of design — every room, every decision, with all the bonuses — remotely. For clients outside Toronto, this is the equivalent service at the same level of completeness.</div>
+      <div class="faq-q">What if I want something more personalised?</div>
+      <div class="faq-a">That is what the Virtual Interior Design services are for. The Design Direction Session ($297) gives you a personalised plan for your specific space. The Virtual Room Design Experience ($1,497) is a complete custom design for one room. The kits are for people who want professional results on a DIY budget. The virtual services are for people who want the design done for them.</div>
     </div>
   </div>
 </section>
@@ -725,12 +787,12 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
 <section class="cta-band">
   <div class="cta-band-inner">
     <div>
-      <span class="eyebrow eyebrow-light">Ready to begin</span>
-      <h2 class="serif">Your home.<br>Your space. Your light.<br><em>Let's begin.</em></h2>
+      <span class="eyebrow eyebrow-light">Start tonight</span>
+      <h2 class="serif">A professionally designed room.<br><em>$49. Instant download.</em></h2>
     </div>
     <div class="cta-band-btns">
-      <a href="contact.html" class="btn btn-accent btn-lg">Apply for In-Person →</a>
-      <a href="virtual.html" class="btn btn-white btn-lg">Outside Toronto? See Virtual →</a>
+      <a href="#kits" class="btn btn-white-filled btn-lg">Browse Kits ↑</a>
+      <a href="virtual.html" class="btn btn-white btn-lg">Need More? See Virtual →</a>
     </div>
   </div>
 </section>
@@ -742,7 +804,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
     <div class="footer-col"><h4>Studio</h4><ul><li><a href="about.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:erica@yolevski.com">erica@yolevski.com</a></li><li><a href="tel:4167320838">(416) 732-0838</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span class="footer-copy">© 2025 Erica Yolevski Design Studio</span><span class="footer-contact">Midtown Toronto</span></div>
+  <div class="footer-bottom"><span class="footer-copy">© 2025 Erica Yolevski Design Studio</span><span class="footer-contact">Virtual Services Available Worldwide</span></div>
 </footer>
 </body>
 </html>
