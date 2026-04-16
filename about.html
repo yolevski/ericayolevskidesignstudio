@@ -58,7 +58,7 @@ a{text-decoration:none;color:inherit}
   padding:0 var(--px);
 }
 .nav-logo{display:flex;align-items:center}
-.nav-logo img{height:32px;width:auto}
+.nav-logo img{height:56px;width:auto}
 .nav-menu{display:flex;align-items:center;gap:32px;list-style:none}
 .nav-menu a{
   font-size:11px;font-weight:400;
@@ -98,7 +98,7 @@ h1.serif,h2.serif,h3.serif{
   font-family:var(--serif);font-weight:400;line-height:1.1;
   letter-spacing:-.01em;
 }
-h1.serif{font-size:clamp(36px,5.5vw,68px)}
+h1.serif{font-size:clamp(42px,6.5vw,82px);font-weight:500}
 h2.serif{font-size:clamp(28px,3.8vw,48px)}
 h3.serif{font-size:clamp(20px,2.5vw,30px)}
 h1.serif em,h2.serif em,h3.serif em{font-style:italic}
@@ -137,7 +137,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
 .hero-banner{
   margin-top:64px;position:relative;
   min-height:clamp(500px,65vw,720px);
-  display:flex;align-items:flex-end;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
 }
 .hero-banner .hb-img{
   position:absolute;inset:0;
@@ -153,8 +153,8 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
   max-width:820px;
 }
 .hero-banner .hb-content h1{color:var(--white);margin-bottom:20px}
-.hero-banner .hb-content p{margin-bottom:32px;max-width:540px}
-.hero-btn-row{display:flex;gap:14px;flex-wrap:wrap}
+.hero-banner .hb-content p{margin-bottom:32px;max-width:600px;text-align:center}
+.hero-btn-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
 
 /* ── PROOF BAR ─────────────────────────────────────── */
 .proof-bar{
@@ -428,7 +428,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
 }
 @media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
-.footer-logo img{height:28px;width:auto;filter:none;opacity:0.8;margin-bottom:16px}
+.footer-logo img{height:48px;width:auto;filter:none;opacity:0.85;margin-bottom:16px}
 .footer-tagline{font-size:12px;font-weight:300;color:rgba(255,255,255,.4);line-height:1.75;max-width:240px}
 .footer-col h4{
   font-size:10px;font-weight:500;letter-spacing:.18em;
@@ -452,9 +452,9 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
   margin-top:64px;background:var(--ink);
   padding:clamp(52px,8vw,96px) var(--px);
 }
-.page-hero-inner{max-width:var(--mw);margin:0 auto}
-.page-hero h1{color:var(--white);margin-bottom:16px}
-.page-hero p{max-width:560px}
+.page-hero-inner{max-width:var(--mw);margin:0 auto;text-align:center}
+.page-hero h1{color:var(--white);margin-bottom:16px;text-align:center}
+.page-hero p{max-width:600px;margin-left:auto;margin-right:auto;text-align:center}
 
 /* ── PRODUCT PAGE HERO ─────────────────────────────── */
 .product-hero{
@@ -513,7 +513,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
 </nav>
 
 <div class="page-hero">
-  <div class="page-hero-inner">
+  <div class="page-hero-inner" style="text-align:center">
     <span class="eyebrow" style="color:var(--alt)">About</span>
     <h1 class="serif text-white">Design rooted in <em>la bella figura.</em></h1>
     <p class="body-lg" style="color:rgba(255,255,255,.55);margin-top:12px">The Italian idea that when you surround yourself with beauty, you feel it. That is the principle behind every room I design.</p>
@@ -533,7 +533,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
       </div>
       <div>
         <span class="eyebrow">About Erica</span>
-        <h2 class="serif mb-8">I live in Midtown Toronto.<br><em>I design for how families actually live.</em></h2>
+        <h2 class="serif mb-8">I live in Midtown Toronto and design<br><em>for how families actually live.</em></h2>
         <p class="body-md mb-6">I live in Lytton Park with my husband and our two boys. Life at home is wonderfully busy — school runs, family dinners, the ordinary rhythms of a full household. It is easy for a home to become a place you manage rather than one you actually love being in.</p>
         <p class="body-md mb-6"><strong style="color:var(--ink);font-weight:500">I believe it does not have to be that way.</strong> Your home should be the place that helps you slow down, recharge, and feel proud every single day. Not because it is perfect — because it is yours. Layered, specific, full of the things that matter to your family.</p>
         <hr class="rule" style="margin:28px 0">
@@ -599,7 +599,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
     <div class="footer-col"><h4>Studio</h4><ul><li><a href="about.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:erica@yolevski.com">erica@yolevski.com</a></li><li><a href="tel:4167320838">(416) 732-0838</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span class="footer-copy">© 2025 Erica Yolevski Design Studio</span></div>
+  <div class="footer-bottom"><span class="footer-copy">© 2026 Erica Yolevski Design Studio</span></div>
 </footer>
 </body>
 </html>

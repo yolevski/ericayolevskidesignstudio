@@ -58,7 +58,7 @@ a{text-decoration:none;color:inherit}
   padding:0 var(--px);
 }
 .nav-logo{display:flex;align-items:center}
-.nav-logo img{height:32px;width:auto}
+.nav-logo img{height:56px;width:auto}
 .nav-menu{display:flex;align-items:center;gap:32px;list-style:none}
 .nav-menu a{
   font-size:11px;font-weight:400;
@@ -98,7 +98,7 @@ h1.serif,h2.serif,h3.serif{
   font-family:var(--serif);font-weight:400;line-height:1.1;
   letter-spacing:-.01em;
 }
-h1.serif{font-size:clamp(36px,5.5vw,68px)}
+h1.serif{font-size:clamp(42px,6.5vw,82px);font-weight:500}
 h2.serif{font-size:clamp(28px,3.8vw,48px)}
 h3.serif{font-size:clamp(20px,2.5vw,30px)}
 h1.serif em,h2.serif em,h3.serif em{font-style:italic}
@@ -137,7 +137,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
 .hero-banner{
   margin-top:64px;position:relative;
   min-height:clamp(500px,65vw,720px);
-  display:flex;align-items:flex-end;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
 }
 .hero-banner .hb-img{
   position:absolute;inset:0;
@@ -153,8 +153,8 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
   max-width:820px;
 }
 .hero-banner .hb-content h1{color:var(--white);margin-bottom:20px}
-.hero-banner .hb-content p{margin-bottom:32px;max-width:540px}
-.hero-btn-row{display:flex;gap:14px;flex-wrap:wrap}
+.hero-banner .hb-content p{margin-bottom:32px;max-width:600px;text-align:center}
+.hero-btn-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
 
 /* ── PROOF BAR ─────────────────────────────────────── */
 .proof-bar{
@@ -428,7 +428,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
 }
 @media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
-.footer-logo img{height:28px;width:auto;filter:none;opacity:0.8;margin-bottom:16px}
+.footer-logo img{height:48px;width:auto;filter:none;opacity:0.85;margin-bottom:16px}
 .footer-tagline{font-size:12px;font-weight:300;color:rgba(255,255,255,.4);line-height:1.75;max-width:240px}
 .footer-col h4{
   font-size:10px;font-weight:500;letter-spacing:.18em;
@@ -452,9 +452,9 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
   margin-top:64px;background:var(--ink);
   padding:clamp(52px,8vw,96px) var(--px);
 }
-.page-hero-inner{max-width:var(--mw);margin:0 auto}
-.page-hero h1{color:var(--white);margin-bottom:16px}
-.page-hero p{max-width:560px}
+.page-hero-inner{max-width:var(--mw);margin:0 auto;text-align:center}
+.page-hero h1{color:var(--white);margin-bottom:16px;text-align:center}
+.page-hero p{max-width:600px;margin-left:auto;margin-right:auto;text-align:center}
 
 /* ── PRODUCT PAGE HERO ─────────────────────────────── */
 .product-hero{
@@ -504,12 +504,45 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
 </nav>
 
 <div class="page-hero">
-  <div class="page-hero-inner">
+  <div class="page-hero-inner" style="text-align:center">
     <span class="eyebrow" style="color:var(--alt)">Selected Work</span>
-    <h1 class="serif text-white">Rooms that tell <em>a story.</em></h1>
+    <h1 class="serif text-white">Rooms that tell<br><em>a story worth living in.</em></h1>
     <p class="body-lg" style="color:rgba(255,255,255,.55);margin-top:12px">Every project begins with the belief that a well-made room grows more beautiful as life happens inside it.</p>
   </div>
 </div>
+
+
+<!-- PROJECT VIDEOS -->
+<section style="background:var(--ink);padding:var(--sp) var(--px)">
+  <div style="max-width:var(--mw);margin:0 auto">
+    <div style="text-align:center;margin-bottom:40px">
+      <span class="eyebrow" style="color:var(--alt)">Project Films</span>
+      <h2 class="serif" style="color:var(--white)">Watch the transformations.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;background:var(--dark2)">
+      <div style="background:var(--dark2)">
+        <!-- PASTE YouTube iframe for Lawrence Park Project here -->
+        <div style="width:100%;aspect-ratio:16/9;background:#1a1714;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;border:1px dashed rgba(255,255,255,.1)">
+          <div style="width:48px;height:48px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center"><span style="color:white;font-size:18px;margin-left:3px">▶</span></div>
+          <span style="font-size:11px;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase">Lawrence Park Project — add YouTube embed</span>
+        </div>
+        <div style="padding:16px 20px">
+          <p style="font-size:12px;font-weight:500;color:var(--white)">Lawrence Park Project</p>
+        </div>
+      </div>
+      <div style="background:var(--dark2)">
+        <!-- PASTE YouTube iframe for Burr Project here -->
+        <div style="width:100%;aspect-ratio:16/9;background:#1a1714;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;border:1px dashed rgba(255,255,255,.1)">
+          <div style="width:48px;height:48px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center"><span style="color:white;font-size:18px;margin-left:3px">▶</span></div>
+          <span style="font-size:11px;color:rgba(255,255,255,.3);letter-spacing:.1em;text-transform:uppercase">Burr Project — add YouTube embed</span>
+        </div>
+        <div style="padding:16px 20px">
+          <p style="font-size:12px;font-weight:500;color:var(--white)">Burr Project</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section style="padding:var(--sp) 0;background:var(--off)">
   <div style="max-width:var(--mw);margin:0 auto;padding:0 var(--px);margin-bottom:40px">
@@ -556,7 +589,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
     <div class="footer-col"><h4>Studio</h4><ul><li><a href="about.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:erica@yolevski.com">erica@yolevski.com</a></li><li><a href="tel:4167320838">(416) 732-0838</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span class="footer-copy">© 2025 Erica Yolevski Design Studio</span></div>
+  <div class="footer-bottom"><span class="footer-copy">© 2026 Erica Yolevski Design Studio</span></div>
 </footer>
 </body>
 </html>

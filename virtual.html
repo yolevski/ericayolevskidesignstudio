@@ -60,7 +60,7 @@ a{text-decoration:none;color:inherit}
   padding:0 var(--px);
 }
 .nav-logo{display:flex;align-items:center}
-.nav-logo img{height:44px;width:auto}
+.nav-logo img{height:56px;width:auto}
 .nav-menu{display:flex;align-items:center;gap:32px;list-style:none}
 .nav-menu a{
   font-size:11px;font-weight:400;
@@ -100,7 +100,7 @@ h1.serif,h2.serif,h3.serif{
   font-family:var(--serif);font-weight:400;line-height:1.1;
   letter-spacing:-.01em;
 }
-h1.serif{font-size:clamp(36px,5.5vw,68px)}
+h1.serif{font-size:clamp(42px,6.5vw,82px);font-weight:500}
 h2.serif{font-size:clamp(28px,3.8vw,48px)}
 h3.serif{font-size:clamp(20px,2.5vw,30px)}
 h1.serif em,h2.serif em,h3.serif em{font-style:italic}
@@ -139,7 +139,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
 .hero-banner{
   margin-top:64px;position:relative;
   min-height:clamp(500px,65vw,720px);
-  display:flex;align-items:flex-end;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
 }
 .hero-banner .hb-img{
   position:absolute;inset:0;
@@ -155,8 +155,8 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
   max-width:820px;
 }
 .hero-banner .hb-content h1{color:var(--white);margin-bottom:20px}
-.hero-banner .hb-content p{margin-bottom:32px;max-width:540px}
-.hero-btn-row{display:flex;gap:14px;flex-wrap:wrap}
+.hero-banner .hb-content p{margin-bottom:32px;max-width:600px;text-align:center}
+.hero-btn-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
 
 /* ── PROOF BAR ─────────────────────────────────────── */
 .proof-bar{
@@ -430,7 +430,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
 }
 @media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
-.footer-logo img{height:28px;width:auto;filter:none;opacity:0.8;margin-bottom:16px}
+.footer-logo img{height:48px;width:auto;filter:none;opacity:0.85;margin-bottom:16px}
 .footer-tagline{font-size:12px;font-weight:300;color:rgba(255,255,255,.4);line-height:1.75;max-width:240px}
 .footer-col h4{
   font-size:10px;font-weight:500;letter-spacing:.18em;
@@ -454,9 +454,9 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
   margin-top:64px;background:var(--ink);
   padding:clamp(52px,8vw,96px) var(--px);
 }
-.page-hero-inner{max-width:var(--mw);margin:0 auto}
-.page-hero h1{color:var(--white);margin-bottom:16px}
-.page-hero p{max-width:560px}
+.page-hero-inner{max-width:var(--mw);margin:0 auto;text-align:center}
+.page-hero h1{color:var(--white);margin-bottom:16px;text-align:center}
+.page-hero p{max-width:600px;margin-left:auto;margin-right:auto;text-align:center}
 
 /* ── PRODUCT PAGE HERO ─────────────────────────────── */
 .product-hero{
@@ -857,7 +857,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
     <h2 class="serif mb-8">Questions about virtual design.</h2>
     <div class="faq-item">
       <div class="faq-q">How does virtual design actually work?</div>
-      <div class="faq-a">You share photos of your space, dimensions, a completed intake questionnaire, and your goals. I design based on these inputs and deliver a complete digital package — mood boards, floor plans, shopping lists, paint palettes, and contractor briefs. Everything you need to execute it yourself. We communicate via video call and email throughout.</div>
+      <div class="faq-a">We start with a live video call — not an email, not a questionnaire into a void. On that first call we do a full video walkthrough of your home together. You show me every room, every challenge, every corner that isn't working. I ask questions. I take notes. I get the full picture the way an in-person designer would. From there I build your design package and we stay in close contact throughout — check-ins, revisions, ongoing communication. You have direct access to me as your designer for the entire project. You are never handed a document and left alone to figure it out. I work alongside you, from the first call to the finished room.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Can virtual design really work for my space?</div>
@@ -899,7 +899,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
     <div class="footer-col"><h4>Studio</h4><ul><li><a href="about.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:erica@yolevski.com">erica@yolevski.com</a></li><li><a href="tel:4167320838">(416) 732-0838</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><span class="footer-copy">© 2025 Erica Yolevski Design Studio</span><span class="footer-contact">Virtual Services Available Worldwide</span></div>
+  <div class="footer-bottom"><span class="footer-copy">© 2026 Erica Yolevski Design Studio</span><span class="footer-contact">Virtual Services Available Worldwide</span></div>
 </footer>
 </body>
 </html>
