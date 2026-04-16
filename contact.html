@@ -592,7 +592,10 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
           </label>
         </div>
 
-        <form action="mailto:erica@yolevski.com" method="post" enctype="text/plain" style="margin-top:24px">
+        <form action="https://formspree.io/f/erica@yolevski.com" method="POST" style="margin-top:24px">
+  <input type="hidden" name="_subject" value="New enquiry from ericayolevski.com">
+  <input type="hidden" name="_replyto" value="">
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
             <div class="contact-field">
               <label>First Name</label>
@@ -616,6 +619,7 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
             <textarea name="message" placeholder="What room is bothering you? What does it feel like right now? What do you wish it felt like? Any timeline, budget range, or context is helpful."></textarea>
           </div>
           <button type="submit" class="btn btn-filled" style="width:100%;padding:17px">Send Message →</button>
+        <p id="form-status" style="font-size:12px;color:var(--accent);text-align:center;margin-top:12px;display:none"></p>
           <p class="body-sm mt-4 text-center" style="color:var(--stone);font-style:italic">I read every message personally and respond within 24 hours. No automated replies.</p>
         </form>
       </div>
@@ -642,6 +646,40 @@ document.querySelectorAll('.svc-opt-card').forEach(card => {
     card.classList.add('selected');
   });
 });
+</script>
+<script>
+const form = document.querySelector('form[action*="formspree"]');
+const status = document.getElementById('form-status');
+if (form) {
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.reset();
+        btn.textContent = 'Message Sent';
+        btn.style.background = 'var(--accent)';
+        status.textContent = 'Thank you — I will be in touch within 24 hours.';
+        status.style.display = 'block';
+      } else {
+        throw new Error();
+      }
+    } catch {
+      btn.textContent = 'Send Message →';
+      btn.disabled = false;
+      status.textContent = 'Something went wrong. Please email erica@yolevski.com directly.';
+      status.style.color = 'var(--mid)';
+      status.style.display = 'block';
+    }
+  });
+}
 </script>
 </body>
 </html>
