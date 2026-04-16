@@ -531,6 +531,41 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
 .svc-detail.dark .price-big{color:var(--white)}
 .price-was{font-size:13px;font-weight:300;color:var(--stone);text-decoration:line-through}
 .price-saving{font-size:11px;font-weight:500;background:var(--accent);color:var(--white);padding:3px 9px}
+
+/* ── IMPROVED HERO OVERLAY ── */
+.hero-banner .hb-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(10,8,6,0.82) 0%,
+    rgba(10,8,6,0.52) 45%,
+    rgba(10,8,6,0.28) 100%
+  );
+}
+.hero-banner .hb-content .eyebrow{
+  color:rgba(255,255,255,0.9)!important;
+  text-shadow:0 1px 3px rgba(0,0,0,0.5);
+  font-weight:500;
+}
+.hero-banner h1,.hero-banner h2,.hero-banner h3,
+.hero-banner p,.hero-banner .body-lg{
+  text-shadow:0 1px 4px rgba(0,0,0,0.35);
+}
+/* page-hero (inner pages) */
+.page-hero{
+  background:var(--ink);
+  position:relative;overflow:hidden;
+}
+.page-hero::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 30% 60%, rgba(139,111,78,.12) 0%, transparent 65%);
+  pointer-events:none;
+}
+.page-hero-inner{position:relative;z-index:2}
+.page-hero .eyebrow{
+  color:rgba(255,255,255,0.85)!important;
+}
+
 </style>
 </head>
 <body>
@@ -555,7 +590,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
   <div class="hb-img"></div>
   <div class="hb-content">
     <span class="eyebrow" style="color:var(--alt)">Virtual Interior Design · Available Anywhere</span>
-    <h1 class="serif">Professional design.<br><em>No site visits. No hourly rates.<br>No surprises at the end.</em></h1>
+    <h1 class="serif">Professional design.<br><em>No site visits. No hourly rates.<br>No hidden costs. No surprises.</em></h1>
     <p class="body-lg" style="color:rgba(255,255,255,.75)">Three services. Three levels of involvement. One outcome — a home that finally feels intentional, cohesive, and unmistakably yours. All done <em>with you</em>, remotely, wherever you are.</p>
     <div class="hero-btn-row">
       <a href="#services" class="btn btn-accent btn-lg">See All Services ↓</a>
@@ -569,7 +604,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
   <div class="proof-stat text-center"><span class="num">$297</span><span class="lbl">Start With a Direction Session</span></div>
   <div class="proof-stat text-center"><span class="num">48h</span><span class="lbl">Written Plan Delivered</span></div>
   <div class="proof-stat text-center"><span class="num">10 Days</span><span class="lbl">Full Room Design Delivered</span></div>
-  <div class="proof-stat text-center"><span class="num">90 Day</span><span class="lbl">Satisfaction Guarantee</span></div>
+  <div class="proof-stat text-center"><span class="num">Unlimited</span><span class="lbl">Revisions Until You Love It</span></div>
 </div>
 
 <!-- HUMAN INTRO STRIP -->
@@ -628,8 +663,8 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
         <li><em>Full credit toward any larger service — every dollar spent here applies to the Virtual Room Design or Whole Home System</em></li>
       </ul>
       <div class="guarantee-block mt-8" style="margin-top:24px">
-        <span class="gb-label">Guarantee</span>
-        <p class="gb-body">If our session doesn't give you more clarity than you had before it, full refund. No questions. No process.</p>
+        <span class="gb-label">My Promise</span>
+        <p class="gb-body">You will leave this session with more clarity and direction than you had before it. If we need a follow-up to get you there, I make time for it — at no extra charge.</p>
       </div>
       <div class="price-row">
         <div class="price-big">$297</div>
@@ -666,8 +701,8 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
         <li><strong>One round of revisions included</strong></li>
       </ul>
       <div class="guarantee-block mt-8" style="margin-top:24px">
-        <span class="gb-label">Guarantee</span>
-        <p class="gb-body">If the design package doesn't give you a clear, complete, executable plan — I redo it. Full refund if the revision still doesn't deliver.</p>
+        <span class="gb-label">My Promise</span>
+        <p class="gb-body">I revise the design — at no extra charge — until you genuinely love it. My goal is not just a completed project but a space you are proud to live in. That is the standard every client receives.</p>
       </div>
       <div class="price-row">
         <div class="price-big">$1,497</div>
@@ -702,7 +737,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
         <div class="price-was">$4,088+ in stated value</div>
       </div>
       <a href="contact.html" class="btn btn-white-filled">Claim Your Spot →</a>
-      <p class="body-sm mt-4" style="color:rgba(255,255,255,.3)">Spots limited monthly. 90-day satisfaction guarantee.</p>
+      <p class="body-sm mt-4" style="color:rgba(255,255,255,.3)">Spots limited monthly. Revisions included until you love the result.</p>
     </div>
     <div class="svc-detail-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/cbc7dcae-4080-43eb-9dc4-2099ae764904/Erica+Yolevski+Design+Studio+Interior+Design+Virtual+E-Design+Toronto+Midtown+Leaside+Lawrence+Park+Whole+Home+White+Glove+Midtown+Toronto.jpg')"></div>
   </div>
@@ -838,7 +873,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
     </div>
     <div class="faq-item">
       <div class="faq-q">What happens after I receive my design?</div>
-      <div class="faq-a">For the Room Design, you have a 30-day email follow-up window for questions. For the Whole Home System, you have three 90-day check-in sessions and a 30-day sourcing hotline. I support the design through the execution phase — not just deliver and disappear.</div>
+      <div class="faq-a">For the Room Design, you have a 30-day email follow-up window for questions. For the Whole Home System, you have three 90-day check-in sessions and a 30-day sourcing hotline. I stay involved through the execution phase — revising, advising, and following up until the result matches the vision.</div>
     </div>
   </div>
 </section>

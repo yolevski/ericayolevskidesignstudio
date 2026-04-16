@@ -624,6 +624,41 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
 }
 .review-card.featured .google-badge {color:rgba(255,255,255,.25)}
 .review-card.featured .google-badge::before {background:rgba(255,255,255,.1);color:rgba(255,255,255,.4)}
+
+/* ── IMPROVED HERO OVERLAY ── */
+.hero-banner .hb-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(10,8,6,0.82) 0%,
+    rgba(10,8,6,0.52) 45%,
+    rgba(10,8,6,0.28) 100%
+  );
+}
+.hero-banner .hb-content .eyebrow{
+  color:rgba(255,255,255,0.9)!important;
+  text-shadow:0 1px 3px rgba(0,0,0,0.5);
+  font-weight:500;
+}
+.hero-banner h1,.hero-banner h2,.hero-banner h3,
+.hero-banner p,.hero-banner .body-lg{
+  text-shadow:0 1px 4px rgba(0,0,0,0.35);
+}
+/* page-hero (inner pages) */
+.page-hero{
+  background:var(--ink);
+  position:relative;overflow:hidden;
+}
+.page-hero::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 30% 60%, rgba(139,111,78,.12) 0%, transparent 65%);
+  pointer-events:none;
+}
+.page-hero-inner{position:relative;z-index:2}
+.page-hero .eyebrow{
+  color:rgba(255,255,255,0.85)!important;
+}
+
 </style>
 </head>
 <body>

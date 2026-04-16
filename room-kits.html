@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Designer Room Kits — Erica Yolevski Design Studio</title>
+<title>DIY Designer Room Kits — Erica Yolevski Design Studio</title>
 <meta name="description" content="Professional interior design for $49. Pre-designed room kits with shopping lists, floor plans, paint palettes and implementation guides. Erica Yolevski.">
 <style>
 /* ═══════════════════════════════════════════════════════
@@ -60,7 +60,7 @@ a{text-decoration:none;color:inherit}
   padding:0 var(--px);
 }
 .nav-logo{display:flex;align-items:center}
-.nav-logo img{height:32px;width:auto}
+.nav-logo img{height:44px;width:auto}
 .nav-menu{display:flex;align-items:center;gap:32px;list-style:none}
 .nav-menu a{
   font-size:11px;font-weight:400;
@@ -560,6 +560,41 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
   color:var(--white);margin-bottom:6px;
 }
 .wi-desc{font-size:12px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.45)}
+
+/* ── IMPROVED HERO OVERLAY ── */
+.hero-banner .hb-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(10,8,6,0.82) 0%,
+    rgba(10,8,6,0.52) 45%,
+    rgba(10,8,6,0.28) 100%
+  );
+}
+.hero-banner .hb-content .eyebrow{
+  color:rgba(255,255,255,0.9)!important;
+  text-shadow:0 1px 3px rgba(0,0,0,0.5);
+  font-weight:500;
+}
+.hero-banner h1,.hero-banner h2,.hero-banner h3,
+.hero-banner p,.hero-banner .body-lg{
+  text-shadow:0 1px 4px rgba(0,0,0,0.35);
+}
+/* page-hero (inner pages) */
+.page-hero{
+  background:var(--ink);
+  position:relative;overflow:hidden;
+}
+.page-hero::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 30% 60%, rgba(139,111,78,.12) 0%, transparent 65%);
+  pointer-events:none;
+}
+.page-hero-inner{position:relative;z-index:2}
+.page-hero .eyebrow{
+  color:rgba(255,255,255,0.85)!important;
+}
+
 </style>
 </head>
 <body>
@@ -584,7 +619,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
   <div class="hb-img"></div>
   <div class="hb-content">
     <span class="eyebrow" style="color:var(--alt)">Designer Room Kits · From $49</span>
-    <h1 class="serif">A professionally designed room.<br><em>Yours to own for $49.</em></h1>
+    <h1 class="serif">A professionally designed room<br><em>yours to own for $49.</em></h1>
     <p class="body-lg" style="color:rgba(255,255,255,.75)">Real projects. Real clients who invested significantly in their homes. Pre-packaged so you can get the exact same result — every product sourced, every decision made — and execute it yourself.</p><p style="font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:12px">DIY — you execute it yourself</p>
     <div class="hero-btn-row">
       <a href="#kits" class="btn btn-accent btn-lg">Browse Kits ↓</a>
@@ -597,7 +632,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
   <div class="proof-stat text-center"><span class="num">$49</span><span class="lbl">Per Room Kit</span></div>
   <div class="proof-stat text-center"><span class="num">6</span><span class="lbl">Sections Per Kit</span></div>
   <div class="proof-stat text-center"><span class="num">Instant</span><span class="lbl">Digital Download</span></div>
-  <div class="proof-stat text-center"><span class="num">100%</span><span class="lbl">Money-Back Guarantee</span></div>
+  <div class="proof-stat text-center"><span class="num">$49</span><span class="lbl">No Designer Fees</span></div>
 </div>
 
 <!-- PAIN + BRIDGE -->
@@ -756,7 +791,6 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
   </div>
 </section>
 
-<!-- GUARANTEE -->
 
 
 <!-- FAQ -->

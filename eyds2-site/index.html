@@ -601,6 +601,41 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
   font-size:11px;font-weight:400;letter-spacing:.14em;
   text-transform:uppercase;color:var(--mid);
 }
+
+/* ── IMPROVED HERO OVERLAY ── */
+.hero-banner .hb-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(10,8,6,0.82) 0%,
+    rgba(10,8,6,0.52) 45%,
+    rgba(10,8,6,0.28) 100%
+  );
+}
+.hero-banner .hb-content .eyebrow{
+  color:rgba(255,255,255,0.9)!important;
+  text-shadow:0 1px 3px rgba(0,0,0,0.5);
+  font-weight:500;
+}
+.hero-banner h1,.hero-banner h2,.hero-banner h3,
+.hero-banner p,.hero-banner .body-lg{
+  text-shadow:0 1px 4px rgba(0,0,0,0.35);
+}
+/* page-hero (inner pages) */
+.page-hero{
+  background:var(--ink);
+  position:relative;overflow:hidden;
+}
+.page-hero::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 30% 60%, rgba(139,111,78,.12) 0%, transparent 65%);
+  pointer-events:none;
+}
+.page-hero-inner{position:relative;z-index:2}
+.page-hero .eyebrow{
+  color:rgba(255,255,255,0.85)!important;
+}
+
 </style>
 </head>
 <body>
@@ -625,13 +660,15 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
 <section class="hero-banner home-hero">
   <div class="hb-img"></div>
   <div class="hb-content" style="text-align:center;max-width:900px;margin:0 auto;padding:clamp(32px,5vw,64px)">
-    <h1 class="serif" style="font-size:clamp(30px,5vw,60px);margin-bottom:20px;text-align:center">Stop wasting money on a home<br>that doesn't feel <em>finished.</em></h1>
+    <h1 class="serif" style="font-size:clamp(30px,5vw,60px);margin-bottom:20px;text-align:center">Stop wasting money on a home that<br>doesn't feel <em>finished.</em></h1>
     <h2 class="serif" style="font-size:clamp(16px,2.2vw,24px);font-weight:300;color:rgba(255,255,255,.8);margin-bottom:14px;line-height:1.45;text-align:center">Timeless, warm, livable homes that feel cohesive, intentional, and built to last — so every room finally feels like it belongs together.</h2>
     <h3 style="font-family:var(--sans);font-size:clamp(10px,1.2vw,13px);font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:40px;text-align:center">No trends. No guesswork. No costly design mistakes.</h3>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;align-items:center">
-      <a href="room-kits.html" class="btn btn-lg" style="background:var(--accent);color:var(--white);border-color:var(--accent);font-weight:500;transition:all .2s" onmouseover="this.style.boxShadow='0 0 0 2px rgba(255,255,255,0.45)';this.style.background='#9d7f5c'" onmouseout="this.style.boxShadow='none';this.style.background='var(--accent)'">Steal a Designer Room — $49</a>
-      <a href="virtual.html" class="btn btn-white btn-lg">Get Direct Designer Access</a>
-      <a href="inperson.html" class="btn btn-white btn-lg">Apply for Full-Service Design</a>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
+      <a href="room-kits.html" class="btn btn-lg" style="background:var(--accent);color:var(--white);border-color:var(--accent);font-weight:500;transition:all .2s;min-width:280px" onmouseover="this.style.boxShadow='0 0 0 3px rgba(255,255,255,0.4)';this.style.background='#9d7f5c'" onmouseout="this.style.boxShadow='none';this.style.background='var(--accent)'">Steal a Designer Room — $49</a>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+        <a href="virtual.html" class="btn btn-white btn-lg">Get Direct Designer Access</a>
+        <a href="inperson.html" class="btn btn-white btn-lg">Apply for Full-Service Design</a>
+      </div>
     </div>
   </div>
 </section>
@@ -640,7 +677,7 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
 <div class="proof-bar">
   <div class="proof-stat text-center"><span class="num">200+</span><span class="lbl">Rooms Transformed</span></div>
   <div class="proof-stat text-center"><span class="num">10+</span><span class="lbl">Years of Practice</span></div>
-  <div class="proof-stat text-center"><span class="num">100%</span><span class="lbl">Satisfaction Guarantee</span></div>
+  <div class="proof-stat text-center"><span class="num">100%</span><span class="lbl">Revision Promise</span></div>
   <div class="proof-stat text-center"><span class="num">$49</span><span class="lbl">Start Today</span></div>
 </div>
 
@@ -826,8 +863,8 @@ h1.serif em,h2.serif em,h3.serif em{font-style:italic}
       <div class="faq-a">No. Every sourced shopping list includes a range of price points and a prioritised order of what to invest in first. A room that feels complete and intentional is not the same as a room that is expensive. That difference is what good design is for.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">Is there a guarantee?</div>
-      <div class="faq-a">Yes. Every service includes a satisfaction guarantee. Room kits: full refund if you follow the kit and your room doesn't feel noticeably better. Direction Session: full refund if the session doesn't give you more clarity than you had before. Virtual design packages: we redo any room free within 90 days if the result doesn't deliver. In-person: if day one doesn't feel right, day two is at no charge.</div>
+      <div class="faq-q">What if I'm not happy with the result?</div>
+      <div class="faq-a">For all virtual and in-person services, I work with you and revise at no extra charge until you love the result. My commitment is that you feel a real difference — not just satisfied, but genuinely proud of your space. The Room Kits are DIY downloads without revision support, which is reflected in the price point. For a fully supported experience with my revision promise, the virtual and in-person services are the right choice.</div>
     </div>
   </div>
 </section>
