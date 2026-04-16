@@ -885,7 +885,13 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
     <!-- Live Instagram feed via Behold.so embed — free plan shows latest 6 posts -->
     <!-- SETUP: Go to behold.so, connect @ericayolevski, copy your widget ID, replace YOUR_WIDGET_ID below -->
     <div id="behold-widget" style="margin-top:32px">
-      <!-- Paste your Behold widget script here after signing up at behold.so (free) -->
+   <behold-widget feed-id="hmEst0MaGRkmoY2B0Jc2"></behold-widget>
+<script>
+  (() => {
+    const d=document,s=d.createElement("script");s.type="module";
+    s.src="https://w.behold.so/widget.js";d.head.append(s);
+  })();
+</script>
       <!-- It will look like: <script src="https://w.behold.so/widget.js" type="module"></script><div data-behold-id="hmEst0MaGRkmoY2B0Jc2"></div> -->
       <!-- TEMPORARY fallback grid until Behold is connected: -->
       <div class="ig-grid" id="ig-fallback">
