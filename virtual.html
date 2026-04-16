@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virtual Interior Design — Erica Yolevski Design Studio</title>
+<meta name="description" content="Virtual interior design services. Design Direction Session $297, Virtual Room Design $1,497, Virtual Whole Home Design System $3,497. Available anywhere.">
+<style>
+/* ═══════════════════════════════════════════════════════
+   ERICA YOLEVSKI DESIGN STUDIO — SHARED STYLESHEET v2
+   Hormozi-method: clear hierarchy, conversion-first,
+   editorially beautiful, zero fluff
+═══════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap');
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+
+:root{
+  /* brand */
+  --ink:    #1a1714;
+  --warm:   #e8dfd3;
+  --linen:  #f1ece4;
+  --stone:  #c8bfb2;
+  --mid:    #8a8178;
+  --accent: #8b6f4e;
+  --alt:    #c4a882;
+  --white:  #ffffff;
+  --off:    #f9f7f4;
+  --dark2:  #221e1b;
+  /* type */
+  --serif:  'Cormorant Garamond',Georgia,serif;
+  --sans:   'Jost',sans-serif;
+  /* layout */
+  --px:     clamp(20px,5vw,72px);
+  --sp:     clamp(56px,7vw,104px);
+  --mw:     1160px;
+}
+
+body{
+  font-family:var(--sans);
+  background:var(--off);
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+}
+
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+
+/* ── NAV ───────────────────────────────────────────── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--warm);
+  height:64px;
+  display:flex;align-items:center;
+  justify-content:space-between;
+  padding:0 var(--px);
+}
+.nav-logo{display:flex;align-items:center}
+.nav-logo img{height:32px;width:auto}
+.nav-menu{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-menu a{
+  font-size:11px;font-weight:400;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--mid);transition:color .2s;
+}
+.nav-menu a:hover,.nav-menu a.active{color:var(--ink)}
+.nav-cta{
+  font-size:11px;font-weight:500;
+  letter-spacing:.12em;text-transform:uppercase;
+  background:var(--ink);color:var(--white)!important;
+  padding:9px 22px;transition:background .2s!important;
+}
+.nav-cta:hover{background:var(--accent)!important}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--ink)}
+@media(max-width:768px){
+  .nav-menu{display:none}
+  .nav-hamburger{display:flex}
+}
+
+/* ── REUSABLE LAYOUT ───────────────────────────────── */
+.container{max-width:var(--mw);margin:0 auto;padding:0 var(--px)}
+.page-pad{padding-top:var(--sp);padding-bottom:var(--sp)}
+.section{padding:var(--sp) var(--px)}
+.section-inner{max-width:var(--mw);margin:0 auto}
+
+/* ── TYPE SCALE ────────────────────────────────────── */
+.eyebrow{
+  font-size:10px;font-weight:500;
+  letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:14px;display:block;
+}
+.eyebrow-light{color:rgba(255,255,255,.55)}
+
+h1.serif,h2.serif,h3.serif{
+  font-family:var(--serif);font-weight:400;line-height:1.1;
+  letter-spacing:-.01em;
+}
+h1.serif{font-size:clamp(36px,5.5vw,68px)}
+h2.serif{font-size:clamp(28px,3.8vw,48px)}
+h3.serif{font-size:clamp(20px,2.5vw,30px)}
+h1.serif em,h2.serif em,h3.serif em{font-style:italic}
+
+.body-lg{font-size:clamp(15px,1.6vw,18px);font-weight:300;line-height:1.85;color:var(--mid)}
+.body-md{font-size:14px;font-weight:300;line-height:1.85;color:var(--mid)}
+.body-sm{font-size:13px;font-weight:300;line-height:1.8;color:var(--mid)}
+
+/* ── BUTTONS ───────────────────────────────────────── */
+.btn{
+  display:inline-block;
+  font-size:11px;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:14px 36px;
+  border:1.5px solid var(--ink);color:var(--ink);
+  background:transparent;cursor:pointer;
+  transition:all .2s;text-align:center;
+}
+.btn:hover{background:var(--ink);color:var(--white)}
+.btn-filled{background:var(--ink);color:var(--white)}
+.btn-filled:hover{background:var(--accent)}
+.btn-accent{background:var(--accent);color:var(--white);border-color:var(--accent)}
+.btn-accent:hover{background:var(--alt);border-color:var(--alt)}
+.btn-white{border-color:rgba(255,255,255,.4);color:var(--white)}
+.btn-white:hover{background:rgba(255,255,255,.1);border-color:var(--white)}
+.btn-white-filled{background:var(--white);color:var(--ink);border-color:var(--white)}
+.btn-white-filled:hover{background:var(--linen)}
+.btn-lg{padding:17px 44px;font-size:12px}
+.btn-sm{padding:10px 24px;font-size:10px}
+
+/* ── DIVIDERS ──────────────────────────────────────── */
+.rule{border:none;border-top:1px solid var(--warm)}
+.rule-accent{border-color:var(--accent)}
+
+/* ── HERO BANNER ───────────────────────────────────── */
+.hero-banner{
+  margin-top:64px;position:relative;
+  min-height:clamp(500px,65vw,720px);
+  display:flex;align-items:flex-end;overflow:hidden;
+}
+.hero-banner .hb-img{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+}
+.hero-banner .hb-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(26,23,20,.72) 0%,rgba(26,23,20,.15) 65%);
+}
+.hero-banner .hb-content{
+  position:relative;z-index:2;
+  padding:clamp(32px,5vw,72px);
+  max-width:820px;
+}
+.hero-banner .hb-content h1{color:var(--white);margin-bottom:20px}
+.hero-banner .hb-content p{margin-bottom:32px;max-width:540px}
+.hero-btn-row{display:flex;gap:14px;flex-wrap:wrap}
+
+/* ── PROOF BAR ─────────────────────────────────────── */
+.proof-bar{
+  background:var(--ink);
+  padding:28px var(--px);
+  display:flex;justify-content:center;
+  gap:clamp(24px,5vw,72px);flex-wrap:wrap;
+}
+.proof-stat .num{
+  font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);
+  font-weight:400;color:var(--alt);display:block;line-height:1;
+  margin-bottom:5px;
+}
+.proof-stat .lbl{
+  font-size:10px;font-weight:400;letter-spacing:.16em;
+  text-transform:uppercase;color:rgba(255,255,255,.4);
+}
+
+/* ── DARK BLOCK ────────────────────────────────────── */
+.dark-block{background:var(--ink);padding:var(--sp) var(--px)}
+.dark-block h2{color:var(--white)}
+.dark-block .body-lg,.dark-block .body-md{color:rgba(255,255,255,.6)}
+.dark-block::before-accent{
+  content:'';position:absolute;left:0;top:0;
+  width:4px;height:100%;background:var(--accent);
+}
+
+/* ── LINEN BLOCK ───────────────────────────────────── */
+.linen-block{background:var(--linen);padding:var(--sp) var(--px)}
+
+/* ── PAIN LIST ─────────────────────────────────────── */
+.pain-list{list-style:none;display:flex;flex-direction:column;gap:16px}
+.pain-list li{
+  font-size:15px;font-weight:300;line-height:1.8;
+  color:var(--ink);padding-left:22px;position:relative;
+}
+.pain-list li::before{
+  content:'—';position:absolute;left:0;
+  color:var(--accent);font-size:12px;top:3px;
+}
+
+/* ── VALUE GRID ────────────────────────────────────── */
+.value-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:2px;background:var(--warm);
+}
+@media(max-width:600px){.value-grid{grid-template-columns:1fr}}
+.vg-cell{background:var(--white);padding:28px 24px}
+.vg-cell.dark{background:var(--ink)}
+.vg-cell.linen{background:var(--linen)}
+.vg-arrow{font-size:20px;color:var(--accent);margin-bottom:10px;display:block}
+.vg-title{font-family:var(--serif);font-size:18px;font-weight:500;color:var(--ink);margin-bottom:8px}
+.vg-cell.dark .vg-title{color:var(--white)}
+.vg-body{font-size:13px;font-weight:300;line-height:1.75;color:var(--mid)}
+.vg-cell.dark .vg-body{color:rgba(255,255,255,.5)}
+
+/* ── SERVICE CARDS GRID ────────────────────────────── */
+.svc-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2px;background:var(--warm);
+}
+.svc-card{
+  background:var(--white);
+  padding:clamp(28px,3vw,44px);
+  display:flex;flex-direction:column;
+  transition:background .22s;position:relative;
+}
+.svc-card:hover{background:var(--linen)}
+.svc-card.dark{background:var(--ink)}
+.svc-card.dark:hover{background:#1f1c18}
+.sc-tag{
+  font-size:9px;font-weight:500;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--mid);
+  margin-bottom:16px;display:block;
+}
+.svc-card.dark .sc-tag{color:rgba(255,255,255,.3)}
+.sc-name{
+  font-family:var(--serif);font-size:22px;font-weight:500;
+  line-height:1.2;margin-bottom:10px;letter-spacing:-.01em;color:var(--ink);
+}
+.svc-card.dark .sc-name{color:var(--white)}
+.sc-hook{font-size:13px;font-weight:300;line-height:1.75;color:var(--mid);margin-bottom:20px;flex:1}
+.svc-card.dark .sc-hook{color:rgba(255,255,255,.5)}
+.sc-includes{list-style:none;margin-bottom:24px}
+.sc-includes li{
+  font-size:12px;font-weight:300;padding:7px 0;
+  border-bottom:1px solid var(--linen);
+  color:var(--ink);display:flex;gap:10px;
+}
+.svc-card.dark .sc-includes li{border-color:rgba(255,255,255,.08);color:rgba(255,255,255,.7)}
+.sc-includes li::before{content:'—';color:var(--stone);font-size:10px;flex-shrink:0;margin-top:2px}
+.svc-card.dark .sc-includes li::before{color:rgba(255,255,255,.2)}
+.sc-value-note{
+  font-family:var(--serif);font-size:12px;font-style:italic;
+  color:var(--stone);margin-bottom:12px;
+  text-decoration:line-through;opacity:.7;
+}
+.svc-card.dark .sc-value-note{color:rgba(255,255,255,.25)}
+.sc-price{
+  font-family:var(--serif);font-size:32px;font-weight:400;
+  letter-spacing:-.02em;color:var(--ink);
+  margin-bottom:16px;line-height:1;
+}
+.svc-card.dark .sc-price{color:var(--white)}
+.sc-guarantee{
+  font-size:10px;font-weight:300;font-style:italic;
+  color:var(--stone);text-align:center;margin-top:8px;
+}
+.svc-card.dark .sc-guarantee{color:rgba(255,255,255,.25)}
+.sc-badge{
+  position:absolute;top:0;right:0;
+  background:var(--accent);color:var(--white);
+  font-size:9px;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;padding:6px 12px;
+}
+
+/* ── BONUS PILL ────────────────────────────────────── */
+.bonus-pill{
+  display:inline-block;
+  background:var(--ink);color:var(--alt);
+  font-size:9px;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;padding:5px 12px;
+  margin:8px 0 4px;
+}
+.svc-card.dark .bonus-pill{background:rgba(255,255,255,.08);color:var(--alt)}
+
+/* ── VALUE STACK ───────────────────────────────────── */
+.value-stack{border:1px solid var(--warm)}
+.vs-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:11px 18px;border-bottom:1px solid var(--warm);gap:12px;
+}
+.vs-row:last-child{border-bottom:none}
+.vs-row.vs-total{background:var(--ink)}
+.vs-item{font-size:12.5px;font-weight:300;color:var(--ink);flex:1;line-height:1.5}
+.vs-item.vs-bonus{color:var(--mid);font-style:italic}
+.vs-row.vs-total .vs-item{color:var(--white);font-weight:500}
+.vs-price{font-size:12.5px;font-weight:500;color:var(--accent);white-space:nowrap}
+.vs-row.vs-total .vs-price{font-family:var(--serif);font-size:22px;color:var(--alt)}
+
+/* ── GUARANTEE BLOCK ───────────────────────────────── */
+.guarantee-block{
+  background:var(--linen);
+  border-left:3px solid var(--stone);
+  padding:clamp(24px,3.5vw,44px);
+}
+.gb-label{
+  font-size:9px;font-weight:500;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--mid);
+  margin-bottom:12px;display:block;
+}
+.gb-title{
+  font-family:var(--serif);
+  font-size:clamp(18px,2.2vw,26px);
+  font-weight:400;line-height:1.3;color:var(--ink);margin-bottom:10px;
+}
+.gb-title em{font-style:italic}
+.gb-body{font-size:13px;font-weight:300;line-height:1.85;color:var(--mid)}
+
+/* ── FAQ ───────────────────────────────────────────── */
+.faq-item{border-top:1px solid var(--warm);padding:20px 0}
+.faq-item:last-child{border-bottom:1px solid var(--warm)}
+.faq-q{
+  font-family:var(--serif);font-size:18px;font-weight:500;
+  color:var(--ink);margin-bottom:10px;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:flex-start;gap:16px;
+}
+.faq-q::after{
+  content:'+';font-family:var(--sans);font-size:20px;
+  font-weight:300;color:var(--accent);flex-shrink:0;
+}
+.faq-a{font-size:13.5px;font-weight:300;line-height:1.9;color:var(--mid)}
+
+/* ── TESTIMONIAL ───────────────────────────────────── */
+.testimonial{
+  background:var(--white);border:1px solid var(--warm);
+  padding:clamp(24px,3vw,40px);
+}
+.t-quote{
+  font-family:var(--serif);
+  font-size:clamp(16px,2vw,22px);
+  font-weight:300;font-style:italic;line-height:1.6;
+  color:var(--ink);margin-bottom:16px;
+}
+.t-cite{font-size:11px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--stone)}
+
+/* ── PULL QUOTE ────────────────────────────────────── */
+.pull-quote{
+  font-family:var(--serif);
+  font-size:clamp(20px,2.8vw,32px);
+  font-weight:300;font-style:italic;line-height:1.45;
+  color:var(--ink);border-left:2px solid var(--accent);
+  padding-left:24px;
+}
+
+/* ── CTA BAND ──────────────────────────────────────── */
+.cta-band{
+  background:var(--ink);padding:var(--sp) var(--px);
+}
+.cta-band-inner{
+  max-width:var(--mw);margin:0 auto;
+  display:grid;grid-template-columns:1fr auto;
+  gap:48px;align-items:center;
+}
+@media(max-width:640px){
+  .cta-band-inner{grid-template-columns:1fr;gap:28px;text-align:center}
+  .cta-band-btns{justify-content:center}
+}
+.cta-band h2{color:var(--white)}
+.cta-band h2 em{color:rgba(255,255,255,.5)}
+.cta-band-btns{display:flex;flex-direction:column;gap:12px;flex-shrink:0}
+
+/* ── MASONRY GALLERY ───────────────────────────────── */
+.gallery-grid{
+  columns:3 260px;column-gap:3px;
+  padding:0 var(--px) var(--sp);
+}
+.gallery-item{
+  break-inside:avoid;margin-bottom:3px;
+  overflow:hidden;background:var(--linen);
+}
+.gallery-item img{
+  width:100%;display:block;
+  transition:transform .5s ease;
+}
+.gallery-item:hover img{transform:scale(1.03)}
+
+/* ── ABOUT LAYOUT ──────────────────────────────────── */
+.about-grid{
+  display:grid;grid-template-columns:1fr 1.1fr;
+  gap:clamp(40px,7vw,96px);align-items:start;
+}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr}}
+.about-portrait{width:100%;aspect-ratio:3/4;object-fit:cover}
+
+/* ── CONTACT ───────────────────────────────────────── */
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:clamp(40px,7vw,96px);align-items:start;
+}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+.contact-field{margin-bottom:20px}
+.contact-field label{
+  display:block;font-size:10px;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--mid);margin-bottom:7px;
+}
+.contact-field input,
+.contact-field select,
+.contact-field textarea{
+  width:100%;padding:13px 16px;
+  font-family:var(--sans);font-size:13px;font-weight:300;
+  color:var(--ink);background:var(--white);
+  border:1px solid var(--warm);outline:none;
+  transition:border-color .2s;
+}
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus{border-color:var(--mid)}
+.contact-field textarea{height:140px;resize:vertical}
+
+/* ── FOOTER ────────────────────────────────────────── */
+.footer{
+  background:var(--ink);padding:52px var(--px) 32px;
+}
+.footer-grid{
+  max-width:var(--mw);margin:0 auto;
+  display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:40px;margin-bottom:40px;
+}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+.footer-logo img{height:28px;width:auto;filter:none;opacity:0.8;margin-bottom:16px}
+.footer-tagline{font-size:12px;font-weight:300;color:rgba(255,255,255,.4);line-height:1.75;max-width:240px}
+.footer-col h4{
+  font-size:10px;font-weight:500;letter-spacing:.18em;
+  text-transform:uppercase;color:rgba(255,255,255,.35);
+  margin-bottom:16px;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul a{font-size:12px;font-weight:300;color:rgba(255,255,255,.55);transition:color .2s}
+.footer-col ul a:hover{color:var(--white)}
+.footer-bottom{
+  max-width:var(--mw);margin:0 auto;
+  border-top:1px solid rgba(255,255,255,.08);
+  padding-top:24px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+}
+.footer-copy{font-size:11px;font-weight:300;color:rgba(255,255,255,.25)}
+.footer-contact{font-size:12px;font-weight:300;color:rgba(255,255,255,.4)}
+
+/* ── PAGE HERO (inner pages) ───────────────────────── */
+.page-hero{
+  margin-top:64px;background:var(--ink);
+  padding:clamp(52px,8vw,96px) var(--px);
+}
+.page-hero-inner{max-width:var(--mw);margin:0 auto}
+.page-hero h1{color:var(--white);margin-bottom:16px}
+.page-hero p{max-width:560px}
+
+/* ── PRODUCT PAGE HERO ─────────────────────────────── */
+.product-hero{
+  background:var(--ink);
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:480px;margin-top:64px;overflow:hidden;
+}
+@media(max-width:768px){.product-hero{grid-template-columns:1fr}}
+.ph-content{
+  padding:clamp(40px,6vw,80px);
+  display:flex;flex-direction:column;justify-content:center;
+}
+.ph-img{background-size:cover;background-position:center}
+@media(max-width:768px){.ph-img{display:none}}
+
+/* ── UTILITY ───────────────────────────────────────── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px)}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--warm)}
+@media(max-width:700px){.two-col{grid-template-columns:1fr}.three-col{grid-template-columns:1fr}}
+.text-center{text-align:center}
+.text-white{color:var(--white)}
+.mt-4{margin-top:16px}.mt-6{margin-top:24px}.mt-8{margin-top:32px}
+.mt-10{margin-top:40px}.mt-12{margin-top:48px}
+.mb-4{margin-bottom:16px}.mb-6{margin-bottom:24px}.mb-8{margin-bottom:32px}
+.gap-2{gap:8px}.gap-4{gap:16px}.gap-6{gap:24px}
+.page-top{margin-top:64px}
+
+/* ── RESPONSIVE HELPERS ────────────────────────────── */
+@media(max-width:480px){
+  .hide-mobile{display:none}
+  .btn-lg{padding:15px 32px}
+}
+
+</style>
+<style>
+.virt-hero .hb-img{
+  background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/3dfe482e-8c95-495c-9952-e33e8d25c6b2/Erica+Yolevski+Design+Studio+Interior+Design+Virtual+E-Design+Toronto+Midtown+Leaside+Lawrence+Park+Whole+Home+White+Glove+Midtown+Toronto.jpg');
+}
+.svc-detail{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:2px;background:var(--warm);
+  margin-bottom:3px;
+}
+@media(max-width:768px){.svc-detail{grid-template-columns:1fr}}
+.svc-detail-content{background:var(--white);padding:clamp(32px,4vw,60px)}
+.svc-detail-img{background-size:cover;background-position:center;min-height:400px}
+.svc-detail.reverse .svc-detail-content{order:2}
+.svc-detail.reverse .svc-detail-img{order:1}
+@media(max-width:768px){.svc-detail.reverse .svc-detail-content,.svc-detail.reverse .svc-detail-img{order:unset}}
+.svc-detail.dark .svc-detail-content{background:var(--ink)}
+.svc-detail.dark h3{color:var(--white)}
+.svc-detail.dark .body-md{color:rgba(255,255,255,.55)}
+.svc-detail.dark .eyebrow{color:var(--alt)}
+
+.includes-col{list-style:none;margin:20px 0}
+.includes-col li{
+  font-size:13px;font-weight:300;padding:9px 0;
+  border-bottom:1px solid var(--linen);
+  color:var(--ink);display:flex;gap:10px;line-height:1.5;
+}
+.svc-detail.dark .includes-col li{border-color:rgba(255,255,255,.08);color:rgba(255,255,255,.65)}
+.includes-col li::before{content:'—';color:var(--stone);font-size:10px;flex-shrink:0;margin-top:2px}
+.svc-detail.dark .includes-col li::before{color:rgba(255,255,255,.2)}
+.bonus-tag{
+  font-size:9px;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;background:var(--ink);color:var(--alt);
+  display:inline-block;padding:4px 10px;margin:8px 0 4px;
+}
+.svc-detail.dark .bonus-tag{background:rgba(255,255,255,.08)}
+.price-row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:16px 0}
+.price-big{font-family:var(--serif);font-size:44px;font-weight:400;color:var(--ink);line-height:1}
+.svc-detail.dark .price-big{color:var(--white)}
+.price-was{font-size:13px;font-weight:300;color:var(--stone);text-decoration:line-through}
+.price-saving{font-size:11px;font-weight:500;background:var(--accent);color:var(--white);padding:3px 9px}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo"><img src="logo-dark.png" alt="Erica Yolevski Design Studio"></a>
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="room-kits.html">Room Kits</a></li>
+    <li><a href="virtual.html" class="active">Virtual Design</a></li>
+    <li><a href="inperson.html">In-Person</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="contact.html" class="nav-cta">Work With Me</a></li>
+  </ul>
+  <div class="nav-hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-banner virt-hero">
+  <div class="hb-img"></div>
+  <div class="hb-content">
+    <span class="eyebrow" style="color:var(--alt)">Virtual Interior Design · Available Anywhere</span>
+    <h1 class="serif">Professional design.<br><em>No site visits. No hourly rates.<br>No surprises at the end.</em></h1>
+    <p class="body-lg" style="color:rgba(255,255,255,.75)">Three services. Three levels of involvement. One outcome — a home that finally feels intentional, cohesive, and unmistakably yours. All done <em>with you</em>, remotely, wherever you are.</p>
+    <div class="hero-btn-row">
+      <a href="#services" class="btn btn-accent btn-lg">See All Services ↓</a>
+      <a href="contact.html" class="btn btn-white btn-lg">Book a Session</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF BAR -->
+<div class="proof-bar">
+  <div class="proof-stat text-center"><span class="num">$297</span><span class="lbl">Start With a Direction Session</span></div>
+  <div class="proof-stat text-center"><span class="num">48h</span><span class="lbl">Written Plan Delivered</span></div>
+  <div class="proof-stat text-center"><span class="num">10 Days</span><span class="lbl">Full Room Design Delivered</span></div>
+  <div class="proof-stat text-center"><span class="num">90 Day</span><span class="lbl">Satisfaction Guarantee</span></div>
+</div>
+
+<!-- PAIN INTRO -->
+<section class="section" style="background:var(--white)">
+  <div class="section-inner two-col" style="max-width:var(--mw)">
+    <div>
+      <span class="eyebrow">Why virtual design works</span>
+      <h2 class="serif mb-8">You get a professional designer<br>without the <em>professional price tag.</em></h2>
+      <ul class="pain-list">
+        <li>You've been stuck on this room for months. Every time you try to fix it you end up more overwhelmed than when you started.</li>
+        <li>You're about to spend serious money on furniture or a renovation and you need someone to tell you if you're about to make a mistake — before you make it.</li>
+        <li>Traditional in-person design means hourly rates, site visit fees, and final numbers that keep growing. Virtual design is a fixed price. You know exactly what you're paying before you start.</li>
+        <li>You need specific answers for your specific space — not generic advice and a mood board that requires you to figure out everything else yourself.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="pull-quote mb-8">"Most design projects fail not at execution — but because nobody stays in your corner long enough to protect the vision through it. I do."</div>
+      <p class="body-md">Every virtual service here includes follow-through. A written plan you can actually use. A contractor brief your trades can actually read. Access to Erica after delivery so the design does not die between the document and the finished room.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THREE SERVICES -->
+<section id="services">
+
+  <!-- SERVICE 1: DIRECTION SESSION -->
+  <div class="svc-detail">
+    <div class="svc-detail-content">
+      <span class="eyebrow">Service 01</span>
+      <h3 class="serif mb-4">Design Direction<br>Session</h3>
+      <p class="body-md mb-6">One hour. A written action plan. You will know exactly what to do when you hang up — what to buy, what order to do it in, what budget to set, and what mistakes to avoid.</p>
+      <ul class="includes-col">
+        <li><strong>60-minute 1:1 video session</strong> — any room, any scope, any question</li>
+        <li><strong>Pre-session intake form</strong> — I review your space before the call so the entire hour is focused on your situation — not introductions</li>
+        <li><strong>Written action plan within 48 hours</strong> — not notes, a document you keep and implement</li>
+        <li><strong>Budget guidance by category</strong> — specific to your space and style</li>
+        <div class="bonus-tag">Bonus</div>
+        <li><em>Full credit toward any larger service — every dollar spent here applies to the Virtual Room Design or Whole Home System</em></li>
+      </ul>
+      <div class="guarantee-block mt-8" style="margin-top:24px">
+        <span class="gb-label">Guarantee</span>
+        <p class="gb-body">If our session doesn't give you more clarity than you had before it, full refund. No questions. No process.</p>
+      </div>
+      <div class="price-row">
+        <div class="price-big">$297</div>
+      </div>
+      <a href="contact.html" class="btn btn-filled">Book Your Session →</a>
+    </div>
+    <div class="svc-detail-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/f29fa71f-e578-4a8d-8edc-53da6ee4aa66/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Communication+Advice+Lytton+Park+In+Home+Consultation.JPG')"></div>
+  </div>
+
+
+  <!-- JENNIFER REVIEW — Direction Session -->
+  <div style="background:var(--linen);padding:clamp(24px,3vw,40px);border-left:3px solid var(--alt);margin-bottom:3px">
+    <p style="font-family:var(--serif);font-size:clamp(15px,1.8vw,20px);font-weight:300;font-style:italic;line-height:1.65;color:var(--ink);margin-bottom:16px">"The one-hour consult is an incredible value. I figured we'd get through a few questions. We ended up going through an entire floor — paint, furniture, lighting, and flooring recommendations. Erica even went above and beyond to send links afterwards. Before this consult I felt very stuck in my vision and unable to move forward. I now have everything I need to execute a refresh of our space."</p>
+    <div style="display:flex;align-items:center;gap:10px">
+      <span style="color:var(--alt);font-size:14px">★★★★★</span>
+      <span style="font-size:11px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--stone)">Jennifer · Midtown Toronto · Design Direction Session</span>
+    </div>
+  </div>
+
+  <!-- SERVICE 2: VIRTUAL ROOM DESIGN -->
+  <div class="svc-detail reverse">
+    <div class="svc-detail-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/031b794f-0c3e-489f-8970-152fc1207f78/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Living+Room+North+Toronto.jpg')"></div>
+    <div class="svc-detail-content">
+      <span class="eyebrow">Service 02</span>
+      <h3 class="serif mb-4">Virtual Room<br>Design Experience</h3>
+      <p class="body-md mb-6">One room, completely designed, sourced, and documented. Every decision made. Every product found. Ready to execute — for you and your contractor.</p>
+      <ul class="includes-col">
+        <li><strong>Introductory design consult call</strong></li>
+        <li><strong>Full mood board and concept direction</strong></li>
+        <li><strong>2D floor plan with furniture placement</strong></li>
+        <li><strong>Complete sourced shopping list with direct links</strong></li>
+        <li><strong>Paint and finish palette, fully specified</strong></li>
+        <li><strong>Contractor-ready finish brief</strong> — hand it to your painter, done</li>
+        <li><strong>One round of revisions included</strong></li>
+      </ul>
+      <div class="guarantee-block mt-8" style="margin-top:24px">
+        <span class="gb-label">Guarantee</span>
+        <p class="gb-body">If the design package doesn't give you a clear, complete, executable plan — I redo it. Full refund if the revision still doesn't deliver.</p>
+      </div>
+      <div class="price-row">
+        <div class="price-big">$1,497</div>
+      </div>
+      <a href="contact.html" class="btn btn-filled">Begin Your Room →</a>
+      <p class="body-sm mt-4" style="color:var(--mid)">Delivered within 10 business days.</p>
+    </div>
+  </div>
+
+  <!-- SERVICE 3: WHOLE HOME -->
+  <div class="svc-detail dark">
+    <div class="svc-detail-content">
+      <span class="eyebrow">Service 03 — Grand Slam Offer</span>
+      <h3 class="serif mb-4">Virtual Whole Home<br>Design System</h3>
+      <p class="body-md mb-6">Every room. Every decision. Your entire home designed, sourced, and mapped — with the bonuses that ensure it actually gets executed the way it was designed.</p>
+      <ul class="includes-col">
+        <li><strong>Complete whole-home design — every room</strong></li>
+        <li><strong>2D floor plans and layouts per room</strong></li>
+        <li><strong>Full sourced shopping lists with direct links</strong></li>
+        <li><strong>Whole-home paint and finish palette</strong></li>
+        <li><strong>Contractor-ready briefs for every room</strong></li>
+        <li><strong>Prioritised implementation roadmap</strong></li>
+        <div class="bonus-tag">Bonuses Included</div>
+        <li><em>The Confidence Call — full walkthrough before delivery ($297 value)</em></li>
+        <li><em>90-Day Follow-Through Check-Ins — 3 sessions ($297 value)</em></li>
+        <li><em>30-Day Priority Sourcing Hotline ($297 value)</em></li>
+      </ul>
+      <div class="price-row">
+        <div class="price-big">$3,497</div>
+        <div class="price-was">$4,088+ in stated value</div>
+      </div>
+      <a href="contact.html" class="btn btn-white-filled">Claim Your Spot →</a>
+      <p class="body-sm mt-4" style="color:rgba(255,255,255,.3)">Spots limited monthly. 90-day satisfaction guarantee.</p>
+    </div>
+    <div class="svc-detail-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/cbc7dcae-4080-43eb-9dc4-2099ae764904/Erica+Yolevski+Design+Studio+Interior+Design+Virtual+E-Design+Toronto+Midtown+Leaside+Lawrence+Park+Whole+Home+White+Glove+Midtown+Toronto.jpg')"></div>
+  </div>
+
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="section" style="background:var(--off)">
+  <div class="section-inner">
+    <div class="text-center mb-10">
+      <span class="eyebrow">Compare services</span>
+      <h2 class="serif">Which one is right for you?</h2>
+    </div>
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;min-width:600px">
+        <thead>
+          <tr>
+            <th style="padding:14px 16px;text-align:left;font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);border-bottom:1px solid var(--warm);background:var(--linen)">Feature</th>
+            <th style="padding:14px 16px;text-align:center;font-size:11px;font-weight:500;color:var(--ink);border-bottom:1px solid var(--warm);background:var(--linen)">Direction Session<br><span style="font-family:var(--serif);font-size:16px;font-weight:400">$297</span></th>
+            <th style="padding:14px 16px;text-align:center;font-size:11px;font-weight:500;color:var(--ink);border-bottom:1px solid var(--warm);background:var(--linen)">Room Design<br><span style="font-family:var(--serif);font-size:16px;font-weight:400">$1,497</span></th>
+            <th style="padding:14px 16px;text-align:center;font-size:11px;font-weight:500;color:var(--white);border-bottom:1px solid var(--warm);background:var(--ink)">Whole Home System<br><span style="font-family:var(--serif);font-size:16px;font-weight:400;color:var(--alt)">$3,497</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--warm)">
+            <td style="padding:12px 16px;font-size:13px;font-weight:300;color:var(--ink)">Number of rooms</td>
+            <td style="padding:12px 16px;text-align:center;font-size:13px;color:var(--mid)">Any / all discussed</td>
+            <td style="padding:12px 16px;text-align:center;font-size:13px;color:var(--mid)">1 room</td>
+            <td style="padding:12px 16px;text-align:center;font-size:13px;color:var(--ink);font-weight:500;background:rgba(26,23,20,.04)">Entire home</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--warm)">
+            <td style="padding:12px 16px;font-size:13px;font-weight:300;color:var(--ink)">Written action plan</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--accent)">✓</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--accent)">✓</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--accent);background:rgba(26,23,20,.04)">✓</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--warm)">
+            <td style="padding:12px 16px;font-size:13px;font-weight:300;color:var(--ink)">Full mood board</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--stone)">—</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--accent)">✓</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--accent);background:rgba(26,23,20,.04)">✓</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--warm)">
+            <td style="padding:12px 16px;font-size:13px;font-weight:300;color:var(--ink)">Floor plan</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--stone)">—</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--accent)">✓</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--accent);background:rgba(26,23,20,.04)">✓ every room</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--warm)">
+            <td style="padding:12px 16px;font-size:13px;font-weight:300;color:var(--ink)">Sourced shopping list with links</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--stone)">—</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--accent)">✓</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--accent);background:rgba(26,23,20,.04)">✓ every room</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--warm)">
+            <td style="padding:12px 16px;font-size:13px;font-weight:300;color:var(--ink)">Contractor brief</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--stone)">—</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--accent)">✓</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--accent);background:rgba(26,23,20,.04)">✓ every room</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--warm)">
+            <td style="padding:12px 16px;font-size:13px;font-weight:300;color:var(--ink)">90-day follow-through check-ins</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--stone)">—</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--stone)">—</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--accent);background:rgba(26,23,20,.04)">✓ 3 sessions</td>
+          </tr>
+          <tr>
+            <td style="padding:12px 16px;font-size:13px;font-weight:300;color:var(--ink)">30-day sourcing hotline</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--stone)">—</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--stone)">—</td>
+            <td style="padding:12px 16px;text-align:center;color:var(--accent);background:rgba(26,23,20,.04)">✓ 30 days</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="linen-block">
+  <div class="section-inner text-center" style="max-width:760px;margin:0 auto">
+    <div class="testimonial">
+      <p class="t-quote">"She held our hand through the entire process and explained her vision step by step to ensure the finished product would be exactly what we wanted. The results speak for themselves. I honestly believe our home could be pictured in a magazine."</p>
+      <span class="t-cite">— North Toronto Client</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--white)">
+  <div class="section-inner" style="max-width:720px;margin:0 auto">
+    <span class="eyebrow">Virtual Design FAQ</span>
+    <h2 class="serif mb-8">Questions about virtual design.</h2>
+    <div class="faq-item">
+      <div class="faq-q">How does virtual design actually work?</div>
+      <div class="faq-a">You share photos of your space, dimensions, a completed intake questionnaire, and your goals. I design based on these inputs and deliver a complete digital package — mood boards, floor plans, shopping lists, paint palettes, and contractor briefs. Everything you need to execute it yourself. We communicate via video call and email throughout.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can virtual design really work for my space?</div>
+      <div class="faq-a">Yes. I've completed hundreds of rooms virtually. The key is thorough documentation at the intake stage — good photos, accurate dimensions, and a clear brief. I've developed an intake process that captures everything I need to make the right decisions without standing in the room. For spaces with genuinely unusual conditions — challenging natural light, irregular architecture — the in-person services may be a better fit.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What if I start with the Direction Session and then want the full Room Design?</div>
+      <div class="faq-a">The full $297 you paid for the Direction Session is credited toward the Virtual Room Design Experience or the Whole Home Design System. You never pay twice for the same work.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How long does each service take?</div>
+      <div class="faq-a">The Direction Session written plan arrives within 48 hours of your call. The Virtual Room Design Experience is delivered within 10 business days. The Whole Home Design System is typically delivered within 14 to 21 business days depending on the number of rooms in scope.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What happens after I receive my design?</div>
+      <div class="faq-a">For the Room Design, you have a 30-day email follow-up window for questions. For the Whole Home System, you have three 90-day check-in sessions and a 30-day sourcing hotline. I support the design through the execution phase — not just deliver and disappear.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-band-inner">
+    <div>
+      <span class="eyebrow eyebrow-light">Start today</span>
+      <h2 class="serif">Stop stalling on your home.<br><em>Pick a path and begin.</em></h2>
+    </div>
+    <div class="cta-band-btns">
+      <a href="contact.html" class="btn btn-accent btn-lg">Book a Direction Session →</a>
+      <a href="inperson.html" class="btn btn-white btn-lg">Want In-Person? →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><div class="footer-logo"><img src="logo-white.png" alt="Erica Yolevski Design Studio"></a><p class="footer-tagline">Timeless interior design for Midtown Toronto homes and beyond.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="room-kits.html">Designer Room Kits</a></li><li><a href="virtual.html">Virtual Design</a></li><li><a href="inperson.html">In-Person Design</a></li></ul></div>
+    <div class="footer-col"><h4>Studio</h4><ul><li><a href="about.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:erica@yolevski.com">erica@yolevski.com</a></li><li><a href="tel:4167320838">(416) 732-0838</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span class="footer-copy">© 2025 Erica Yolevski Design Studio</span><span class="footer-contact">Virtual Services Available Worldwide</span></div>
+</footer>
+</body>
+</html>

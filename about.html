@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Erica Yolevski — Interior Designer Toronto</title>
+<style>
+/* ═══════════════════════════════════════════════════════
+   ERICA YOLEVSKI DESIGN STUDIO — SHARED STYLESHEET v2
+   Hormozi-method: clear hierarchy, conversion-first,
+   editorially beautiful, zero fluff
+═══════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap');
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+
+:root{
+  /* brand */
+  --ink:    #1a1714;
+  --warm:   #e8dfd3;
+  --linen:  #f1ece4;
+  --stone:  #c8bfb2;
+  --mid:    #8a8178;
+  --accent: #8b6f4e;
+  --alt:    #c4a882;
+  --white:  #ffffff;
+  --off:    #f9f7f4;
+  --dark2:  #221e1b;
+  /* type */
+  --serif:  'Cormorant Garamond',Georgia,serif;
+  --sans:   'Jost',sans-serif;
+  /* layout */
+  --px:     clamp(20px,5vw,72px);
+  --sp:     clamp(56px,7vw,104px);
+  --mw:     1160px;
+}
+
+body{
+  font-family:var(--sans);
+  background:var(--off);
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+}
+
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+
+/* ── NAV ───────────────────────────────────────────── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--warm);
+  height:64px;
+  display:flex;align-items:center;
+  justify-content:space-between;
+  padding:0 var(--px);
+}
+.nav-logo{display:flex;align-items:center}
+.nav-logo img{height:32px;width:auto}
+.nav-menu{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-menu a{
+  font-size:11px;font-weight:400;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--mid);transition:color .2s;
+}
+.nav-menu a:hover,.nav-menu a.active{color:var(--ink)}
+.nav-cta{
+  font-size:11px;font-weight:500;
+  letter-spacing:.12em;text-transform:uppercase;
+  background:var(--ink);color:var(--white)!important;
+  padding:9px 22px;transition:background .2s!important;
+}
+.nav-cta:hover{background:var(--accent)!important}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--ink)}
+@media(max-width:768px){
+  .nav-menu{display:none}
+  .nav-hamburger{display:flex}
+}
+
+/* ── REUSABLE LAYOUT ───────────────────────────────── */
+.container{max-width:var(--mw);margin:0 auto;padding:0 var(--px)}
+.page-pad{padding-top:var(--sp);padding-bottom:var(--sp)}
+.section{padding:var(--sp) var(--px)}
+.section-inner{max-width:var(--mw);margin:0 auto}
+
+/* ── TYPE SCALE ────────────────────────────────────── */
+.eyebrow{
+  font-size:10px;font-weight:500;
+  letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:14px;display:block;
+}
+.eyebrow-light{color:rgba(255,255,255,.55)}
+
+h1.serif,h2.serif,h3.serif{
+  font-family:var(--serif);font-weight:400;line-height:1.1;
+  letter-spacing:-.01em;
+}
+h1.serif{font-size:clamp(36px,5.5vw,68px)}
+h2.serif{font-size:clamp(28px,3.8vw,48px)}
+h3.serif{font-size:clamp(20px,2.5vw,30px)}
+h1.serif em,h2.serif em,h3.serif em{font-style:italic}
+
+.body-lg{font-size:clamp(15px,1.6vw,18px);font-weight:300;line-height:1.85;color:var(--mid)}
+.body-md{font-size:14px;font-weight:300;line-height:1.85;color:var(--mid)}
+.body-sm{font-size:13px;font-weight:300;line-height:1.8;color:var(--mid)}
+
+/* ── BUTTONS ───────────────────────────────────────── */
+.btn{
+  display:inline-block;
+  font-size:11px;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:14px 36px;
+  border:1.5px solid var(--ink);color:var(--ink);
+  background:transparent;cursor:pointer;
+  transition:all .2s;text-align:center;
+}
+.btn:hover{background:var(--ink);color:var(--white)}
+.btn-filled{background:var(--ink);color:var(--white)}
+.btn-filled:hover{background:var(--accent)}
+.btn-accent{background:var(--accent);color:var(--white);border-color:var(--accent)}
+.btn-accent:hover{background:var(--alt);border-color:var(--alt)}
+.btn-white{border-color:rgba(255,255,255,.4);color:var(--white)}
+.btn-white:hover{background:rgba(255,255,255,.1);border-color:var(--white)}
+.btn-white-filled{background:var(--white);color:var(--ink);border-color:var(--white)}
+.btn-white-filled:hover{background:var(--linen)}
+.btn-lg{padding:17px 44px;font-size:12px}
+.btn-sm{padding:10px 24px;font-size:10px}
+
+/* ── DIVIDERS ──────────────────────────────────────── */
+.rule{border:none;border-top:1px solid var(--warm)}
+.rule-accent{border-color:var(--accent)}
+
+/* ── HERO BANNER ───────────────────────────────────── */
+.hero-banner{
+  margin-top:64px;position:relative;
+  min-height:clamp(500px,65vw,720px);
+  display:flex;align-items:flex-end;overflow:hidden;
+}
+.hero-banner .hb-img{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+}
+.hero-banner .hb-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(26,23,20,.72) 0%,rgba(26,23,20,.15) 65%);
+}
+.hero-banner .hb-content{
+  position:relative;z-index:2;
+  padding:clamp(32px,5vw,72px);
+  max-width:820px;
+}
+.hero-banner .hb-content h1{color:var(--white);margin-bottom:20px}
+.hero-banner .hb-content p{margin-bottom:32px;max-width:540px}
+.hero-btn-row{display:flex;gap:14px;flex-wrap:wrap}
+
+/* ── PROOF BAR ─────────────────────────────────────── */
+.proof-bar{
+  background:var(--ink);
+  padding:28px var(--px);
+  display:flex;justify-content:center;
+  gap:clamp(24px,5vw,72px);flex-wrap:wrap;
+}
+.proof-stat .num{
+  font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);
+  font-weight:400;color:var(--alt);display:block;line-height:1;
+  margin-bottom:5px;
+}
+.proof-stat .lbl{
+  font-size:10px;font-weight:400;letter-spacing:.16em;
+  text-transform:uppercase;color:rgba(255,255,255,.4);
+}
+
+/* ── DARK BLOCK ────────────────────────────────────── */
+.dark-block{background:var(--ink);padding:var(--sp) var(--px)}
+.dark-block h2{color:var(--white)}
+.dark-block .body-lg,.dark-block .body-md{color:rgba(255,255,255,.6)}
+.dark-block::before-accent{
+  content:'';position:absolute;left:0;top:0;
+  width:4px;height:100%;background:var(--accent);
+}
+
+/* ── LINEN BLOCK ───────────────────────────────────── */
+.linen-block{background:var(--linen);padding:var(--sp) var(--px)}
+
+/* ── PAIN LIST ─────────────────────────────────────── */
+.pain-list{list-style:none;display:flex;flex-direction:column;gap:16px}
+.pain-list li{
+  font-size:15px;font-weight:300;line-height:1.8;
+  color:var(--ink);padding-left:22px;position:relative;
+}
+.pain-list li::before{
+  content:'—';position:absolute;left:0;
+  color:var(--accent);font-size:12px;top:3px;
+}
+
+/* ── VALUE GRID ────────────────────────────────────── */
+.value-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:2px;background:var(--warm);
+}
+@media(max-width:600px){.value-grid{grid-template-columns:1fr}}
+.vg-cell{background:var(--white);padding:28px 24px}
+.vg-cell.dark{background:var(--ink)}
+.vg-cell.linen{background:var(--linen)}
+.vg-arrow{font-size:20px;color:var(--accent);margin-bottom:10px;display:block}
+.vg-title{font-family:var(--serif);font-size:18px;font-weight:500;color:var(--ink);margin-bottom:8px}
+.vg-cell.dark .vg-title{color:var(--white)}
+.vg-body{font-size:13px;font-weight:300;line-height:1.75;color:var(--mid)}
+.vg-cell.dark .vg-body{color:rgba(255,255,255,.5)}
+
+/* ── SERVICE CARDS GRID ────────────────────────────── */
+.svc-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2px;background:var(--warm);
+}
+.svc-card{
+  background:var(--white);
+  padding:clamp(28px,3vw,44px);
+  display:flex;flex-direction:column;
+  transition:background .22s;position:relative;
+}
+.svc-card:hover{background:var(--linen)}
+.svc-card.dark{background:var(--ink)}
+.svc-card.dark:hover{background:#1f1c18}
+.sc-tag{
+  font-size:9px;font-weight:500;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--mid);
+  margin-bottom:16px;display:block;
+}
+.svc-card.dark .sc-tag{color:rgba(255,255,255,.3)}
+.sc-name{
+  font-family:var(--serif);font-size:22px;font-weight:500;
+  line-height:1.2;margin-bottom:10px;letter-spacing:-.01em;color:var(--ink);
+}
+.svc-card.dark .sc-name{color:var(--white)}
+.sc-hook{font-size:13px;font-weight:300;line-height:1.75;color:var(--mid);margin-bottom:20px;flex:1}
+.svc-card.dark .sc-hook{color:rgba(255,255,255,.5)}
+.sc-includes{list-style:none;margin-bottom:24px}
+.sc-includes li{
+  font-size:12px;font-weight:300;padding:7px 0;
+  border-bottom:1px solid var(--linen);
+  color:var(--ink);display:flex;gap:10px;
+}
+.svc-card.dark .sc-includes li{border-color:rgba(255,255,255,.08);color:rgba(255,255,255,.7)}
+.sc-includes li::before{content:'—';color:var(--stone);font-size:10px;flex-shrink:0;margin-top:2px}
+.svc-card.dark .sc-includes li::before{color:rgba(255,255,255,.2)}
+.sc-value-note{
+  font-family:var(--serif);font-size:12px;font-style:italic;
+  color:var(--stone);margin-bottom:12px;
+  text-decoration:line-through;opacity:.7;
+}
+.svc-card.dark .sc-value-note{color:rgba(255,255,255,.25)}
+.sc-price{
+  font-family:var(--serif);font-size:32px;font-weight:400;
+  letter-spacing:-.02em;color:var(--ink);
+  margin-bottom:16px;line-height:1;
+}
+.svc-card.dark .sc-price{color:var(--white)}
+.sc-guarantee{
+  font-size:10px;font-weight:300;font-style:italic;
+  color:var(--stone);text-align:center;margin-top:8px;
+}
+.svc-card.dark .sc-guarantee{color:rgba(255,255,255,.25)}
+.sc-badge{
+  position:absolute;top:0;right:0;
+  background:var(--accent);color:var(--white);
+  font-size:9px;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;padding:6px 12px;
+}
+
+/* ── BONUS PILL ────────────────────────────────────── */
+.bonus-pill{
+  display:inline-block;
+  background:var(--ink);color:var(--alt);
+  font-size:9px;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;padding:5px 12px;
+  margin:8px 0 4px;
+}
+.svc-card.dark .bonus-pill{background:rgba(255,255,255,.08);color:var(--alt)}
+
+/* ── VALUE STACK ───────────────────────────────────── */
+.value-stack{border:1px solid var(--warm)}
+.vs-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:11px 18px;border-bottom:1px solid var(--warm);gap:12px;
+}
+.vs-row:last-child{border-bottom:none}
+.vs-row.vs-total{background:var(--ink)}
+.vs-item{font-size:12.5px;font-weight:300;color:var(--ink);flex:1;line-height:1.5}
+.vs-item.vs-bonus{color:var(--mid);font-style:italic}
+.vs-row.vs-total .vs-item{color:var(--white);font-weight:500}
+.vs-price{font-size:12.5px;font-weight:500;color:var(--accent);white-space:nowrap}
+.vs-row.vs-total .vs-price{font-family:var(--serif);font-size:22px;color:var(--alt)}
+
+/* ── GUARANTEE BLOCK ───────────────────────────────── */
+.guarantee-block{
+  background:var(--linen);
+  border-left:3px solid var(--stone);
+  padding:clamp(24px,3.5vw,44px);
+}
+.gb-label{
+  font-size:9px;font-weight:500;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--mid);
+  margin-bottom:12px;display:block;
+}
+.gb-title{
+  font-family:var(--serif);
+  font-size:clamp(18px,2.2vw,26px);
+  font-weight:400;line-height:1.3;color:var(--ink);margin-bottom:10px;
+}
+.gb-title em{font-style:italic}
+.gb-body{font-size:13px;font-weight:300;line-height:1.85;color:var(--mid)}
+
+/* ── FAQ ───────────────────────────────────────────── */
+.faq-item{border-top:1px solid var(--warm);padding:20px 0}
+.faq-item:last-child{border-bottom:1px solid var(--warm)}
+.faq-q{
+  font-family:var(--serif);font-size:18px;font-weight:500;
+  color:var(--ink);margin-bottom:10px;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:flex-start;gap:16px;
+}
+.faq-q::after{
+  content:'+';font-family:var(--sans);font-size:20px;
+  font-weight:300;color:var(--accent);flex-shrink:0;
+}
+.faq-a{font-size:13.5px;font-weight:300;line-height:1.9;color:var(--mid)}
+
+/* ── TESTIMONIAL ───────────────────────────────────── */
+.testimonial{
+  background:var(--white);border:1px solid var(--warm);
+  padding:clamp(24px,3vw,40px);
+}
+.t-quote{
+  font-family:var(--serif);
+  font-size:clamp(16px,2vw,22px);
+  font-weight:300;font-style:italic;line-height:1.6;
+  color:var(--ink);margin-bottom:16px;
+}
+.t-cite{font-size:11px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--stone)}
+
+/* ── PULL QUOTE ────────────────────────────────────── */
+.pull-quote{
+  font-family:var(--serif);
+  font-size:clamp(20px,2.8vw,32px);
+  font-weight:300;font-style:italic;line-height:1.45;
+  color:var(--ink);border-left:2px solid var(--accent);
+  padding-left:24px;
+}
+
+/* ── CTA BAND ──────────────────────────────────────── */
+.cta-band{
+  background:var(--ink);padding:var(--sp) var(--px);
+}
+.cta-band-inner{
+  max-width:var(--mw);margin:0 auto;
+  display:grid;grid-template-columns:1fr auto;
+  gap:48px;align-items:center;
+}
+@media(max-width:640px){
+  .cta-band-inner{grid-template-columns:1fr;gap:28px;text-align:center}
+  .cta-band-btns{justify-content:center}
+}
+.cta-band h2{color:var(--white)}
+.cta-band h2 em{color:rgba(255,255,255,.5)}
+.cta-band-btns{display:flex;flex-direction:column;gap:12px;flex-shrink:0}
+
+/* ── MASONRY GALLERY ───────────────────────────────── */
+.gallery-grid{
+  columns:3 260px;column-gap:3px;
+  padding:0 var(--px) var(--sp);
+}
+.gallery-item{
+  break-inside:avoid;margin-bottom:3px;
+  overflow:hidden;background:var(--linen);
+}
+.gallery-item img{
+  width:100%;display:block;
+  transition:transform .5s ease;
+}
+.gallery-item:hover img{transform:scale(1.03)}
+
+/* ── ABOUT LAYOUT ──────────────────────────────────── */
+.about-grid{
+  display:grid;grid-template-columns:1fr 1.1fr;
+  gap:clamp(40px,7vw,96px);align-items:start;
+}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr}}
+.about-portrait{width:100%;aspect-ratio:3/4;object-fit:cover}
+
+/* ── CONTACT ───────────────────────────────────────── */
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:clamp(40px,7vw,96px);align-items:start;
+}
+@media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+.contact-field{margin-bottom:20px}
+.contact-field label{
+  display:block;font-size:10px;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--mid);margin-bottom:7px;
+}
+.contact-field input,
+.contact-field select,
+.contact-field textarea{
+  width:100%;padding:13px 16px;
+  font-family:var(--sans);font-size:13px;font-weight:300;
+  color:var(--ink);background:var(--white);
+  border:1px solid var(--warm);outline:none;
+  transition:border-color .2s;
+}
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus{border-color:var(--mid)}
+.contact-field textarea{height:140px;resize:vertical}
+
+/* ── FOOTER ────────────────────────────────────────── */
+.footer{
+  background:var(--ink);padding:52px var(--px) 32px;
+}
+.footer-grid{
+  max-width:var(--mw);margin:0 auto;
+  display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:40px;margin-bottom:40px;
+}
+@media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
+.footer-logo img{height:28px;width:auto;filter:none;opacity:0.8;margin-bottom:16px}
+.footer-tagline{font-size:12px;font-weight:300;color:rgba(255,255,255,.4);line-height:1.75;max-width:240px}
+.footer-col h4{
+  font-size:10px;font-weight:500;letter-spacing:.18em;
+  text-transform:uppercase;color:rgba(255,255,255,.35);
+  margin-bottom:16px;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul a{font-size:12px;font-weight:300;color:rgba(255,255,255,.55);transition:color .2s}
+.footer-col ul a:hover{color:var(--white)}
+.footer-bottom{
+  max-width:var(--mw);margin:0 auto;
+  border-top:1px solid rgba(255,255,255,.08);
+  padding-top:24px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+}
+.footer-copy{font-size:11px;font-weight:300;color:rgba(255,255,255,.25)}
+.footer-contact{font-size:12px;font-weight:300;color:rgba(255,255,255,.4)}
+
+/* ── PAGE HERO (inner pages) ───────────────────────── */
+.page-hero{
+  margin-top:64px;background:var(--ink);
+  padding:clamp(52px,8vw,96px) var(--px);
+}
+.page-hero-inner{max-width:var(--mw);margin:0 auto}
+.page-hero h1{color:var(--white);margin-bottom:16px}
+.page-hero p{max-width:560px}
+
+/* ── PRODUCT PAGE HERO ─────────────────────────────── */
+.product-hero{
+  background:var(--ink);
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:480px;margin-top:64px;overflow:hidden;
+}
+@media(max-width:768px){.product-hero{grid-template-columns:1fr}}
+.ph-content{
+  padding:clamp(40px,6vw,80px);
+  display:flex;flex-direction:column;justify-content:center;
+}
+.ph-img{background-size:cover;background-position:center}
+@media(max-width:768px){.ph-img{display:none}}
+
+/* ── UTILITY ───────────────────────────────────────── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px)}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--warm)}
+@media(max-width:700px){.two-col{grid-template-columns:1fr}.three-col{grid-template-columns:1fr}}
+.text-center{text-align:center}
+.text-white{color:var(--white)}
+.mt-4{margin-top:16px}.mt-6{margin-top:24px}.mt-8{margin-top:32px}
+.mt-10{margin-top:40px}.mt-12{margin-top:48px}
+.mb-4{margin-bottom:16px}.mb-6{margin-bottom:24px}.mb-8{margin-bottom:32px}
+.gap-2{gap:8px}.gap-4{gap:16px}.gap-6{gap:24px}
+.page-top{margin-top:64px}
+
+/* ── RESPONSIVE HELPERS ────────────────────────────── */
+@media(max-width:480px){
+  .hide-mobile{display:none}
+  .btn-lg{padding:15px 32px}
+}
+
+</style>
+<style>
+.about-hero-img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--warm)}
+@media(max-width:640px){.values-grid{grid-template-columns:1fr}}
+.value-block{background:var(--white);padding:32px 28px;transition:background .2s}
+.value-block:hover{background:var(--linen)}
+.v-num{font-family:var(--serif);font-size:36px;font-weight:300;font-style:italic;color:var(--alt);display:block;margin-bottom:14px;line-height:1}
+.v-title{font-family:var(--serif);font-size:18px;font-weight:500;color:var(--ink);margin-bottom:8px}
+.v-desc{font-size:13px;font-weight:300;line-height:1.75;color:var(--mid)}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-logo"><img src="logo-dark.png" alt="Erica Yolevski Design Studio"></a>
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li><li><a href="room-kits.html">Room Kits</a></li>
+    <li><a href="virtual.html">Virtual Design</a></li><li><a href="inperson.html">In-Person</a></li>
+    <li><a href="gallery.html">Gallery</a></li><li><a href="about.html" class="active">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Work With Me</a></li>
+  </ul>
+  <div class="nav-hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow" style="color:var(--alt)">About</span>
+    <h1 class="serif text-white">Design rooted in <em>la bella figura.</em></h1>
+    <p class="body-lg" style="color:rgba(255,255,255,.55);margin-top:12px">The Italian idea that when you surround yourself with beauty, you feel it. That is the principle behind every room I design.</p>
+  </div>
+</div>
+
+<!-- ABOUT BODY -->
+<section class="section" style="background:var(--white)">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div>
+        <img class="about-portrait" src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/393af6ff-4c32-4578-b76d-a7d53ecad244/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Living+Room+North+Toronto+Homepage+About+Lytton+Me.jpg" alt="Erica Yolevski">
+        <div class="testimonial mt-8">
+          <p class="t-quote">"I honestly believe our home could be pictured in a magazine. The results speak for themselves."</p>
+          <span class="t-cite">— North Toronto Client</span>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">About Erica</span>
+        <h2 class="serif mb-8">I live in Midtown Toronto.<br><em>I design for how families actually live.</em></h2>
+        <p class="body-md mb-6">I live in Lytton Park with my husband and our two boys. Life at home is wonderfully busy — school runs, family dinners, the ordinary rhythms of a full household. It is easy for a home to become a place you manage rather than one you actually love being in.</p>
+        <p class="body-md mb-6"><strong style="color:var(--ink);font-weight:500">I believe it does not have to be that way.</strong> Your home should be the place that helps you slow down, recharge, and feel proud every single day. Not because it is perfect — because it is yours. Layered, specific, full of the things that matter to your family.</p>
+        <hr class="rule" style="margin:28px 0">
+        <p class="body-md mb-6">Before I was a designer, I was a person who noticed everything. The proportion of a doorframe. The way afternoon light moves through a west-facing room. The difference between a sofa that photographs beautifully and one that you actually sink into at the end of a long day.</p>
+        <p class="body-md mb-8">That attention to detail has never left. It drives the way I work — slowly, specifically, always with the long view in mind. <strong style="color:var(--ink);font-weight:500">Not what this room looks like on a Tuesday in April. What it feels like on a Sunday morning in ten years.</strong></p>
+        <a href="contact.html" class="btn btn-filled">Work With Me →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BELLA FIGURA -->
+<section class="linen-block">
+  <div class="section-inner two-col" style="max-width:var(--mw)">
+    <div>
+      <img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/8d9f643e-2b0a-4857-8968-0d704b354d6a/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Living+Room+North+Toronto+About+Me.jpg" alt="Erica" style="width:100%;object-fit:cover;aspect-ratio:4/3">
+    </div>
+    <div>
+      <span class="eyebrow">The philosophy</span>
+      <h2 class="serif mb-8"><em>La Bella Figura</em> —<br>the heart of the work.</h2>
+      <p class="body-md mb-6">Everything I do is about one thing — making you feel something the moment you walk in. My guiding principle is the Italian idea of la bella figura. When you surround yourself with beauty, you feel it too.</p>
+      <p class="body-md mb-6">This is not about expensive things. It is about <strong style="color:var(--ink);font-weight:500">chosen things</strong>. Pieces with provenance. Rooms with proportions that feel right before you know why. Colour that reads differently at noon than at dusk.</p>
+      <p class="body-md">Trends fade quickly. Timeless design lasts a lifetime. When you invest your time, energy, and money into your home, you deserve results that still feel beautiful ten years from now.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SIX VALUES -->
+<section class="section" style="background:var(--off)">
+  <div class="section-inner">
+    <div class="text-center mb-10">
+      <span class="eyebrow">What I believe</span>
+      <h2 class="serif">Six principles behind <em>every project.</em></h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-block"><span class="v-num">01</span><div class="v-title">Timeless over trending</div><div class="v-desc">Trends are seasonal. Great design is not. Every choice is made with the ten-year view in mind.</div></div>
+      <div class="value-block"><span class="v-num">02</span><div class="v-title">Character over catalogue</div><div class="v-desc">Rooms that feel alive were not assembled from a single source. They were composed over time, with intention.</div></div>
+      <div class="value-block"><span class="v-num">03</span><div class="v-title">Quality that compounds</div><div class="v-desc">A well-made room grows more beautiful as life happens inside it. Quality is economy over time.</div></div>
+      <div class="value-block"><span class="v-num">04</span><div class="v-title">Rooms that tell a story</div><div class="v-desc">Every home has a story. The best design makes it legible — to the family living there, and to anyone who walks through the door.</div></div>
+      <div class="value-block"><span class="v-num">05</span><div class="v-title">Designed for real life</div><div class="v-desc">Beauty that cannot survive a Tuesday evening with children is not beauty — it is a stage set. Every space must hold actual life.</div></div>
+      <div class="value-block"><span class="v-num">06</span><div class="v-title">Detail as the differentiator</div><div class="v-desc">The room people cannot stop talking about is never the most expensive room. It is the most considered one.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-band-inner">
+    <div>
+      <span class="eyebrow eyebrow-light">Let's work together</span>
+      <h2 class="serif">Ready to build a home<br><em>worth coming back to?</em></h2>
+    </div>
+    <div class="cta-band-btns">
+      <a href="contact.html" class="btn btn-white-filled btn-lg">Get in Touch</a>
+      <a href="virtual.html" class="btn btn-white btn-lg">See Services →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><div class="footer-logo"><img src="logo-white.png" alt="Erica Yolevski"></div><p class="footer-tagline">Timeless interior design for Midtown Toronto homes and beyond.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="room-kits.html">Room Kits</a></li><li><a href="virtual.html">Virtual Design</a></li><li><a href="inperson.html">In-Person</a></li></ul></div>
+    <div class="footer-col"><h4>Studio</h4><ul><li><a href="about.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:erica@yolevski.com">erica@yolevski.com</a></li><li><a href="tel:4167320838">(416) 732-0838</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span class="footer-copy">© 2025 Erica Yolevski Design Studio</span></div>
+</footer>
+</body>
+</html>
