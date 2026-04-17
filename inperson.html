@@ -148,7 +148,7 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
 }
 .hero-banner .hb-img::after{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(26,23,20,.72) 0%,rgba(26,23,20,.15) 65%);
+  background:linear-gradient(to top,rgba(10,8,6,0.88) 0%,rgba(10,8,6,0.65) 45%,rgba(10,8,6,0.38) 100%);
 }
 .hero-banner .hb-content{
   position:relative;z-index:2;
@@ -531,19 +531,19 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
   content:'';position:absolute;inset:0;
   background:linear-gradient(
     to top,
-    rgba(10,8,6,0.82) 0%,
-    rgba(10,8,6,0.52) 45%,
-    rgba(10,8,6,0.28) 100%
+    rgba(10,8,6,0.88) 0%,
+    rgba(10,8,6,0.65) 40%,
+    rgba(10,8,6,0.42) 100%
   );
 }
 .hero-banner .hb-content .eyebrow{
-  color:rgba(255,255,255,0.9)!important;
-  text-shadow:0 1px 3px rgba(0,0,0,0.5);
+  color:rgba(255,255,255,0.95)!important;
+  text-shadow:none;
   font-weight:500;
 }
 .hero-banner h1,.hero-banner h2,.hero-banner h3,
 .hero-banner p,.hero-banner .body-lg{
-  text-shadow:0 1px 4px rgba(0,0,0,0.35);
+  text-shadow:none;
 }
 /* page-hero (inner pages) */
 .page-hero{
@@ -585,7 +585,7 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
   <div class="hb-content" style="text-align:center;width:100%;display:flex;flex-direction:column;align-items:center">
     <span class="eyebrow" style="color:var(--alt)">In-Person Design · Midtown Toronto</span>
     <h1 class="serif">White-glove design, <em>completely done for you.</em></h1>
-    <p class="body-lg" style="color:rgba(255,255,255,.75)">Some decisions cannot be made from a screen. For those, I come to you.</p><p style="font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:12px">Done FOR you — white-glove full service</p>
+    <p class="body-lg" style="color:rgba(255,255,255,.92)">Some decisions cannot be made from a screen. For those, I come to you.</p><p style="font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:12px">Done FOR you — white-glove full service</p>
     <div class="hero-btn-row">
       <a href="#services" class="btn btn-accent btn-lg">See Services ↓</a>
       <a href="contact.html" class="btn btn-white btn-lg">Book In-Person</a>
@@ -643,68 +643,102 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
 </section>
 
 <!-- SERVICES -->
-<section id="services">
+<section id="services" style="background:var(--off);padding:var(--sp) var(--px)">
+  <div style="max-width:var(--mw);margin:0 auto">
 
-  <!-- SERVICE 1: IN-PERSON ROOM -->
-  <div class="svc-detail">
-    <div class="svc-detail-content">
-      <div class="badge-exclusive">Midtown Toronto Only</div>
-      <span class="eyebrow">Service 01</span>
-      <h3 class="serif mb-4">In-Person Room Design</h3>
-      <p class="body-md mb-6">One room. Completely handled. I come to your home, assess the space in person, develop the full design direction on-site, and follow through until the room looks exactly the way you imagined it.</p>
-      <ul class="includes-col">
-        <li><strong>Multiple on-site visits</strong> — I come to you, as many times as the project needs</li>
-        <li><strong>Complete room concept developed in your actual space</strong></li>
-        <li><strong>Full mood board and complete sourced shopping list</strong></li>
-        <li><strong>In-context paint and finish palette</strong> — colours chosen under your actual light</li>
-        <li><strong>Furniture layout and traffic flow plan</strong></li>
-        <li><strong>Contractor-ready finish brief for all trades</strong></li>
-        <li><strong>Present for deliveries and installations</strong> — so nothing goes wrong on site</li>
-        <li><strong>Ongoing support until the room is complete</strong></li>
-      </ul>
-      <div class="guarantee-block" style="margin-top:24px">
-        <span class="gb-label">My Promise</span>
-        <p class="gb-body">I revise and revisit — at no extra charge — until you love the result. This is a white-glove service. You should not have to chase me, wonder what comes next, or manage any part of this yourself.</p>
+    <style>
+    .ip-cards{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--warm)}
+    @media(max-width:768px){.ip-cards{grid-template-columns:1fr}}
+    .ip-card{background:var(--white);display:flex;flex-direction:column;overflow:hidden;transition:background .2s;position:relative}
+    .ip-card:hover{background:var(--linen)}
+    .ip-card.dark-card{background:var(--ink)}
+    .ip-card.dark-card:hover{background:#1f1c18}
+    .ip-card-img{width:100%;aspect-ratio:16/9;background-size:cover;background-position:center;flex-shrink:0}
+    .ip-card-body{padding:28px 28px 24px;display:flex;flex-direction:column;flex:1}
+    .ip-card .sc-tag{font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;display:block}
+    .ip-card.dark-card .sc-tag{color:rgba(255,255,255,.3)}
+    .ip-card h3{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--ink);margin-bottom:10px;line-height:1.2;letter-spacing:-.01em}
+    .ip-card.dark-card h3{color:var(--white)}
+    .ip-card .hook{font-size:13px;font-weight:300;line-height:1.75;color:var(--mid);margin-bottom:16px}
+    .ip-card.dark-card .hook{color:rgba(255,255,255,.5)}
+    .ip-includes{list-style:none;margin-bottom:16px;border-top:1px solid var(--linen);padding-top:12px}
+    .ip-card.dark-card .ip-includes{border-color:rgba(255,255,255,.08)}
+    .ip-includes li{font-size:12px;font-weight:300;color:var(--mid);padding:5px 0;border-bottom:1px solid var(--linen);display:flex;gap:8px;line-height:1.4}
+    .ip-card.dark-card .ip-includes li{color:rgba(255,255,255,.55);border-color:rgba(255,255,255,.06)}
+    .ip-includes li::before{content:"—";color:var(--stone);font-size:10px;flex-shrink:0;margin-top:2px}
+    .ip-card.dark-card .ip-includes li::before{color:rgba(255,255,255,.2)}
+    .ip-bonus-tag{font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;background:var(--ink);color:var(--alt);display:inline-block;padding:4px 10px;margin:8px 0 4px}
+    .ip-card.dark-card .ip-bonus-tag{background:rgba(255,255,255,.08)}
+    .ip-price-row{display:flex;align-items:baseline;gap:10px;margin-bottom:16px;margin-top:auto;padding-top:12px}
+    .ip-price{font-family:var(--serif);font-size:36px;font-weight:400;color:var(--ink);line-height:1}
+    .ip-card.dark-card .ip-price{color:var(--white)}
+    .ip-promise{font-size:10px;font-style:italic;color:var(--stone);margin-bottom:14px}
+    .ip-card.dark-card .ip-promise{color:rgba(255,255,255,.25)}
+    .ip-badge{position:absolute;top:0;right:0;background:var(--accent);color:var(--white);font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px}
+    </style>
+
+    <div class="ip-cards">
+
+      <!-- SERVICE 1: IN-PERSON ROOM -->
+      <div class="ip-card">
+        <div class="ip-card-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/2658fa0b-6089-42a1-80dc-8a1e9208fe77/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Midtown+Toronto+Lytton+Lawrence+Park.jpg')"></div>
+        <div class="ip-card-body">
+          <span class="sc-tag">Done For You · Midtown Toronto</span>
+          <h3>In-Person Room Design</h3>
+          <p class="hook">I come to your home. Multiple on-site visits. Every decision made in your actual space — your light, your proportions, your pieces. Completely handled for you.</p>
+          <ul class="ip-includes">
+            <li>Multiple on-site visits — as many as needed</li>
+            <li>Complete room concept developed in your space</li>
+            <li>Full mood board + complete sourced shopping list</li>
+            <li>In-context paint and finish palette</li>
+            <li>Furniture layout and traffic flow plan</li>
+            <li>Contractor-ready brief for all trades</li>
+            <li>Present for deliveries and installations</li>
+            <li>Ongoing support until the room is complete</li>
+          </ul>
+          <p class="ip-promise">I revise at no extra charge until you love the result.</p>
+          <div class="ip-price-row">
+            <div class="ip-price">$2,495</div>
+          </div>
+          <a href="contact.html" class="btn btn-filled" style="text-align:center">Apply for Full-Service Design →</a>
+        </div>
       </div>
-      <div class="price-row">
-        <div class="price-big">$2,495</div>
+
+      <!-- SERVICE 2: FULL HOME TRANSFORMATION -->
+      <div class="ip-card dark-card">
+        <span class="ip-badge">Grand Slam</span>
+        <div class="ip-card-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/bbd67001-174e-41e5-b8c2-9eb8aa9b51cd/Erica+Yolevski+Design+Studio+Interior+Design+Virtual+E-Design+Toronto+Midtown+Leaside+Lawrence+Park+Whole+Home+White+Glove+Midtown+Toronto.jpg')"></div>
+        <div class="ip-card-body">
+          <span class="sc-tag">Done For You · Grand Slam</span>
+          <h3>In-Person Full Home Transformation</h3>
+          <p class="hook">Every room. Completely handled — from concept to installation. I manage your contractors, attend deliveries, oversee installations, and stay with you for six months until every room is done exactly right.</p>
+          <ul class="ip-includes">
+            <li>Multiple on-site design visits — every room</li>
+            <li>Complete whole-home design — every room in scope</li>
+            <li>Full sourced shopping lists — every room</li>
+            <li>Whole-home paint and finish palette</li>
+          </ul>
+          <span class="ip-bonus-tag">Bonuses Included</span>
+          <ul class="ip-includes">
+            <li>Trade-access sourcing — products not publicly available ($997)</li>
+            <li>Contractor Coordination Brief for all trades ($497)</li>
+            <li>Six-Month Priority Design Hotline ($994)</li>
+            <li>Final in-person reveal walkthrough ($495)</li>
+            <li>Full digital reference package — yours to keep</li>
+          </ul>
+          <p class="ip-promise" style="color:rgba(255,255,255,.3)">Six months of me in your corner. Completely hands-off for you.</p>
+          <div class="ip-price-row">
+            <div class="ip-price">$7,500</div>
+          </div>
+          <a href="contact.html" class="btn btn-white-filled" style="text-align:center">Apply for Full-Service Design →</a>
+        </div>
       </div>
-      <a href="contact.html" class="btn btn-filled">Apply for Full-Service Design →</a>
+
     </div>
-    <div class="svc-detail-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/2658fa0b-6089-42a1-80dc-8a1e9208fe77/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Midtown+Toronto+Lytton+Lawrence+Park.jpg')"></div>
   </div>
-
-  <!-- SERVICE 2: FULL HOME TRANSFORMATION -->
-  <div class="svc-detail dark">
-    <div class="svc-detail-content">
-      <div class="badge-exclusive" style="background:rgba(255,255,255,.08);color:var(--alt);border-color:rgba(255,255,255,.1)">Midtown Toronto Only · Grand Slam</div>
-      <span class="eyebrow">Service 02</span>
-      <h3 class="serif mb-4">In-Person Full Home Transformation</h3>
-      <p class="body-md mb-6">Every room. Completely handled — from concept to installation. I manage your contractors, source through my trade accounts, attend deliveries, oversee installations, and stay with you for six months until every room is done exactly right. You do nothing except enjoy the result.</p>
-      <ul class="includes-col">
-        <li><strong>Multiple on-site design visits</strong> — I come as many times as it takes</li>
-        <li><strong>Complete whole-home design — every room</strong></li>
-        <li><strong>2D floor plans and layouts for every room</strong></li>
-        <li><strong>Full sourced shopping lists — every room</strong></li>
-        <li><strong>Whole-home paint and finish palette</strong></li>
-        <div class="bonus-tag">Bonuses Included</div>
-        <li><em>Trade-access sourcing session — products not publicly available ($997 value)</em></li>
-        <li><em>Contractor Coordination Brief for all trades ($497 value)</em></li>
-        <li><em>Six-Month Priority Design Hotline ($994 value)</em></li>
-        <li><em>Final in-person reveal walkthrough — I come back when complete ($495 value)</em></li>
-        <li><em>Full digital reference package — yours to keep forever</em></li>
-      </ul>
-      <div class="price-row">
-        <div class="price-big">$7,500</div>
-        <div class="price-was">$8,773+ in stated value</div>
-      </div>
-      <a href="contact.html" class="btn btn-white-filled">Apply for Full-Service Design →</a>
-      <p class="body-sm mt-4" style="color:rgba(255,255,255,.3)">Limited availability monthly. Revisions included until you love it.</p>
-    </div>
-    <div class="svc-detail-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/bbd67001-174e-41e5-b8c2-9eb8aa9b51cd/Erica+Yolevski+Design+Studio+Interior+Design+Virtual+E-Design+Toronto+Midtown+Leaside+Lawrence+Park+Whole+Home+White+Glove+Midtown+Toronto.jpg')"></div>
-  </div>
-
 </section>
+
+
 
 <!-- TESTIMONIAL -->
 <section class="linen-block">

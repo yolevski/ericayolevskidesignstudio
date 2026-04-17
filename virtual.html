@@ -148,7 +148,7 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
 }
 .hero-banner .hb-img::after{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(26,23,20,.72) 0%,rgba(26,23,20,.15) 65%);
+  background:linear-gradient(to top,rgba(10,8,6,0.88) 0%,rgba(10,8,6,0.65) 45%,rgba(10,8,6,0.38) 100%);
 }
 .hero-banner .hb-content{
   position:relative;z-index:2;
@@ -538,19 +538,19 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
   content:'';position:absolute;inset:0;
   background:linear-gradient(
     to top,
-    rgba(10,8,6,0.82) 0%,
-    rgba(10,8,6,0.52) 45%,
-    rgba(10,8,6,0.28) 100%
+    rgba(10,8,6,0.88) 0%,
+    rgba(10,8,6,0.65) 40%,
+    rgba(10,8,6,0.42) 100%
   );
 }
 .hero-banner .hb-content .eyebrow{
-  color:rgba(255,255,255,0.9)!important;
-  text-shadow:0 1px 3px rgba(0,0,0,0.5);
+  color:rgba(255,255,255,0.95)!important;
+  text-shadow:none;
   font-weight:500;
 }
 .hero-banner h1,.hero-banner h2,.hero-banner h3,
 .hero-banner p,.hero-banner .body-lg{
-  text-shadow:0 1px 4px rgba(0,0,0,0.35);
+  text-shadow:none;
 }
 /* page-hero (inner pages) */
 .page-hero{
@@ -647,103 +647,117 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
 </section>
 
 <!-- THREE SERVICES -->
-<section id="services">
+<section id="services" style="background:var(--off);padding:var(--sp) var(--px)">
+  <div style="max-width:var(--mw);margin:0 auto">
 
-  <!-- SERVICE 1: DIRECTION SESSION -->
-  <div class="svc-detail">
-    <div class="svc-detail-content">
-      <span class="eyebrow">Service 01</span>
-      <h3 class="serif mb-4">Design Direction Session</h3>
-      <p class="body-md mb-6">One hour. A written action plan. You will know exactly what to do when you hang up — what to buy, what order to do it in, what budget to set, and what mistakes to avoid.</p>
-      <ul class="includes-col">
-        <li><strong>60-minute 1:1 video session</strong> — any room, any scope, any question</li>
-        <li><strong>Pre-session intake form</strong> — I review your space before the call so the entire hour is focused on your situation — not introductions</li>
-        <li><strong>Written action plan within 48 hours</strong> — not notes, a document you keep and implement</li>
-        <li><strong>Budget guidance by category</strong> — specific to your space and style</li>
-        <div class="bonus-tag">Bonus</div>
-        <li><em>Full credit toward any larger service — every dollar spent here applies to the Virtual Room Design or Whole Home System</em></li>
-      </ul>
-      <div class="guarantee-block mt-8" style="margin-top:24px">
-        <span class="gb-label">My Promise</span>
-        <p class="gb-body">You will leave this session with more clarity and direction than you had before it. If we need a follow-up to get you there, I make time for it — at no extra charge.</p>
+    <!-- ADD CARD GRID CSS inline -->
+    <style>
+    .svc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--warm)}
+    @media(max-width:900px){.svc-cards{grid-template-columns:1fr}}
+    .svc-card-new{background:var(--white);display:flex;flex-direction:column;overflow:hidden;transition:background .2s}
+    .svc-card-new:hover{background:var(--linen)}
+    .svc-card-new.dark-card{background:var(--ink)}
+    .svc-card-new.dark-card:hover{background:#1f1c18}
+    .svc-card-img{width:100%;aspect-ratio:4/3;background-size:cover;background-position:center;flex-shrink:0}
+    .svc-card-body{padding:24px 24px 20px;display:flex;flex-direction:column;flex:1}
+    .svc-card-new .sc-tag{font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;display:block}
+    .svc-card-new.dark-card .sc-tag{color:rgba(255,255,255,.3)}
+    .svc-card-new h3{font-family:var(--serif);font-size:20px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.2;letter-spacing:-.01em}
+    .svc-card-new.dark-card h3{color:var(--white)}
+    .svc-card-new .hook{font-size:13px;font-weight:300;line-height:1.7;color:var(--mid);margin-bottom:16px}
+    .svc-card-new.dark-card .hook{color:rgba(255,255,255,.5)}
+    .svc-includes-short{list-style:none;margin-bottom:16px;border-top:1px solid var(--linen);padding-top:12px}
+    .svc-card-new.dark-card .svc-includes-short{border-color:rgba(255,255,255,.08)}
+    .svc-includes-short li{font-size:11.5px;font-weight:300;color:var(--mid);padding:4px 0;border-bottom:1px solid var(--linen);display:flex;gap:8px;line-height:1.4}
+    .svc-card-new.dark-card .svc-includes-short li{color:rgba(255,255,255,.55);border-color:rgba(255,255,255,.06)}
+    .svc-includes-short li::before{content:"—";color:var(--stone);font-size:10px;flex-shrink:0;margin-top:1px}
+    .svc-card-new.dark-card .svc-includes-short li::before{color:rgba(255,255,255,.2)}
+    .svc-price-row{display:flex;align-items:baseline;gap:10px;margin-bottom:14px;margin-top:auto}
+    .svc-price-big{font-family:var(--serif);font-size:32px;font-weight:400;color:var(--ink);line-height:1}
+    .svc-card-new.dark-card .svc-price-big{color:var(--white)}
+    .svc-badge-card{position:absolute;top:0;right:0;background:var(--accent);color:var(--white);font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px}
+    .promise-tag{font-size:10px;font-style:italic;color:var(--stone);margin-bottom:12px}
+    .svc-card-new.dark-card .promise-tag{color:rgba(255,255,255,.25)}
+    </style>
+
+    <div class="svc-cards">
+
+      <!-- SERVICE 1: DIRECTION SESSION -->
+      <div class="svc-card-new">
+        <div class="svc-card-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/f29fa71f-e578-4a8d-8edc-53da6ee4aa66/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Communication+Advice+Lytton+Park+In+Home+Consultation.JPG')"></div>
+        <div class="svc-card-body">
+          <span class="sc-tag">Done With You · Service 01</span>
+          <h3>Design Direction Session</h3>
+          <p class="hook">One hour. A live video call. A written plan. You'll know exactly what to do when we hang up.</p>
+          <ul class="svc-includes-short">
+            <li>60-min live video call with me</li>
+            <li>Full video walkthrough of your home</li>
+            <li>Written action plan within 48 hours</li>
+            <li>Budget guidance by category</li>
+            <li>Credit toward any larger service</li>
+          </ul>
+          <p class="promise-tag">I work alongside you until you have clarity.</p>
+          <div class="svc-price-row">
+            <div class="svc-price-big">$297</div>
+          </div>
+          <a href="contact.html" class="btn btn-filled" style="text-align:center">Book Your Session →</a>
+        </div>
       </div>
-      <div class="price-row">
-        <div class="price-big">$297</div>
+
+      <!-- SERVICE 2: VIRTUAL ROOM DESIGN -->
+      <div class="svc-card-new" style="position:relative">
+        <div class="svc-card-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/031b794f-0c3e-489f-8970-152fc1207f78/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Living+Room+North+Toronto.jpg')"></div>
+        <div class="svc-card-body">
+          <span class="sc-tag">Done With You · Service 02</span>
+          <h3>Virtual Room Design Experience</h3>
+          <p class="hook">One room, completely designed and sourced. Every decision made. Delivered in 10 business days.</p>
+          <ul class="svc-includes-short">
+            <li>Live video call + home walkthrough</li>
+            <li>Full mood board and concept direction</li>
+            <li>2D floor plan with furniture layout</li>
+            <li>Complete sourced shopping list with links</li>
+            <li>Paint palette + contractor brief</li>
+            <li>3D conceptual rendering</li>
+            <li>Unlimited communication throughout</li>
+          </ul>
+          <p class="promise-tag">I revise until you genuinely love it.</p>
+          <div class="svc-price-row">
+            <div class="svc-price-big">$1,497</div>
+          </div>
+          <a href="contact.html" class="btn btn-filled" style="text-align:center">Begin Your Room →</a>
+        </div>
       </div>
-      <a href="contact.html" class="btn btn-filled">Book Your Session →</a>
+
+      <!-- SERVICE 3: WHOLE HOME -->
+      <div class="svc-card-new dark-card" style="position:relative">
+        <span class="svc-badge-card">Most Complete</span>
+        <div class="svc-card-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/cbc7dcae-4080-43eb-9dc4-2099ae764904/Erica+Yolevski+Design+Studio+Interior+Design+Virtual+E-Design+Toronto+Midtown+Leaside+Lawrence+Park+Whole+Home+White+Glove+Midtown+Toronto.jpg')"></div>
+        <div class="svc-card-body">
+          <span class="sc-tag">Done With You · Service 03</span>
+          <h3>Virtual Whole Home Design System</h3>
+          <p class="hook">Every room. Every decision. Your entire home designed, sourced, and mapped — with 90-day follow-through.</p>
+          <ul class="svc-includes-short">
+            <li>Complete whole-home design — every room</li>
+            <li>Floor plans + sourced lists for every room</li>
+            <li>Whole-home paint and finish palette</li>
+            <li>3D renderings + implementation roadmap</li>
+            <li>Unlimited communication throughout</li>
+            <li>Confidence Call before delivery</li>
+            <li>90-day check-ins + 30-day sourcing hotline</li>
+          </ul>
+          <p class="promise-tag" style="color:rgba(255,255,255,.3)">I stay with you until every room is done.</p>
+          <div class="svc-price-row">
+            <div class="svc-price-big">$3,497</div>
+          </div>
+          <a href="contact.html" class="btn btn-white-filled" style="text-align:center">Claim Your Spot →</a>
+        </div>
+      </div>
+
     </div>
-    <div class="svc-detail-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/f29fa71f-e578-4a8d-8edc-53da6ee4aa66/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Communication+Advice+Lytton+Park+In+Home+Consultation.JPG')"></div>
   </div>
-
-
-  <!-- JENNIFER REVIEW — Direction Session -->
-  <div style="background:var(--linen);padding:clamp(24px,3vw,40px);border-left:3px solid var(--alt);margin-bottom:3px">
-    <p style="font-family:var(--serif);font-size:clamp(15px,1.8vw,20px);font-weight:300;font-style:italic;line-height:1.65;color:var(--ink);margin-bottom:16px">"The one-hour consult is an incredible value. I figured we'd get through a few questions. We ended up going through an entire floor — paint, furniture, lighting, and flooring recommendations. Erica even went above and beyond to send links afterwards. Before this consult I felt very stuck in my vision and unable to move forward. I now have everything I need to execute a refresh of our space."</p>
-    <div style="display:flex;align-items:center;gap:10px">
-      <span style="color:var(--alt);font-size:14px">★★★★★</span>
-      <span style="font-size:11px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--stone)">Jennifer · Midtown Toronto · Design Direction Session</span>
-    </div>
-  </div>
-
-  <!-- SERVICE 2: VIRTUAL ROOM DESIGN -->
-  <div class="svc-detail reverse">
-    <div class="svc-detail-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/031b794f-0c3e-489f-8970-152fc1207f78/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Living+Room+North+Toronto.jpg')"></div>
-    <div class="svc-detail-content">
-      <span class="eyebrow">Service 02</span>
-      <h3 class="serif mb-4">Virtual Room Design Experience</h3>
-      <p class="body-md mb-6">One room, completely designed, sourced, and documented. Every decision made. Every product found. Ready to execute — for you and your contractor.</p>
-      <ul class="includes-col">
-        <li><strong>Introductory design consult call</strong></li>
-        <li><strong>Full mood board and concept direction</strong></li>
-        <li><strong>2D floor plan with furniture placement</strong></li>
-        <li><strong>Complete sourced shopping list with direct links</strong></li>
-        <li><strong>Paint and finish palette, fully specified</strong></li>
-        <li><strong>Contractor-ready finish brief</strong> — hand it to your painter, done</li>
-        <li><strong>One round of revisions included</strong></li>
-      </ul>
-      <div class="guarantee-block mt-8" style="margin-top:24px">
-        <span class="gb-label">My Promise</span>
-        <p class="gb-body">I revise the design — at no extra charge — until you genuinely love it. My goal is not just a completed project but a space you are proud to live in. That is the standard every client receives.</p>
-      </div>
-      <div class="price-row">
-        <div class="price-big">$1,497</div>
-      </div>
-      <a href="contact.html" class="btn btn-filled">Begin Your Room →</a>
-      <p class="body-sm mt-4" style="color:var(--mid)">Delivered within 10 business days.</p>
-    </div>
-  </div>
-
-  <!-- SERVICE 3: WHOLE HOME -->
-  <div class="svc-detail dark">
-    <div class="svc-detail-content">
-      <span class="eyebrow">Service 03 — Grand Slam Offer</span>
-      <h3 class="serif mb-4">Virtual Whole Home Design System</h3>
-      <p class="body-md mb-6">Every room. Every decision. Your entire home designed, sourced, and mapped — with the bonuses that ensure it actually gets executed the way it was designed.</p>
-      <ul class="includes-col">
-        <li><strong>Complete whole-home design — every room</strong></li>
-        <li><strong>2D floor plans and layouts per room</strong></li>
-        <li><strong>Full sourced shopping lists with direct links</strong></li>
-        <li><strong>Whole-home paint and finish palette</strong></li>
-        <li><strong>Contractor-ready briefs for every room</strong></li>
-        <li><strong>Prioritised implementation roadmap</strong></li>
-        <li><strong>3D conceptual renderings</strong> — see every room before you spend a dollar on furniture</li>
-        <li><strong>Unlimited communication for the entire project</strong> — message me any time ($799 value)</li>
-        <div class="bonus-tag">Bonuses Included</div>
-        <li><em>The Confidence Call — full walkthrough before delivery ($297 value)</em></li>
-        <li><em>90-Day Follow-Through Check-Ins — 3 sessions ($297 value)</em></li>
-        <li><em>30-Day Priority Sourcing Hotline ($297 value)</em></li>
-      </ul>
-      <div class="price-row">
-        <div class="price-big">$3,497</div>
-        <div class="price-was">$4,088+ in stated value</div>
-      </div>
-      <a href="contact.html" class="btn btn-white-filled">Claim Your Spot →</a>
-      <p class="body-sm mt-4" style="color:rgba(255,255,255,.3)">Spots limited monthly. Revisions included until you love the result.</p>
-    </div>
-    <div class="svc-detail-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/cbc7dcae-4080-43eb-9dc4-2099ae764904/Erica+Yolevski+Design+Studio+Interior+Design+Virtual+E-Design+Toronto+Midtown+Leaside+Lawrence+Park+Whole+Home+White+Glove+Midtown+Toronto.jpg')"></div>
-  </div>
-
 </section>
+
+
 
 <!-- COMPARISON TABLE -->
 <section class="section" style="background:var(--off)">

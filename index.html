@@ -148,7 +148,7 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
 }
 .hero-banner .hb-img::after{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(26,23,20,.72) 0%,rgba(26,23,20,.15) 65%);
+  background:linear-gradient(to top,rgba(10,8,6,0.88) 0%,rgba(10,8,6,0.65) 45%,rgba(10,8,6,0.38) 100%);
 }
 .hero-banner .hb-content{
   position:relative;z-index:2;
@@ -612,19 +612,19 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
   content:'';position:absolute;inset:0;
   background:linear-gradient(
     to top,
-    rgba(10,8,6,0.82) 0%,
-    rgba(10,8,6,0.52) 45%,
-    rgba(10,8,6,0.28) 100%
+    rgba(10,8,6,0.88) 0%,
+    rgba(10,8,6,0.65) 40%,
+    rgba(10,8,6,0.42) 100%
   );
 }
 .hero-banner .hb-content .eyebrow{
-  color:rgba(255,255,255,0.9)!important;
-  text-shadow:0 1px 3px rgba(0,0,0,0.5);
+  color:rgba(255,255,255,0.95)!important;
+  text-shadow:none;
   font-weight:500;
 }
 .hero-banner h1,.hero-banner h2,.hero-banner h3,
 .hero-banner p,.hero-banner .body-lg{
-  text-shadow:0 1px 4px rgba(0,0,0,0.35);
+  text-shadow:none;
 }
 /* page-hero (inner pages) */
 .page-hero{
@@ -666,8 +666,8 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
   <div class="hb-img"></div>
   <div class="hb-content" style="text-align:center;max-width:1040px;margin:0 auto;padding:clamp(32px,5vw,64px)">
     <h1 class="serif" style="font-size:clamp(38px,6vw,72px);font-weight:600;margin-bottom:20px;text-align:center;letter-spacing:-.02em;line-height:1.05">Stop wasting money on a home that doesn't feel finished.</h1>
-    <h2 class="serif" style="font-size:clamp(16px,2.2vw,24px);font-weight:300;color:rgba(255,255,255,.8);margin-bottom:14px;line-height:1.45;text-align:center">Timeless, warm, livable homes that feel cohesive, intentional, and built to last so every room finally feels like it belongs together.</h2>
-    <h3 style="font-family:var(--sans);font-size:clamp(10px,1.2vw,13px);font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:40px;text-align:center">No trends. No guesswork. No costly design mistakes.</h3>
+    <h2 class="serif" style="font-size:clamp(16px,2.2vw,24px);font-weight:400;color:rgba(255,255,255,.95);margin-bottom:14px;line-height:1.5;text-align:center">Timeless, warm, livable homes that feel cohesive, intentional, and built to last so every room finally feels like it belongs together.</h2>
+    <h3 style="font-family:var(--sans);font-size:clamp(10px,1.2vw,13px);font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:40px;text-align:center;font-weight:500">No trends. No guesswork. No costly design mistakes.</h3>
     <div style="display:flex;flex-direction:column;align-items:center;gap:14px">
       <a href="room-kits.html" class="btn btn-lg" style="background:var(--accent);color:var(--white);border-color:var(--accent);font-weight:500;transition:all .2s;min-width:280px" onmouseover="this.style.boxShadow='0 0 0 3px rgba(255,255,255,0.4)';this.style.background='#9d7f5c'" onmouseout="this.style.boxShadow='none';this.style.background='var(--accent)'">Steal a Designer Room — $49</a>
       <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
@@ -885,13 +885,18 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
     <!-- Live Instagram feed via Behold.so embed — free plan shows latest 6 posts -->
     <!-- SETUP: Go to behold.so, connect @ericayolevski, copy your widget ID, replace YOUR_WIDGET_ID below -->
     <div id="behold-widget" style="margin-top:32px">
-   <behold-widget feed-id="hmEst0MaGRkmoY2B0Jc2"></behold-widget>
-<script>
-  (() => {
-    const d=document,s=d.createElement("script");s.type="module";
-    s.src="https://w.behold.so/widget.js";d.head.append(s);
-  })();
-</script>
+      <!-- Paste your Behold widget script here after signing up at behold.so (free) -->
+      <!-- It will look like: <script src="https://w.behold.so/widget.js" type="module"></script><div data-behold-id="YOUR_ID"></div> -->
+      <!-- TEMPORARY fallback grid until Behold is connected: -->
+      <div class="ig-grid" id="ig-fallback">
+        <div class="ig-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/1773069648542-X3VQUGO2JYZ0B988HY1E/image-asset.jpeg" alt="" loading="lazy"></div>
+        <div class="ig-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/1775881942338-U5Q8B1E89GNQQITMWX5P/image-asset.jpeg" alt="" loading="lazy"></div>
+        <div class="ig-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/1775881942338-N9WI08D21EQTO7A7KEZO/image-asset.jpeg" alt="" loading="lazy"></div>
+        <div class="ig-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/1775881942338-S0VTMMLAZOP1OR6MC3EI/image-asset.jpeg" alt="" loading="lazy"></div>
+      </div>
+      <p style="font-size:11px;color:var(--stone);text-align:center;margin-top:12px;font-style:italic">Live Instagram feed — connect via behold.so to auto-update when you post</p>
+    </div>
+  </div>
 </section>
 
 <!-- FAQ -->
