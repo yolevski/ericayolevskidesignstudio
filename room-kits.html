@@ -622,6 +622,98 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
   color:rgba(255,255,255,0.85)!important;
 }
 
+
+/* ══════ HERO IMAGE FIXES ══════ */
+.home-hero .hb-img{
+  position:absolute;inset:0;z-index:0;
+  background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/96db35c3-af3f-4060-8b88-32e1e6dc54bf/Erica+Yolevski+Design+Studio+Midtown+Toronto+Interior+Design+Decorating+Edesign+Renovation+Lytton+Park+Lawrence+Park+Leaside.jpg');
+  background-size:cover;background-position:center;
+}
+.home-hero .hb-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,8,6,0.88) 0%,rgba(10,8,6,0.65) 40%,rgba(10,8,6,0.42) 100%);
+}
+.virt-hero .hb-img{
+  position:absolute;inset:0;z-index:0;
+  background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/031b794f-0c3e-489f-8970-152fc1207f78/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Living+Room+North+Toronto.jpg');
+  background-size:cover;background-position:center;
+}
+.virt-hero .hb-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,8,6,0.88) 0%,rgba(10,8,6,0.65) 40%,rgba(10,8,6,0.42) 100%);
+}
+
+/* ══════ GLOBAL NO HORIZONTAL SCROLL ══════ */
+html,body{overflow-x:hidden;max-width:100vw}
+*{max-width:100%}
+img,video,iframe{max-width:100%;height:auto}
+
+/* ══════ MOBILE STACKING ══════ */
+@media(max-width:768px){
+  /* All multi-column grids stack */
+  .paths-grid{grid-template-columns:1fr !important}
+  .svc-cards{grid-template-columns:1fr !important}
+  .ip-cards{grid-template-columns:1fr !important}
+  .projects-grid{grid-template-columns:1fr !important}
+
+  /* Force single column on inline style grids */
+  [style*="grid-template-columns:repeat(3"],
+  [style*="grid-template-columns: repeat(3"],
+  [style*="grid-template-columns:repeat(2"],
+  [style*="grid-template-columns: repeat(2"],
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns:1fr 1fr 1fr"],
+  [style*="grid-template-columns:1.3fr 1fr"]{
+    grid-template-columns:1fr !important;
+  }
+
+  /* Hero content tighter on mobile */
+  
+  .hero-banner h1{font-size:clamp(30px,8vw,44px) !important;line-height:1.1 !important}
+
+  /* Proof bar wraps cleanly */
+  .proof-bar{gap:20px !important;padding:20px 16px !important}
+  .proof-stat .num{font-size:22px !important}
+  .proof-stat .lbl{font-size:9px !important}
+
+  /* Comparison tables scrollable */
+  section table{font-size:11px !important}
+
+  /* Section padding tighter */
+  .section,section{padding-left:20px !important;padding-right:20px !important}
+
+  /* Hide some visual weight */
+  .hero-banner{min-height:560px !important}
+
+  /* Buttons full width on mobile */
+  .hero-btn-row a,.hero-btn-row .btn{width:100% !important;min-width:0 !important}
+  .hero-btn-row{flex-direction:column !important;width:100% !important}
+
+  /* Side-by-side columns in pain/solution tables stack */
+  [style*="display:grid"][style*="gap:40px"]{grid-template-columns:1fr !important;gap:32px !important}
+}
+
+
+/* ══════ HERO CONTENT LAYERING FIX ══════ */
+.hero-banner .hb-content{
+  position:relative;z-index:2;
+}
+.hero-banner .hb-img{
+  position:absolute;inset:0;z-index:0;
+}
+.hero-banner{
+  position:relative;
+  min-height:72vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+@media(max-width:768px){
+  .hero-banner{min-height:520px !important}
+  .hero-banner .hb-content{padding:24px 20px !important;position:relative;z-index:2}
+}
+
 </style>
 </head>
 <body>
