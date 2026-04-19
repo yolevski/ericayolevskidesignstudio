@@ -714,6 +714,34 @@ img,video,iframe{max-width:100%;height:auto}
   .hero-banner .hb-content{padding:24px 20px !important;position:relative;z-index:2}
 }
 
+
+/* ══════ HERO TEXT COLOR — force readable white over gradient ══════ */
+.hero-banner .hb-content h1,
+.hero-banner .hb-content h2,
+.hero-banner .hb-content h3,
+.hero-banner .hb-content p,
+.hero-banner .hb-content span,
+.hero-banner .hb-content .eyebrow,
+.hero-banner .hb-content .body-lg{
+  color:var(--white) !important;
+}
+.hero-banner .hb-content em{color:var(--white) !important}
+.hero-banner .hb-content h1 em{color:var(--alt) !important;font-style:italic}
+.hero-banner .hb-content .eyebrow{color:var(--alt) !important}
+.hero-banner .hb-content p.body-lg{color:rgba(255,255,255,0.92) !important}
+
+/* Stronger overlay for readability */
+.home-hero .hb-img::after,
+.virt-hero .hb-img::after,
+.ip-hero .hb-img::after,
+.kit-hero .hb-img::after{
+  content:'';position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to top,rgba(10,8,6,0.92) 0%,rgba(10,8,6,0.70) 45%,rgba(10,8,6,0.48) 100%);
+}
+.hero-banner .hb-content{
+  position:relative;z-index:10;
+}
+
 </style>
 </head>
 <body>

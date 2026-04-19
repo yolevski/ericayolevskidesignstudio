@@ -212,7 +212,7 @@ p{text-wrap:pretty}em{font-style:italic;font-weight:400}a{color:inherit;text-dec
 }
 .virt-hero .hb-img{
   position:absolute;inset:0;z-index:0;
-  background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/031b794f-0c3e-489f-8970-152fc1207f78/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Living+Room+North+Toronto.jpg');
+  background-image:url('virtual-hero-living-room.jpg');
   background-size:cover;background-position:center;
 }
 .virt-hero .hb-img::after{
@@ -289,6 +289,34 @@ img,video,iframe{max-width:100%;height:auto}
 @media(max-width:768px){
   .hero-banner{min-height:520px !important}
   .hero-banner .hb-content{padding:24px 20px !important;position:relative;z-index:2}
+}
+
+
+/* ══════ HERO TEXT COLOR — force readable white over gradient ══════ */
+.hero-banner .hb-content h1,
+.hero-banner .hb-content h2,
+.hero-banner .hb-content h3,
+.hero-banner .hb-content p,
+.hero-banner .hb-content span,
+.hero-banner .hb-content .eyebrow,
+.hero-banner .hb-content .body-lg{
+  color:var(--white) !important;
+}
+.hero-banner .hb-content em{color:var(--white) !important}
+.hero-banner .hb-content h1 em{color:var(--alt) !important;font-style:italic}
+.hero-banner .hb-content .eyebrow{color:var(--alt) !important}
+.hero-banner .hb-content p.body-lg{color:rgba(255,255,255,0.92) !important}
+
+/* Stronger overlay for readability */
+.home-hero .hb-img::after,
+.virt-hero .hb-img::after,
+.ip-hero .hb-img::after,
+.kit-hero .hb-img::after{
+  content:'';position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to top,rgba(10,8,6,0.92) 0%,rgba(10,8,6,0.70) 45%,rgba(10,8,6,0.48) 100%);
+}
+.hero-banner .hb-content{
+  position:relative;z-index:10;
 }
 
 </style>
