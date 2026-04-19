@@ -706,6 +706,27 @@ img,video,iframe{max-width:100%;height:auto}
   position:relative;z-index:10;
 }
 
+
+/* ══════ HERO TOP PADDING FIX — prevent nav overlap ══════ */
+.hero-banner{
+  padding-top:40px;
+  padding-bottom:40px;
+}
+@media(max-width:768px){
+  .hero-banner{
+    padding-top:32px !important;
+    padding-bottom:32px !important;
+    min-height:600px !important;
+  }
+  .hero-banner .hb-content{
+    padding-top:20px !important;
+  }
+  .hero-banner .eyebrow{
+    font-size:11px !important;
+    line-height:1.5 !important;
+  }
+}
+
 </style>
 </head>
 <body>
