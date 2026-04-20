@@ -47,7 +47,7 @@ p{text-wrap:pretty}em{font-style:italic;font-weight:400}a{color:inherit;text-dec
 .eyebrow{display:inline-block;font-size:10.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
 
 .hero-banner{position:relative;min-height:72vh;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:72px}
-.hero-banner::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(10,8,6,.6) 0%,rgba(10,8,6,.78) 100%),url('erica-virtual-consultation.jpg') center 25%/cover}
+.hero-banner::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(10,8,6,.55) 0%,rgba(10,8,6,.75) 100%);pointer-events:none}
 .hero-content{position:relative;z-index:2;max-width:980px;width:100%;padding:64px var(--px);text-align:center;color:var(--white)}
 .hero-content .eyebrow{color:var(--alt)}
 .hero-content h1{color:var(--white);margin-bottom:22px;font-size:clamp(36px,5.8vw,72px)}
@@ -362,6 +362,27 @@ img,video,iframe{max-width:100%;height:auto}
   padding:clamp(80px,10vw,140px) var(--px) !important;
 }
 
+
+/* ══════ INLINE BONUS TAG FOR SERVICE CARDS ══════ */
+.bonus-tag-inline{
+  display:inline-block;
+  background:var(--accent);
+  color:var(--white);
+  font-size:8px;
+  font-weight:600;
+  letter-spacing:.14em;
+  padding:2px 6px;
+  margin-right:6px;
+  vertical-align:middle;
+  border-radius:2px;
+  line-height:1.2;
+}
+.bonus-tag-inline.alt{
+  background:var(--alt);
+  color:var(--ink);
+}
+.svc-card-new.dark-card .bonus-tag-inline.alt{background:var(--alt);color:var(--ink)}
+
 </style>
 </head>
 
@@ -543,8 +564,8 @@ img,video,iframe{max-width:100%;height:auto}
             <li>Complete sourced shopping list with links ($500)</li>
             <li>Paint palette + contractor brief ($300)</li>
             <li>3D conceptual rendering ($400)</li>
-            <li>Exclusive designer discounts at retailers ($500+)</li>
-            <li>Unlimited communication throughout ($799)</li>
+            <li><span class="bonus-tag-inline">BONUS</span> Exclusive designer discounts at retailers ($500+)</li>
+            <li><span class="bonus-tag-inline">BONUS</span> Unlimited communication throughout ($799)</li>
           </ul>
           <div class="value-strip">Stated value: <strong>$3,400+</strong></div>
           <p class="promise-tag">I revise until you genuinely love it.</p>
@@ -568,10 +589,10 @@ img,video,iframe{max-width:100%;height:auto}
             <li>Floor plans + sourced lists for every room</li>
             <li>Whole-home paint and finish palette</li>
             <li>3D renderings + implementation roadmap</li>
-            <li>Exclusive designer discounts at retailers</li>
-            <li>Unlimited communication throughout ($799)</li>
-            <li>90-day check-ins + 30-day sourcing hotline ($994)</li>
-            <li>Priority confidence call before delivery</li>
+            <li><span class="bonus-tag-inline alt">BONUS</span> Exclusive designer discounts at retailers</li>
+            <li><span class="bonus-tag-inline alt">BONUS</span> Unlimited communication throughout ($799)</li>
+            <li><span class="bonus-tag-inline alt">BONUS</span> 90-day check-ins + 30-day sourcing hotline ($994)</li>
+            <li><span class="bonus-tag-inline alt">BONUS</span> Priority confidence call before delivery</li>
           </ul>
           <div class="value-strip">Stated value: <strong>$8,500+</strong></div>
           <p class="promise-tag" style="color:rgba(255,255,255,.3)">I stay with you until every room is done.</p>

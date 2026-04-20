@@ -223,8 +223,18 @@ body{padding-top:36px}
 .faq-a-inner{padding:0 0 24px;color:var(--mid);font-size:14.5px;line-height:1.75;font-weight:300}
 
 .ig{background:var(--cream);padding:var(--sp) var(--px)}
+.ig-section{background:var(--off);padding:clamp(72px,9vw,120px) var(--px) clamp(56px,7vw,96px);border-top:1px solid var(--warm)}
 .ig-inner{max-width:var(--mw);margin:0 auto}
-.ig-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:32px;gap:20px;flex-wrap:wrap}
+.ig-divider{width:40px;height:.5px;background:var(--accent);margin:0 auto 24px}
+.ig-title-block{text-align:center;margin-bottom:56px}
+.ig-title-block .eyebrow{color:var(--accent);margin-bottom:14px;display:block}
+.ig-title-block h2{font-family:var(--serif);font-size:clamp(40px,5vw,64px);font-weight:400;letter-spacing:-.02em;line-height:1.05;margin-bottom:14px;color:var(--ink)}
+.ig-title-block h2 em{color:var(--accent);font-style:italic}
+.ig-title-block p{font-family:var(--serif);font-size:clamp(15px,1.6vw,18px);font-style:italic;font-weight:300;color:var(--mid);max-width:520px;margin:0 auto;line-height:1.5}
+.ig-cta{text-align:center;margin-top:40px;padding-top:36px;border-top:1px solid var(--warm)}
+.ig-cta .handle{font-family:var(--serif);font-size:22px;font-style:italic;color:var(--ink);margin-bottom:6px;display:block}
+.ig-cta .sub{font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--mid);margin-bottom:20px;display:block}
+
 
 .final-cta{background:linear-gradient(135deg,var(--ink) 0%,var(--dark2) 100%);padding:var(--sp) var(--px);position:relative;overflow:hidden}
 .final-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 30%,rgba(196,168,130,.15) 0%,transparent 50%),radial-gradient(ellipse at 70% 70%,rgba(139,111,78,.1) 0%,transparent 50%);pointer-events:none}
@@ -449,7 +459,7 @@ img,video,iframe{max-width:100%;height:auto}
   <div class="hb-img"></div>
   <div class="hb-content" style="text-align:center;max-width:1040px;width:100%;padding:clamp(32px,5vw,64px);display:flex;flex-direction:column;align-items:center">
 
-    <span class="eyebrow" style="color:var(--alt);margin-bottom:24px;max-width:680px;display:block;line-height:1.5;text-align:center;white-space:normal">For Toronto homeowners tired of a house that still doesn't feel finished</span>
+    <span class="eyebrow" style="color:var(--alt);text-align:center;display:block;width:100%;margin-bottom:24px">For Toronto homeowners tired of a house that still doesn't feel finished</span>
 
     <h1 class="serif" style="font-size:clamp(42px,6.5vw,82px);font-weight:600;letter-spacing:-.02em;line-height:1.05;margin-bottom:22px;text-align:center;width:100%">Get the home <em>you actually want.</em><br>Delivered in as little as 24 hours.</h1>
 
@@ -786,13 +796,15 @@ img,video,iframe{max-width:100%;height:auto}
 <!-- ═══ 13. INSTAGRAM ═══ -->
 <section class="ig-section">
   <div class="ig-inner">
-    <div class="ig-header">
-      <div>
-        <span class="eyebrow">Follow the work</span>
-        <h2 class="serif">@ericayolevski</h2>
-      </div>
-      <a href="https://instagram.com/ericayolevski" target="_blank" class="btn btn-sm">Follow on Instagram →</a>
+
+    <!-- Centered editorial header -->
+    <div class="ig-title-block">
+      <span class="eyebrow">Follow the work</span>
+      <div class="ig-divider"></div>
+      <h2 class="serif">Behind every <em>beautiful room.</em></h2>
+      <p>Daily inspiration, in-progress projects, and the small details that make a home feel designed — from my studio in Midtown Toronto.</p>
     </div>
+
     <!-- Live Instagram feed — Behold.so -->
     <behold-widget feed-id="hmEst0MaGRkmoY2B0Jc2"></behold-widget>
     <script>
@@ -801,6 +813,14 @@ img,video,iframe{max-width:100%;height:auto}
         s.src="https://w.behold.so/widget.js";d.head.append(s);
       })();
     </script>
+
+    <!-- Footer CTA -->
+    <div class="ig-cta">
+      <span class="handle">@ericayolevski</span>
+      <span class="sub">Interior Design · Toronto</span>
+      <a href="https://instagram.com/ericayolevski" target="_blank" class="btn btn-filled">Follow on Instagram →</a>
+    </div>
+
   </div>
 </section>
 
