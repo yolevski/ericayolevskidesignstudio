@@ -103,6 +103,12 @@ a{text-decoration:none;color:inherit}
 .nav-cta:hover{background:var(--accent)!important}
 .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
 .nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--ink)}
+.nav-hamburger{transition:all .2s ease}
+.nav-hamburger span{transition:all .25s ease;transform-origin:center}
+.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
 @media(max-width:768px){
   .nav-menu{display:none}
   .nav-hamburger{display:flex}
@@ -964,31 +970,20 @@ img,video,iframe{max-width:100%;height:auto}
   var menu = document.querySelector('.nav-menu');
   if (!btn || !menu) return;
   var open = false;
+  function openMenu(){
+    menu.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:100px;left:0;right:0;background:#fff;padding:24px;gap:18px;border-bottom:1px solid #e8dfd3;z-index:199;box-shadow:0 8px 24px rgba(0,0,0,.08);max-height:80vh;overflow-y:auto';
+    btn.classList.add('open');
+  }
+  function closeMenu(){
+    menu.style.cssText = 'display:none';
+    btn.classList.remove('open');
+  }
   btn.addEventListener('click', function(){
     open = !open;
-    if (open) {
-      menu.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:#fff;padding:20px 24px;gap:16px;border-bottom:1px solid #e8dfd3;z-index:199;box-shadow:0 8px 24px rgba(0,0,0,.08)';
-      btn.innerHTML = '<span style="font-size:22px;line-height:1;color:#1a1714">✕</span>';
-    } else {
-      menu.style.cssText = 'display:none';
-      btn.innerHTML = '<span></span><span></span><span></span>';
-    }
+    if (open) openMenu(); else closeMenu();
   });
-  // Close when a link is tapped
   menu.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){
-      open = false;
-      menu.style.cssText = 'display:none';
-      btn.innerHTML = '<span></span><span></span><span></span>';
-    });
-  });
-  // Close on outside tap
-  document.addEventListener('click', function(e){
-    if (open && !btn.contains(e.target) && !menu.contains(e.target)){
-      open = false;
-      menu.style.cssText = 'display:none';
-      btn.innerHTML = '<span></span><span></span><span></span>';
-    }
+    a.addEventListener('click', function(){ open = false; closeMenu(); });
   });
 })();
 </script>
