@@ -298,7 +298,7 @@ img{max-width:100%;display:block}
 }
 .home-hero .hb-img::after{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(10,8,6,0.88) 0%,rgba(10,8,6,0.65) 40%,rgba(10,8,6,0.42) 100%);
+  background:linear-gradient(to bottom,rgba(10,8,6,0.72) 0%,rgba(10,8,6,0.55) 30%,rgba(10,8,6,0.78) 100%);
 }
 .virt-hero .hb-img{
   position:absolute;inset:0;z-index:0;
@@ -307,7 +307,7 @@ img{max-width:100%;display:block}
 }
 .virt-hero .hb-img::after{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(10,8,6,0.88) 0%,rgba(10,8,6,0.65) 40%,rgba(10,8,6,0.42) 100%);
+  background:linear-gradient(to bottom,rgba(10,8,6,0.72) 0%,rgba(10,8,6,0.55) 30%,rgba(10,8,6,0.78) 100%);
 }
 
 /* ══════ GLOBAL NO HORIZONTAL SCROLL ══════ */
@@ -379,6 +379,7 @@ img,video,iframe{max-width:100%;height:auto}
 @media(max-width:768px){
   .hero-banner{min-height:520px !important}
   .hero-banner .hb-content{padding:24px 20px !important;position:relative;z-index:2}
+  .hero-banner.home-hero{padding-top:140px !important}
 }
 
 
@@ -430,6 +431,37 @@ img,video,iframe{max-width:100%;height:auto}
   }
 }
 
+
+/* ══════ HERO EYEBROW READABILITY ══════ */
+.hero-banner .eyebrow{
+  text-shadow:0 1px 3px rgba(0,0,0,.6), 0 0 20px rgba(0,0,0,.3);
+}
+/* ══════ MOBILE HERO FIXES ══════ */
+@media(max-width:600px){
+  .hero-banner.home-hero .btn{
+    white-space:normal !important;
+    font-size:11.5px !important;
+    letter-spacing:.06em !important;
+    padding:14px 12px !important;
+  }
+  .hero-banner.home-hero .eyebrow{
+    white-space:normal !important;
+    line-height:1.5 !important;
+    max-width:320px !important;
+    display:block !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    text-align:center !important;
+  }
+}
+@media(max-width:380px){
+  .hero-banner.home-hero .btn{
+    font-size:10.5px !important;
+    padding:12px 8px !important;
+    letter-spacing:.04em !important;
+  }
+}
+
 </style>
 </head>
 
@@ -456,11 +488,11 @@ img,video,iframe{max-width:100%;height:auto}
 ═══════════════════════════════════════════════════════════════ -->
 
 <!-- ═══ 1. HERO — PAIN-BASED HOOK + DREAM OUTCOME ═══ -->
-<section class="hero-banner home-hero" style="align-items:center;justify-content:center">
+<section class="hero-banner home-hero" style="align-items:center;justify-content:center;padding-top:clamp(100px,13vh,180px);padding-bottom:clamp(80px,10vh,140px)">
   <div class="hb-img"></div>
   <div class="hb-content" style="text-align:center;max-width:1040px;width:100%;padding:clamp(32px,5vw,64px);display:flex;flex-direction:column;align-items:center">
 
-    <span class="eyebrow" style="color:var(--alt)">For Toronto homeowners tired of a house that still doesn't feel finished</span>
+    <span class="eyebrow" style="color:var(--alt)">For Toronto homeowners tired of an unfinished home</span>
 
     <h1 class="serif" style="font-size:clamp(36px,5.5vw,68px);font-weight:600;letter-spacing:-.02em;line-height:1.05;margin-bottom:22px;text-align:center;width:100%;text-wrap:balance">Get the home <em>you actually want,</em><br>delivered in 24 hours.</h1>
 
@@ -470,12 +502,12 @@ img,video,iframe{max-width:100%;height:auto}
 
     <div style="display:flex;flex-direction:column;align-items:center;gap:18px;width:100%;max-width:540px">
       <!-- PRIMARY CTA — Lead magnet -->
-      <a href="room-kits.html" class="btn btn-lg" style="background:var(--accent);color:var(--white);border-color:var(--accent);font-weight:600;transition:all .2s;width:100%;padding:22px 28px;font-size:15px;letter-spacing:.02em" onmouseover="this.style.boxShadow='0 0 0 3px rgba(255,255,255,0.4)';this.style.background='#9d7f5c'" onmouseout="this.style.boxShadow='none';this.style.background='var(--accent)'">Steal a $15,000 Designer Room for $49 →</a>
+      <a href="room-kits.html" class="btn btn-lg" style="background:var(--accent);color:var(--white);border-color:var(--accent);font-weight:600;transition:all .2s;width:100%;padding:20px 24px;font-size:14px;letter-spacing:.04em;white-space:nowrap" onmouseover="this.style.boxShadow='0 0 0 3px rgba(255,255,255,0.4)';this.style.background='#9d7f5c'" onmouseout="this.style.boxShadow='none';this.style.background='var(--accent)'">Get a $15,000 Designer Room for $49 →</a>
 
       <!-- Secondary CTAs — Direction Session front and center -->
       <div style="display:flex;gap:12px;width:100%;flex-wrap:wrap">
-        <a href="virtual.html" class="btn btn-white btn-lg" style="flex:1;min-width:200px;padding:16px 14px;font-size:13px;letter-spacing:.04em">Book a $297 Designer Session →</a>
-        <a href="inperson.html" class="btn btn-white btn-lg" style="flex:1;min-width:200px;padding:16px 14px;font-size:13px;letter-spacing:.04em">Apply for White-Glove Service →</a>
+        <a href="virtual.html" class="btn btn-white btn-lg" style="flex:1;min-width:180px;padding:15px 16px;font-size:12.5px;letter-spacing:.06em;white-space:nowrap">Book a $297 Session →</a>
+        <a href="inperson.html" class="btn btn-white btn-lg" style="flex:1;min-width:180px;padding:15px 16px;font-size:12.5px;letter-spacing:.06em;white-space:nowrap">Apply for White-Glove →</a>
       </div>
     </div>
   </div>
@@ -793,10 +825,10 @@ img,video,iframe{max-width:100%;height:auto}
     <h2 class="serif" style="color:var(--white);margin-top:18px;margin-bottom:22px;font-size:clamp(36px,5vw,58px)">Your home deserves to feel<br><em>like yours.</em></h2>
     <p class="body-lg" style="color:rgba(255,255,255,.7);max-width:620px;margin:0 auto 40px">Every week that passes is another week you live with a home that isn't quite right. Start with a $49 kit, book a consultation, or apply for in-person — whatever fits where you are today.</p>
     <div style="display:flex;flex-direction:column;align-items:center;gap:18px;width:100%;max-width:540px;margin:0 auto">
-      <a href="room-kits.html" class="btn btn-lg" style="background:var(--accent);color:var(--white);border-color:var(--accent);font-weight:600;width:100%;padding:22px 28px;font-size:15px;letter-spacing:.02em" onmouseover="this.style.boxShadow='0 0 0 3px rgba(255,255,255,0.4)';this.style.background='#9d7f5c'" onmouseout="this.style.boxShadow='none';this.style.background='var(--accent)'">Steal a $15,000 Designer Room for $49 →</a>
+      <a href="room-kits.html" class="btn btn-lg" style="background:var(--accent);color:var(--white);border-color:var(--accent);font-weight:600;width:100%;padding:22px 28px;font-size:15px;letter-spacing:.02em" onmouseover="this.style.boxShadow='0 0 0 3px rgba(255,255,255,0.4)';this.style.background='#9d7f5c'" onmouseout="this.style.boxShadow='none';this.style.background='var(--accent)'">Get a $15,000 Designer Room for $49 →</a>
       <div style="display:flex;gap:12px;width:100%;flex-wrap:wrap">
-        <a href="virtual.html" class="btn btn-white btn-lg" style="flex:1;min-width:200px;padding:16px 14px;font-size:13px;letter-spacing:.04em">Book a $297 Designer Session →</a>
-        <a href="inperson.html" class="btn btn-white btn-lg" style="flex:1;min-width:200px;padding:16px 14px;font-size:13px;letter-spacing:.04em">Apply for White-Glove Service →</a>
+        <a href="virtual.html" class="btn btn-white btn-lg" style="flex:1;min-width:180px;padding:15px 16px;font-size:12.5px;letter-spacing:.06em;white-space:nowrap">Book a $297 Session →</a>
+        <a href="inperson.html" class="btn btn-white btn-lg" style="flex:1;min-width:180px;padding:15px 16px;font-size:12.5px;letter-spacing:.06em;white-space:nowrap">Apply for White-Glove →</a>
       </div>
     </div>
   </div>
