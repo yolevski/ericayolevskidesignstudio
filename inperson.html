@@ -49,8 +49,8 @@ html{scroll-behavior:smooth;font-size:16px}
   --linen:  #f1ece4;
   --stone:  #c8bfb2;
   --mid:    #8a8178;
-  --accent: #a78b6c;
-  --alt:    #d4b89a;
+  --accent: #c9a98d;
+  --alt:    #dbc4a8;
   --white:  #ffffff;
   --off:    #f9f7f4;
   --dark2:  #221e1b;
@@ -178,10 +178,7 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
   position:absolute;inset:0;
   background-size:cover;background-position:center;
 }
-.hero-banner .hb-img::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(10,8,6,.55) 0%,rgba(10,8,6,.32) 100%) 100%);
-}
+.hero-banner .hb-img::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,8,6,.30) 0%,rgba(10,8,6,.05) 100%);pointer-events:none}
 .hero-banner .hb-content{
   position:relative;z-index:2;
   padding:clamp(32px,5vw,72px);
@@ -559,15 +556,7 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
 }
 
 /* ── IMPROVED HERO OVERLAY ── */
-.hero-banner .hb-img::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(
-    to top,
-    rgba(10,8,6,0.88) 0%,
-    rgba(10,8,6,0.65) 40%,
-    rgba(10,8,6,0.42) 100%
-  );
-}
+.hero-banner .hb-img::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,8,6,.30) 0%,rgba(10,8,6,.05) 100%);pointer-events:none}
 .hero-banner .hb-content .eyebrow{
   color:rgba(255,255,255,0.95)!important;
   text-shadow:none;
@@ -599,19 +588,13 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
   background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/96db35c3-af3f-4060-8b88-32e1e6dc54bf/Erica+Yolevski+Design+Studio+Midtown+Toronto+Interior+Design+Decorating+Edesign+Renovation+Lytton+Park+Lawrence+Park+Leaside.jpg');
   background-size:cover;background-position:center;
 }
-.home-hero .hb-img::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(10,8,6,.55) 0%,rgba(10,8,6,.32) 100%) 100%);
-}
+.home-hero .hb-img::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,8,6,.30) 0%,rgba(10,8,6,.05) 100%);pointer-events:none}
 .virt-hero .hb-img{
   position:absolute;inset:0;z-index:0;
   background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/031b794f-0c3e-489f-8970-152fc1207f78/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Living+Room+North+Toronto.jpg');
   background-size:cover;background-position:center;
 }
-.virt-hero .hb-img::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(10,8,6,.55) 0%,rgba(10,8,6,.32) 100%) 100%);
-}
+.virt-hero .hb-img::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,8,6,.30) 0%,rgba(10,8,6,.05) 100%);pointer-events:none}
 
 /* ══════ GLOBAL NO HORIZONTAL SCROLL ══════ */
 html,body{overflow-x:hidden;max-width:100vw}
@@ -704,10 +687,7 @@ img,video,iframe{max-width:100%;height:auto}
 .home-hero .hb-img::after,
 .virt-hero .hb-img::after,
 .ip-hero .hb-img::after,
-.kit-hero .hb-img::after{
-  content:'';position:absolute;inset:0;z-index:1;
-  background:linear-gradient(to top,rgba(10,8,6,0.92) 0%,rgba(10,8,6,0.70) 45%,rgba(10,8,6,0.48) 100%);
-}
+.kit-hero .hb-img::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,8,6,.30) 0%,rgba(10,8,6,.05) 100%);pointer-events:none}
 .hero-banner .hb-content{
   position:relative;z-index:10;
 }
@@ -757,7 +737,7 @@ img,video,iframe{max-width:100%;height:auto}
   <div class="hb-content" style="text-align:center;max-width:1060px;width:100%;display:flex;flex-direction:column;align-items:center">
     <span class="eyebrow" style="color:var(--alt)">In-Person Design · Midtown Toronto</span>
     <h1 class="serif" style="font-size:clamp(44px,7vw,92px);font-weight:600;letter-spacing:-.02em;line-height:1.08;text-align:center">White-glove design,<br><em>completely done for you.</em></h1>
-    <p class="body-lg" style="color:rgba(255,255,255,.92)">Some decisions cannot be made from a screen. For those, I come to you.</p><p style="font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:12px">Done FOR you — white-glove full service</p>
+    <p class="body-lg" style="color:rgba(255,255,255,.92)">Some decisions cannot be made from a screen. For those, I come to you.</p><p style="font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:12px">Done FOR you · white-glove full service</p>
     <div class="hero-btn-row">
       <a href="#services" class="btn btn-accent btn-lg">See Services ↓</a>
       <a href="contact.html" class="btn btn-white btn-lg">Book In-Person</a>
@@ -847,7 +827,17 @@ img,video,iframe{max-width:100%;height:auto}
     .ip-promise{font-size:10px;font-style:italic;color:var(--stone);margin-bottom:14px}
     .ip-card.dark-card .ip-promise{color:rgba(255,255,255,.25)}
     .ip-badge{position:absolute;top:0;right:0;background:var(--accent);color:var(--white);font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px}
-    </style>
+    
+/* Hero text shadows — preserve legibility while letting photography show */
+.hero-banner h1,
+.hero-banner .eyebrow,
+.hero-banner p,
+.home-hero h1,
+.home-hero .eyebrow,
+.home-hero p{
+  text-shadow:0 2px 14px rgba(0,0,0,.45), 0 1px 2px rgba(0,0,0,.35);
+}
+</style>
 
     <div class="ip-cards">
 

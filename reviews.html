@@ -49,8 +49,8 @@ html{scroll-behavior:smooth;font-size:16px}
   --linen:  #f1ece4;
   --stone:  #c8bfb2;
   --mid:    #8a8178;
-  --accent: #a78b6c;
-  --alt:    #d4b89a;
+  --accent: #c9a98d;
+  --alt:    #dbc4a8;
   --white:  #ffffff;
   --off:    #f9f7f4;
   --dark2:  #221e1b;
@@ -178,10 +178,7 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
   position:absolute;inset:0;
   background-size:cover;background-position:center;
 }
-.hero-banner .hb-img::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(10,8,6,.55) 0%,rgba(10,8,6,.32) 100%) 100%);
-}
+.hero-banner .hb-img::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,8,6,.30) 0%,rgba(10,8,6,.05) 100%);pointer-events:none}
 .hero-banner .hb-content{
   position:relative;z-index:2;
   padding:clamp(32px,5vw,72px);
@@ -664,19 +661,13 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
   background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/96db35c3-af3f-4060-8b88-32e1e6dc54bf/Erica+Yolevski+Design+Studio+Midtown+Toronto+Interior+Design+Decorating+Edesign+Renovation+Lytton+Park+Lawrence+Park+Leaside.jpg');
   background-size:cover;background-position:center;
 }
-.home-hero .hb-img::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(10,8,6,.55) 0%,rgba(10,8,6,.32) 100%) 100%);
-}
+.home-hero .hb-img::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,8,6,.30) 0%,rgba(10,8,6,.05) 100%);pointer-events:none}
 .virt-hero .hb-img{
   position:absolute;inset:0;z-index:0;
   background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/031b794f-0c3e-489f-8970-152fc1207f78/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Living+Room+North+Toronto.jpg');
   background-size:cover;background-position:center;
 }
-.virt-hero .hb-img::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(10,8,6,.55) 0%,rgba(10,8,6,.32) 100%) 100%);
-}
+.virt-hero .hb-img::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,8,6,.30) 0%,rgba(10,8,6,.05) 100%);pointer-events:none}
 
 /* ══════ GLOBAL NO HORIZONTAL SCROLL ══════ */
 html,body{overflow-x:hidden;max-width:100vw}
@@ -728,6 +719,16 @@ img,video,iframe{max-width:100%;height:auto}
   [style*="display:grid"][style*="gap:40px"]{grid-template-columns:1fr !important;gap:32px !important}
 }
 
+
+/* Hero text shadows — preserve legibility while letting photography show */
+.hero-banner h1,
+.hero-banner .eyebrow,
+.hero-banner p,
+.home-hero h1,
+.home-hero .eyebrow,
+.home-hero p{
+  text-shadow:0 2px 14px rgba(0,0,0,.45), 0 1px 2px rgba(0,0,0,.35);
+}
 </style>
 </head>
 <body>

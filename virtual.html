@@ -16,7 +16,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;color:#1a1714;line-height:1.65;overflow-x:hidden}
-:root{--ink:#1a1714;--warm:#e8dfd3;--linen:#f1ece4;--stone:#c8bfb2;--mid:#8a8178;--accent:#a78b6c;--alt:#d4b89a;--white:#fff;--off:#f9f7f4;--dark2:#221e1b;--cream:#faf7f2;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',sans-serif;--px:clamp(20px,5vw,72px);--sp:clamp(56px,7vw,104px);--mw:1160px}
+:root{--ink:#1a1714;--warm:#e8dfd3;--linen:#f1ece4;--stone:#c8bfb2;--mid:#8a8178;--accent:#c9a98d;--alt:#dbc4a8;--white:#fff;--off:#f9f7f4;--dark2:#221e1b;--cream:#faf7f2;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',sans-serif;--px:clamp(20px,5vw,72px);--sp:clamp(56px,7vw,104px);--mw:1160px}
 h1,h2,h3,h4,h5,h6{text-wrap:balance;overflow-wrap:break-word;font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.12}
 h1{font-size:clamp(42px,6.5vw,82px);font-weight:600}h2{font-size:clamp(32px,4.5vw,56px)}h3{font-size:clamp(22px,2.5vw,30px)}
 p{text-wrap:pretty}em{font-style:italic;font-weight:400}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
@@ -42,7 +42,7 @@ p{text-wrap:pretty}em{font-style:italic;font-weight:400}a{color:inherit;text-dec
 .btn-lg{padding:18px 36px;font-size:12px}.btn-xl{padding:22px 44px;font-size:13px;letter-spacing:.16em}
 .btn-filled{background:var(--ink);color:var(--white)}.btn-filled:hover{background:var(--accent);border-color:var(--accent)}
 .btn-accent{background:var(--accent);color:var(--white);border-color:var(--accent);font-weight:600}
-.btn-accent:hover{background:#b89878;border-color:#b89878;transform:translateY(-1px);box-shadow:0 8px 24px rgba(139,111,78,.3)}
+.btn-accent:hover{background:#b8987a;border-color:#b8987a;transform:translateY(-1px);box-shadow:0 8px 24px rgba(139,111,78,.3)}
 .btn-white{background:transparent;color:var(--white);border-color:rgba(255,255,255,.5)}
 .btn-white:hover{background:var(--white);color:var(--ink);border-color:var(--white)}
 .btn-white-filled{background:var(--white);color:var(--ink);border-color:var(--white)}
@@ -50,7 +50,7 @@ p{text-wrap:pretty}em{font-style:italic;font-weight:400}a{color:inherit;text-dec
 .eyebrow{display:inline-block;font-size:10.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
 
 .hero-banner{position:relative;min-height:72vh;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:72px}
-.hero-banner::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(10,8,6,.32) 0%,rgba(10,8,6,.55) 100%);pointer-events:none}
+.hero-banner::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(10,8,6,.18) 0%,rgba(10,8,6,.40) 100%);pointer-events:none}
 .hero-content{position:relative;z-index:2;max-width:980px;width:100%;padding:64px var(--px);text-align:center;color:var(--white)}
 .hero-content .eyebrow{color:var(--alt)}
 .hero-content h1{color:var(--white);margin-bottom:22px;font-size:clamp(36px,5.8vw,72px)}
@@ -200,7 +200,7 @@ p{text-wrap:pretty}em{font-style:italic;font-weight:400}a{color:inherit;text-dec
 .proof-stat .num{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:400;color:var(--alt);display:block;line-height:1;margin-bottom:5px}
 .proof-stat .lbl{font-size:10px;font-weight:400;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4)}
 .btn.btn-accent{background:var(--accent);color:var(--white);border-color:var(--accent)}
-.btn.btn-accent:hover{background:#b89878}
+.btn.btn-accent:hover{background:#b8987a}
 
 
 /* ══════ HERO IMAGE FIXES ══════ */
@@ -209,10 +209,7 @@ p{text-wrap:pretty}em{font-style:italic;font-weight:400}a{color:inherit;text-dec
   background-image:url('virtual-hero-living-room.jpg');
   background-size:cover;background-position:center;
 }
-.home-hero .hb-img::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(10,8,6,.55) 0%,rgba(10,8,6,.32) 100%) 100%);
-}
+.home-hero .hb-img::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,8,6,.30) 0%,rgba(10,8,6,.05) 100%);pointer-events:none}
 .virt-hero .hb-img{
   position:absolute !important;
   inset:0 !important;
@@ -224,10 +221,7 @@ p{text-wrap:pretty}em{font-style:italic;font-weight:400}a{color:inherit;text-dec
 .hero-banner.virt-hero .hb-img{
   background-image:url('virtual-hero-living-room.jpg') !important;
 }
-.virt-hero .hb-img::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(10,8,6,.55) 0%,rgba(10,8,6,.32) 100%) 100%);
-}
+.virt-hero .hb-img::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,8,6,.30) 0%,rgba(10,8,6,.05) 100%);pointer-events:none}
 
 /* ══════ GLOBAL NO HORIZONTAL SCROLL ══════ */
 html,body{overflow-x:hidden;max-width:100vw}
@@ -320,10 +314,7 @@ img,video,iframe{max-width:100%;height:auto}
 .home-hero .hb-img::after,
 .virt-hero .hb-img::after,
 .ip-hero .hb-img::after,
-.kit-hero .hb-img::after{
-  content:'';position:absolute;inset:0;z-index:1;
-  background:linear-gradient(to top,rgba(10,8,6,0.92) 0%,rgba(10,8,6,0.70) 45%,rgba(10,8,6,0.48) 100%);
-}
+.kit-hero .hb-img::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,8,6,.30) 0%,rgba(10,8,6,.05) 100%);pointer-events:none}
 .hero-banner .hb-content{
   position:relative;z-index:10;
 }
@@ -414,7 +405,7 @@ img,video,iframe{max-width:100%;height:auto}
   <div class="hb-img"></div>
   <div class="hb-content" style="text-align:center;max-width:1100px;width:100%;padding:clamp(32px,5vw,64px);display:flex;flex-direction:column;align-items:center">
     <span class="eyebrow" style="color:var(--alt)">Virtual Interior Design · Available Anywhere</span>
-    <h1 class="serif" style="font-size:clamp(42px,5.5vw,76px);font-weight:600;letter-spacing:-.02em;line-height:1.08;text-align:center;width:100%">The <em>fastest</em> way to professionally design your home without full-service pricing.</h1>
+    <h1 class="serif" style="font-size:clamp(46px,6vw,84px);font-weight:600;letter-spacing:-.02em;line-height:1.08;text-align:center;width:100%">The <em>fastest</em> way to a professionally designed home.</h1>
     <p class="body-lg" style="color:rgba(255,255,255,0.92);text-align:center;max-width:720px;margin:16px auto 32px">Live video calls, a full walkthrough of your home, 3D renderings, sourced shopping lists, and my direct access throughout. Starting at $297.</p>
     <div class="hero-btn-row" style="justify-content:center">
       <a href="#services" class="btn btn-accent btn-lg">See All Services ↓</a>
@@ -521,7 +512,17 @@ img,video,iframe{max-width:100%;height:auto}
     .value-strip{background:var(--linen);padding:10px 12px;margin:-4px -4px 12px;font-size:10px;color:var(--mid);letter-spacing:.08em}
     .svc-card-new.dark-card .value-strip{background:rgba(255,255,255,.06);color:rgba(255,255,255,.5)}
     .value-strip strong{color:var(--accent)}
-    </style>
+    
+/* Hero text shadows — preserve legibility while letting photography show */
+.hero-banner h1,
+.hero-banner .eyebrow,
+.hero-banner p,
+.home-hero h1,
+.home-hero .eyebrow,
+.home-hero p{
+  text-shadow:0 2px 14px rgba(0,0,0,.45), 0 1px 2px rgba(0,0,0,.35);
+}
+</style>
 
     <div class="svc-cards">
 
