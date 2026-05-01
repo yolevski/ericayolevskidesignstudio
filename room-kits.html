@@ -752,15 +752,124 @@ img,video,iframe{max-width:100%;height:auto}
 }
 
 
-/* Hero text shadows — preserve legibility while letting photography show */
-.hero-banner h1,
-.hero-banner .eyebrow,
-.hero-banner p,
-.home-hero h1,
-.home-hero .eyebrow,
-.home-hero p{
-  text-shadow:0 2px 14px rgba(0,0,0,.45), 0 1px 2px rgba(0,0,0,.35);
+
+
+/* ══════ MAGAZINE HERO TREATMENT ══════ */
+.hero-banner,
+.home-hero{
+  position:relative;
+  overflow:hidden;
 }
+
+/* Hero image — subtle warmth boost + slow zoom for cinematic feel */
+.hero-banner .hb-img,
+.home-hero .hb-img{
+  filter:saturate(1.08) contrast(1.04);
+  transform:scale(1.02);
+  animation:heroBreathe 24s ease-in-out infinite alternate;
+}
+
+@keyframes heroBreathe{
+  from{ transform:scale(1.02) }
+  to{ transform:scale(1.08) }
+}
+
+/* Honor user reduced-motion preference */
+@media(prefers-reduced-motion:reduce){
+  .hero-banner .hb-img,
+  .home-hero .hb-img{
+    animation:none;
+    transform:scale(1.02);
+  }
+}
+
+/* Refined overlay — soft cinematic vignette instead of flat darkening */
+.hero-banner .hb-img::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:radial-gradient(ellipse at center, transparent 35%, rgba(10,8,6,.22) 100%);
+  pointer-events:none;
+}
+
+/* Soft fade to next section — bottom of hero blends into page */
+.hero-banner::after,
+.home-hero::after{
+  content:'';
+  position:absolute;
+  left:0;right:0;bottom:0;
+  height:80px;
+  background:linear-gradient(to bottom, transparent 0%, var(--linen) 100%);
+  z-index:2;
+  pointer-events:none;
+}
+
+/* Magazine-style typography refinements */
+.hero-banner .eyebrow,
+.home-hero .eyebrow{
+  position:relative;
+  display:inline-block;
+  padding-bottom:16px;
+  margin-bottom:28px;
+}
+
+/* Delicate horizontal divider beneath the eyebrow */
+.hero-banner .eyebrow::after,
+.home-hero .eyebrow::after{
+  content:'';
+  position:absolute;
+  left:50%;bottom:0;
+  width:32px;height:1px;
+  background:var(--alt);
+  transform:translateX(-50%);
+  opacity:.7;
+}
+
+/* Refined headline rendering */
+.hero-banner h1,
+.home-hero h1{
+  font-feature-settings:"liga" 1, "kern" 1, "swsh" 1;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Better CTA button polish */
+.hero-banner .btn,
+.home-hero .btn{
+  transition:all .35s cubic-bezier(.4,0,.2,1);
+  letter-spacing:.06em;
+}
+.hero-banner .btn:hover,
+.home-hero .btn:hover{
+  transform:translateY(-1px);
+}
+
+
+
+/* ══════ Subtle scrim behind hero text — magazine "feature panel" technique ══════ */
+.hero-banner .hb-content,
+.home-hero .hb-content{
+  position:relative;
+  z-index:3;
+}
+
+/* Soft radial backdrop panel — invisible at edges, gentle darken at center where text sits */
+.hero-banner .hb-content::before,
+.home-hero .hb-content::before{
+  content:'';
+  position:absolute;
+  top:50%;left:50%;
+  width:min(900px, 92%);
+  height:min(620px, 95%);
+  transform:translate(-50%,-50%);
+  background:radial-gradient(ellipse at center, rgba(10,8,6,.32) 0%, rgba(10,8,6,.20) 50%, transparent 85%);
+  filter:blur(40px);
+  z-index:-1;
+  pointer-events:none;
+}
+
 </style>
 </head>
 <body>
