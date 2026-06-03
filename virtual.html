@@ -50,6 +50,7 @@ p{text-wrap:pretty}em{font-style:italic;font-weight:400}a{color:inherit;text-dec
 .eyebrow{display:inline-block;font-size:10.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
 
 .hero-banner{position:relative;min-height:72vh;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:72px}
+.hero-banner::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(10,8,6,.18) 0%,rgba(10,8,6,.40) 100%);pointer-events:none}
 .hero-content{position:relative;z-index:2;max-width:980px;width:100%;padding:64px var(--px);text-align:center;color:var(--white)}
 .hero-content .eyebrow{color:var(--alt)}
 .hero-content h1{color:var(--white);margin-bottom:22px;font-size:clamp(36px,5.8vw,72px)}
@@ -205,7 +206,7 @@ p{text-wrap:pretty}em{font-style:italic;font-weight:400}a{color:inherit;text-dec
 /* ══════ HERO IMAGE FIXES ══════ */
 .home-hero .hb-img{
   position:absolute;inset:0;z-index:0;
-  background-image:url('virtual-hero-living-room.jpg?v=2');
+  background-image:url('virtual-hero-living-room.jpg');
   background-size:cover;background-position:center;
 }
 .home-hero .hb-img::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,8,6,.30) 0%,rgba(10,8,6,.05) 100%);pointer-events:none}
@@ -213,14 +214,12 @@ p{text-wrap:pretty}em{font-style:italic;font-weight:400}a{color:inherit;text-dec
   position:absolute !important;
   inset:0 !important;
   z-index:0 !important;
-  background-image:url('virtual-hero-living-room.jpg?v=2') !important;
+  background-image:url('virtual-hero-living-room.jpg') !important;
   background-size:cover !important;
   background-position:center !important;
 }
-/* Virtual hero matches home hero height */
-.hero-banner.virt-hero{min-height:101vh}
 .hero-banner.virt-hero .hb-img{
-  background-image:url('virtual-hero-living-room.jpg?v=2') !important;
+  background-image:url('virtual-hero-living-room.jpg') !important;
 }
 .virt-hero .hb-img::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,8,6,.30) 0%,rgba(10,8,6,.05) 100%);pointer-events:none}
 
@@ -315,7 +314,7 @@ img,video,iframe{max-width:100%;height:auto}
 .home-hero .hb-img::after,
 .virt-hero .hb-img::after,
 .ip-hero .hb-img::after,
-.kit-hero .hb-img::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(10,8,6,.05) 0%,rgba(10,8,6,.15) 50%,rgba(10,8,6,.32) 100%);pointer-events:none}
+.kit-hero .hb-img::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,8,6,.30) 0%,rgba(10,8,6,.05) 100%);pointer-events:none}
 .hero-banner .hb-content{
   position:relative;z-index:10;
 }
@@ -402,7 +401,7 @@ img,video,iframe{max-width:100%;height:auto}
 ═══════════════════════════════════════════════════════════════ -->
 
 <!-- HERO -->
-<section class="hero-banner virt-hero" style="align-items:center;justify-content:center;padding-top:clamp(100px,13vh,180px);padding-bottom:clamp(80px,10vh,140px);background-image:url('virtual-hero-living-room.jpg?v=2');background-size:cover;background-position:center">
+<section class="hero-banner virt-hero" style="align-items:center;justify-content:center;background-image:url('virtual-hero-living-room.jpg');background-size:cover;background-position:center">
   <div class="hb-img"></div>
   <div class="hb-content" style="text-align:center;max-width:1100px;width:100%;padding:clamp(32px,5vw,64px);display:flex;flex-direction:column;align-items:center">
     <span class="eyebrow" style="color:var(--alt)">Virtual Interior Design · Available Anywhere</span>
@@ -638,7 +637,7 @@ img,video,iframe{max-width:100%;height:auto}
 
       <!-- DIRECTION SESSION -->
       <div class="svc-card-new">
-        <div class="svc-card-img" style="background-image:url('svc-direction-erica.jpg');background-position:center top"></div>
+        <div class="svc-card-img" style="background-image:url('erica-virtual-consultation.jpg');background-position:center top"></div>
         <div class="svc-card-body">
           <span class="sc-tag">Done With You · Service 01</span>
           <h3>Design Direction Session</h3>
@@ -661,7 +660,7 @@ img,video,iframe{max-width:100%;height:auto}
 
       <!-- ROOM DESIGN -->
       <div class="svc-card-new">
-        <div class="svc-card-img" style="background-image:url('svc-room-design-bathroom.jpg')"></div>
+        <div class="svc-card-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/031b794f-0c3e-489f-8970-152fc1207f78/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Living+Room+North+Toronto.jpg')"></div>
         <div class="svc-card-body">
           <span class="sc-tag">Done With You · Service 02</span>
           <h3>Virtual Room Design Experience</h3>
@@ -688,7 +687,7 @@ img,video,iframe{max-width:100%;height:auto}
       <!-- WHOLE HOME -->
       <div class="svc-card-new dark-card">
         <span class="svc-badge-card">Best Value</span>
-        <div class="svc-card-img" style="background-image:url('virtual-hero-living-room.jpg?v=2')"></div>
+        <div class="svc-card-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/cbc7dcae-4080-43eb-9dc4-2099ae764904/Erica+Yolevski+Design+Studio+Interior+Design+Virtual+E-Design+Toronto+Midtown+Leaside+Lawrence+Park+Whole+Home+White+Glove+Midtown+Toronto.jpg')"></div>
         <div class="svc-card-body">
           <span class="sc-tag">Done With You · Service 03</span>
           <h3>Virtual Whole Home Design System</h3>

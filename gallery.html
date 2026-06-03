@@ -702,6 +702,94 @@ img,video,iframe{max-width:100%;height:auto}
   pointer-events:none;
 }
 
+
+/* ══════ PROJECT GALLERY ══════ */
+.project{
+  max-width:var(--mw);
+  margin:0 auto;
+  padding:clamp(40px,5vw,72px) var(--px);
+  border-bottom:1px solid rgba(138,129,120,.16);
+}
+.project:last-child{ border-bottom:none }
+
+.project-head{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(20px,4vw,60px);
+  align-items:end;
+  margin-bottom:32px;
+}
+.project-title{
+  font-size:clamp(26px,3vw,40px);
+  font-weight:600;
+  letter-spacing:-.01em;
+  line-height:1.1;
+  margin-bottom:6px;
+}
+.project-meta{
+  font-size:10.5px;
+  font-weight:500;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--accent);
+}
+.project-desc{
+  font-size:15px;
+  line-height:1.65;
+  color:var(--mid);
+}
+
+.project-hero{
+  width:100%;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  background:var(--linen);
+  margin-bottom:14px;
+}
+.project-hero img{
+  width:100%;height:100%;
+  object-fit:cover;display:block;
+  transition:transform .6s ease;
+}
+.project-hero:hover img{ transform:scale(1.03) }
+
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+.project-grid-item{
+  aspect-ratio:4/5;
+  overflow:hidden;
+  background:var(--linen);
+}
+.project-grid-item img{
+  width:100%;height:100%;
+  object-fit:cover;display:block;
+  transition:transform .6s ease;
+}
+.project-grid-item:hover img{ transform:scale(1.04) }
+
+/* Placeholder styling — visible only until images are added */
+.ph{
+  width:100%;height:100%;
+  min-height:120px;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  background:repeating-linear-gradient(45deg,var(--linen),var(--linen) 12px,#ece5da 12px,#ece5da 24px);
+  color:var(--mid);
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:500;
+  padding:16px;
+}
+
+@media(max-width:760px){
+  .project-head{ grid-template-columns:1fr; gap:14px; align-items:start }
+  .project-grid{ grid-template-columns:1fr 1fr; gap:10px }
+}
+
 </style>
 </head>
 <body>
@@ -726,64 +814,131 @@ img,video,iframe{max-width:100%;height:auto}
 
 
 
-<!-- PROJECT VIDEOS -->
+<!-- ═══════════ PROJECT FILMS ═══════════ -->
 <section style="background:var(--ink);padding:var(--sp) var(--px)">
   <div style="max-width:var(--mw);margin:0 auto">
-    <div style="text-align:center;margin-bottom:40px">
+    <div style="text-align:center;margin-bottom:48px">
       <span class="eyebrow" style="color:var(--alt)">Project Films</span>
-      <h2 class="serif" style="color:var(--white)">Watch the <em>transformations.</em></h2>
+      <h2 class="serif" style="color:var(--white);margin-top:14px">Watch the <em>transformations.</em></h2>
+      <p class="body-md" style="color:rgba(255,255,255,.65);max-width:560px;margin:18px auto 0">Step inside completed projects and see how each space comes together — the character, the detail, the way it all holds together as a home.</p>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:16px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
       <div>
-        <div style="box-shadow:0 8px 32px rgba(0,0,0,.4);margin-bottom:12px">
+        <div style="box-shadow:0 12px 40px rgba(0,0,0,.45);margin-bottom:16px;border-radius:2px;overflow:hidden">
           <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
-  <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-    <iframe src="https://fast.wistia.net/embed/iframe/nfhyrkoxfv?videoFoam=true&playerColor=8b6f4e&playbar=false&controlsVisibleOnLoad=false&smallPlayButton=false&volumeControl=false&fullscreenButton=true&autoPlay=false" title="Burr Project" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="100%" height="100%"></iframe>
-  </div>
-</div>
-<script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+            <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+              <iframe src="https://fast.wistia.net/embed/iframe/nfhyrkoxfv?videoFoam=true&playerColor=c9a98d&playbar=false&controlsVisibleOnLoad=false&smallPlayButton=false&volumeControl=false&fullscreenButton=true&autoPlay=false" title="Lawrence Park Project" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="100%" height="100%"></iframe>
+            </div>
+          </div>
         </div>
-        <p style="font-size:12px;font-weight:500;color:rgba(255,255,255,.6);letter-spacing:.06em">Burr Project</p>
+        <p style="font-family:var(--serif);font-style:italic;font-size:20px;color:var(--white);margin-bottom:2px">Lawrence Park</p>
+        <p style="font-size:10.5px;font-weight:500;color:var(--alt);letter-spacing:.16em;text-transform:uppercase">Whole Home Transformation</p>
       </div>
       <div>
-        <div style="box-shadow:0 8px 32px rgba(0,0,0,.4);margin-bottom:12px">
+        <div style="box-shadow:0 12px 40px rgba(0,0,0,.45);margin-bottom:16px;border-radius:2px;overflow:hidden">
           <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
-  <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-    <iframe src="https://fast.wistia.net/embed/iframe/6jawzzh54o?videoFoam=true&playerColor=8b6f4e&playbar=false&controlsVisibleOnLoad=false&smallPlayButton=false&volumeControl=false&fullscreenButton=true&autoPlay=false" title="Lawrence Park Project" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="100%" height="100%"></iframe>
-  </div>
-</div>
-<script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+            <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+              <iframe src="https://fast.wistia.net/embed/iframe/6jawzzh54o?videoFoam=true&playerColor=c9a98d&playbar=false&controlsVisibleOnLoad=false&smallPlayButton=false&volumeControl=false&fullscreenButton=true&autoPlay=false" title="Burr Project" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="100%" height="100%"></iframe>
+            </div>
+          </div>
         </div>
-        <p style="font-size:12px;font-weight:500;color:rgba(255,255,255,.6);letter-spacing:.06em">Lawrence Park Project</p>
+        <p style="font-family:var(--serif);font-style:italic;font-size:20px;color:var(--white);margin-bottom:2px">Burr Project</p>
+        <p style="font-size:10.5px;font-weight:500;color:var(--alt);letter-spacing:.16em;text-transform:uppercase">Full Room Design</p>
       </div>
     </div>
   </div>
+  <script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
 </section>
 
 
+<!-- ═══════════ PROJECTS — ORGANIZED BY PROJECT ═══════════ -->
+<!--
+  ┌──────────────────────────────────────────────────────────────┐
+  │  HOW TO FILL THIS TEMPLATE                                      │
+  │                                                                 │
+  │  Each project is a <section class="project">.                  │
+  │  To add photos, replace each:                                  │
+  │     <div class="ph">PLACEHOLDER ...</div>                      │
+  │  with:                                                          │
+  │     <img src="YOUR-IMAGE.jpg" alt="Description" loading="lazy"> │
+  │                                                                 │
+  │  Each project has:                                              │
+  │   - A title + location + scope label (edit the text)           │
+  │   - 1 large "hero" image slot                                  │
+  │   - 4 supporting image slots in a grid                         │
+  │                                                                 │
+  │  To add MORE projects: copy a whole <section class="project">  │
+  │  block and paste it. To add more photos to a project, copy a   │
+  │  <div class="project-grid-item"> block.                        │
+  └──────────────────────────────────────────────────────────────┘
+-->
 <section style="padding:var(--sp) 0;background:var(--off)">
-  <div style="max-width:var(--mw);margin:0 auto;padding:0 var(--px);margin-bottom:40px">
-    <span class="eyebrow">The work</span>
+  <div style="max-width:var(--mw);margin:0 auto;padding:0 var(--px);text-align:center;margin-bottom:8px">
+    <span class="eyebrow">The Portfolio</span>
     <h2 class="serif">Character, quality, and detail <em>in every room.</em></h2>
+    <p class="body-md" style="color:var(--mid);max-width:600px;margin:18px auto 0">A selection of recent projects across Midtown Toronto and beyond. Each home designed for the life actually lived inside it.</p>
   </div>
-  <div class="gallery-grid">
-    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/78cf3aa8-645c-4b84-a26a-e5f5dfd8f9bd/Erica+Yolevski+Interior+Designer+Toronto+Midtown+Decorator+Redesign+Living+Room+Virtual.jpg" alt="Living room" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/12cc6da1-071f-41b8-8a35-8e5e362f65c3/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Kitchen+Custom+Leaside.jpg" alt="Kitchen" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/39073b5e-bc92-4c57-a473-88db609572de/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Art+Wall.jpg" alt="Art wall" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/a221fc24-4aa7-46bd-a05c-ca9ee348d777/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Dining+Leaside.jpg" alt="Dining" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/a34804a5-cec0-4361-aa2d-eac9c1916ab8/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+.jpg" alt="Interior" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/7202f477-b063-46fa-8f96-12d2154f6f38/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Bathroom+Edesign+Room+Redecorate.jpg" alt="Bathroom" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/031b794f-0c3e-489f-8970-152fc1207f78/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Living+Room+North+Toronto.jpg" alt="Living room 2" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/cbc7dcae-4080-43eb-9dc4-2099ae764904/Erica+Yolevski+Design+Studio+Interior+Design+Virtual+E-Design+Toronto+Midtown+Leaside+Lawrence+Park+Whole+Home+White+Glove+Midtown+Toronto.jpg" alt="Whole home" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/6d97fd97-dd48-4a6d-b708-c9b0c22229df/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Mount+Pleasant+Accent+Chair+Leaside.JPG" alt="Accent chair" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/d9879895-eb2f-4ea4-9eb1-9575f6325d08/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Nursery+Baby+Room+Leaside.jpg" alt="Nursery" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/7f7a4ce8-752f-4992-ba1c-a5af31e92457/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Bathroom.jpg" alt="Bathroom 2" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/2658fa0b-6089-42a1-80dc-8a1e9208fe77/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Midtown+Toronto+Lytton+Lawrence+Park.jpg" alt="Lytton Park" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/bcdf1ff0-22f7-4ae3-8068-b20ac48b2f5f/Erica+Yolevski+Design+Studio+Midtown+Toronto+Interior+Design+Decorating+Edesign+Renovation+Lytton+Park+Lawrence+Park+Leaside.jpg" alt="Renovation" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/bb8b34d8-119f-44e3-a69f-6f7a5aacfcc4/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Art+Wall+House.jpg" alt="Art wall 2" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/63fb4021-f716-4d2b-b7ce-ad3be1a43115/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Room+VIP+Design+EDesign.jpg" alt="VIP room" loading="lazy"></div>
-    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/e8e83663-46ea-483e-9a0c-f3311425ed3a/F3ACD2DE-90BE-4E3B-A920-6F24DF775CE1.jpg" alt="Interior detail" loading="lazy"></div>
+
+  <!-- ───────── PROJECT 1 ───────── -->
+  <div class="project">
+    <div class="project-head">
+      <div>
+        <h3 class="project-title serif">Lawrence Park Residence</h3>
+        <p class="project-meta">Lawrence Park, Toronto · Whole Home</p>
+      </div>
+      <p class="project-desc">A full transformation balancing timeless character with the realities of a busy family home. Replace this text with a short description of the project.</p>
+    </div>
+    <div class="project-hero">
+      <div class="ph">PLACEHOLDER — Project 1 hero image (wide, landscape works best)</div>
+    </div>
+    <div class="project-grid">
+      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
+      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
+      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
+      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
+    </div>
   </div>
+
+  <!-- ───────── PROJECT 2 ───────── -->
+  <div class="project">
+    <div class="project-head">
+      <div>
+        <h3 class="project-title serif">Burr Project</h3>
+        <p class="project-meta">Midtown Toronto · Living + Dining</p>
+      </div>
+      <p class="project-desc">Replace this text with a short description of the project — what the space was, what you did, the result.</p>
+    </div>
+    <div class="project-hero">
+      <div class="ph">PLACEHOLDER — Project 2 hero image (wide, landscape works best)</div>
+    </div>
+    <div class="project-grid">
+      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
+      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
+      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
+      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
+    </div>
+  </div>
+
+  <!-- ───────── PROJECT 3 ───────── -->
+  <div class="project">
+    <div class="project-head">
+      <div>
+        <h3 class="project-title serif">Leaside Family Home</h3>
+        <p class="project-meta">Leaside, Toronto · Kitchen + Main Floor</p>
+      </div>
+      <p class="project-desc">Replace this text with a short description of the project.</p>
+    </div>
+    <div class="project-hero">
+      <div class="ph">PLACEHOLDER — Project 3 hero image (wide, landscape works best)</div>
+    </div>
+    <div class="project-grid">
+      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
+      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
+      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
+      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
+    </div>
+  </div>
+
 </section>
 
 <section class="cta-band">
