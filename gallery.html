@@ -400,12 +400,15 @@ h1.serif,h2.serif,h3.serif,h1,h2,h3{text-wrap:balance;overflow-wrap:break-word}
 
 /* ── MASONRY GALLERY ───────────────────────────────── */
 .gallery-grid{
-  columns:3 260px;column-gap:3px;
-  padding:0 var(--px) var(--sp);
+  columns:3 280px;column-gap:14px;
+  padding:0 var(--px);
+  max-width:var(--mw);
+  margin:0 auto;
 }
 .gallery-item{
-  break-inside:avoid;margin-bottom:3px;
-  overflow:hidden;background:var(--linen);
+  break-inside:avoid;margin-bottom:14px;
+  overflow:hidden;background:var(--warm);
+  border-radius:2px;
 }
 .gallery-item img{
   width:100%;display:block;
@@ -790,6 +793,23 @@ img,video,iframe{max-width:100%;height:auto}
   .project-grid{ grid-template-columns:1fr 1fr; gap:10px }
 }
 
+
+/* ══════ INSTAGRAM EMBED GRID ══════ */
+.ig-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:20px;
+  justify-items:center;
+  align-items:start;
+}
+.ig-grid .instagram-media{
+  margin:0 auto !important;
+  min-height:480px;
+}
+@media(max-width:640px){
+  .ig-grid{ grid-template-columns:1fr; }
+}
+
 </style>
 </head>
 <body>
@@ -820,7 +840,7 @@ img,video,iframe{max-width:100%;height:auto}
     <div style="text-align:center;margin-bottom:48px">
       <span class="eyebrow" style="color:var(--alt)">Project Films</span>
       <h2 class="serif" style="color:var(--white);margin-top:14px">Watch the <em>transformations.</em></h2>
-      <p class="body-md" style="color:rgba(255,255,255,.65);max-width:560px;margin:18px auto 0">Step inside completed projects and see how each space comes together — the character, the detail, the way it all holds together as a home.</p>
+      <p class="body-md" style="color:rgba(255,255,255,.65);max-width:560px;margin:18px auto 0">Step inside completed projects and see how each space comes together as a home.</p>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
       <div>
@@ -851,94 +871,52 @@ img,video,iframe{max-width:100%;height:auto}
 </section>
 
 
-<!-- ═══════════ PROJECTS — ORGANIZED BY PROJECT ═══════════ -->
-<!--
-  ┌──────────────────────────────────────────────────────────────┐
-  │  HOW TO FILL THIS TEMPLATE                                      │
-  │                                                                 │
-  │  Each project is a <section class="project">.                  │
-  │  To add photos, replace each:                                  │
-  │     <div class="ph">PLACEHOLDER ...</div>                      │
-  │  with:                                                          │
-  │     <img src="YOUR-IMAGE.jpg" alt="Description" loading="lazy"> │
-  │                                                                 │
-  │  Each project has:                                              │
-  │   - A title + location + scope label (edit the text)           │
-  │   - 1 large "hero" image slot                                  │
-  │   - 4 supporting image slots in a grid                         │
-  │                                                                 │
-  │  To add MORE projects: copy a whole <section class="project">  │
-  │  block and paste it. To add more photos to a project, copy a   │
-  │  <div class="project-grid-item"> block.                        │
-  └──────────────────────────────────────────────────────────────┘
--->
-<section style="padding:var(--sp) 0;background:var(--off)">
-  <div style="max-width:var(--mw);margin:0 auto;padding:0 var(--px);text-align:center;margin-bottom:8px">
+<!-- ═══════════ FROM INSTAGRAM ═══════════ -->
+<section style="padding:var(--sp) var(--px);background:var(--off)">
+  <div style="max-width:var(--mw);margin:0 auto">
+    <div style="text-align:center;margin-bottom:48px">
+      <span class="eyebrow">Fresh from the studio</span>
+      <h2 class="serif" style="margin-top:14px">Latest <em>on Instagram.</em></h2>
+      <p class="body-md" style="color:var(--mid);max-width:560px;margin:18px auto 24px">Reels, reveals, and works in progress — straight from <a href="https://www.instagram.com/ericayolevski" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px">@ericayolevski</a>.</p>
+    </div>
+    <div class="ig-grid">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DQ988sliV_4/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:540px;min-width:280px;padding:0;width:100%"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DZFvvM5MlHS/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:540px;min-width:280px;padding:0;width:100%"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DUQnypjjUDp/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:540px;min-width:280px;padding:0;width:100%"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DT0W7N4DXHW/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:540px;min-width:280px;padding:0;width:100%"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DU3PoYTjRzn/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:0;max-width:540px;min-width:280px;padding:0;width:100%"></blockquote>
+    </div>
+    <div style="text-align:center;margin-top:40px">
+      <a href="https://www.instagram.com/ericayolevski" target="_blank" rel="noopener" class="btn btn-filled btn-sm">Follow @ericayolevski →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════ PROJECT GALLERY ═══════════ -->
+<section style="padding:var(--sp) 0;background:var(--linen)">
+  <div style="max-width:var(--mw);margin:0 auto;padding:0 var(--px);text-align:center;margin-bottom:44px">
     <span class="eyebrow">The Portfolio</span>
-    <h2 class="serif">Character, quality, and detail <em>in every room.</em></h2>
-    <p class="body-md" style="color:var(--mid);max-width:600px;margin:18px auto 0">A selection of recent projects across Midtown Toronto and beyond. Each home designed for the life actually lived inside it.</p>
+    <h2 class="serif" style="margin-top:14px">Character, quality, and detail <em>in every room.</em></h2>
+    <p class="body-md" style="color:var(--mid);max-width:600px;margin:18px auto 0">A selection of completed rooms across Midtown Toronto and beyond — each designed for the life actually lived inside it.</p>
   </div>
-
-  <!-- ───────── PROJECT 1 ───────── -->
-  <div class="project">
-    <div class="project-head">
-      <div>
-        <h3 class="project-title serif">Lawrence Park Residence</h3>
-        <p class="project-meta">Lawrence Park, Toronto · Whole Home</p>
-      </div>
-      <p class="project-desc">A full transformation balancing timeless character with the realities of a busy family home. Replace this text with a short description of the project.</p>
-    </div>
-    <div class="project-hero">
-      <div class="ph">PLACEHOLDER — Project 1 hero image (wide, landscape works best)</div>
-    </div>
-    <div class="project-grid">
-      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
-      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
-      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
-      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
-    </div>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/78cf3aa8-645c-4b84-a26a-e5f5dfd8f9bd/Erica+Yolevski+Interior+Designer+Toronto+Midtown+Decorator+Redesign+Living+Room+Virtual.jpg" alt="Living room design" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/12cc6da1-071f-41b8-8a35-8e5e362f65c3/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Kitchen+Custom+Leaside.jpg" alt="Custom kitchen, Leaside" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/39073b5e-bc92-4c57-a473-88db609572de/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Art+Wall.jpg" alt="Art wall" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/a221fc24-4aa7-46bd-a05c-ca9ee348d777/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Dining+Leaside.jpg" alt="Dining room, Leaside" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/a34804a5-cec0-4361-aa2d-eac9c1916ab8/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+.jpg" alt="Interior detail" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/031b794f-0c3e-489f-8970-152fc1207f78/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Living+Room+North+Toronto.jpg" alt="Living room, North Toronto" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/63fb4021-f716-4d2b-b7ce-ad3be1a43115/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Room+VIP+Design+EDesign.jpg" alt="VIP room design" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/2658fa0b-6089-42a1-80dc-8a1e9208fe77/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Midtown+Toronto+Lytton+Lawrence+Park.jpg" alt="Whole home, Lawrence Park" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/bcdf1ff0-22f7-4ae3-8068-b20ac48b2f5f/Erica+Yolevski+Design+Studio+Midtown+Toronto+Interior+Design+Decorating+Edesign+Renovation+Lytton+Park+Lawrence+Park+Leaside.jpg" alt="Midtown Toronto interior" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/cbc7dcae-4080-43eb-9dc4-2099ae764904/Erica+Yolevski+Design+Studio+Interior+Design+Virtual+E-Design+Toronto+Midtown+Leaside+Lawrence+Park+Whole+Home+White+Glove+Midtown+Toronto.jpg" alt="White glove whole home" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/7202f477-b063-46fa-8f96-12d2154f6f38/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Bathroom+Edesign+Room+Redecorate.jpg" alt="Bathroom" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/7f7a4ce8-752f-4992-ba1c-a5af31e92457/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Bathroom.jpg" alt="Bathroom detail" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/d9879895-eb2f-4ea4-9eb1-9575f6325d08/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Nursery+Baby+Room+Leaside.jpg" alt="Nursery, Leaside" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/bb8b34d8-119f-44e3-a69f-6f7a5aacfcc4/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Art+Wall+House.jpg" alt="Art wall, full house" loading="lazy"></div>
+    <div class="gallery-item"><img src="https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/6d97fd97-dd48-4a6d-b708-c9b0c22229df/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Mount+Pleasant+Accent+Chair+Leaside.JPG" alt="Accent chair, Mount Pleasant" loading="lazy"></div>
   </div>
-
-  <!-- ───────── PROJECT 2 ───────── -->
-  <div class="project">
-    <div class="project-head">
-      <div>
-        <h3 class="project-title serif">Burr Project</h3>
-        <p class="project-meta">Midtown Toronto · Living + Dining</p>
-      </div>
-      <p class="project-desc">Replace this text with a short description of the project — what the space was, what you did, the result.</p>
-    </div>
-    <div class="project-hero">
-      <div class="ph">PLACEHOLDER — Project 2 hero image (wide, landscape works best)</div>
-    </div>
-    <div class="project-grid">
-      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
-      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
-      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
-      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
-    </div>
-  </div>
-
-  <!-- ───────── PROJECT 3 ───────── -->
-  <div class="project">
-    <div class="project-head">
-      <div>
-        <h3 class="project-title serif">Leaside Family Home</h3>
-        <p class="project-meta">Leaside, Toronto · Kitchen + Main Floor</p>
-      </div>
-      <p class="project-desc">Replace this text with a short description of the project.</p>
-    </div>
-    <div class="project-hero">
-      <div class="ph">PLACEHOLDER — Project 3 hero image (wide, landscape works best)</div>
-    </div>
-    <div class="project-grid">
-      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
-      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
-      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
-      <div class="project-grid-item"><div class="ph">PLACEHOLDER — image</div></div>
-    </div>
-  </div>
-
 </section>
 
 <section class="cta-band">
@@ -986,5 +964,6 @@ img,video,iframe{max-width:100%;height:auto}
   });
 })();
 </script>
+<script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
