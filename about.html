@@ -635,17 +635,9 @@ img,video,iframe{max-width:100%;height:auto}
   pointer-events:none;
 }
 
-/* Soft fade to next section — bottom of hero blends into page */
+/* White bottom-fade removed for a cleaner, more polished hero edge */
 .hero-banner::after,
-.home-hero::after{
-  content:'';
-  position:absolute;
-  left:0;right:0;bottom:0;
-  height:80px;
-  background:linear-gradient(to bottom, transparent 0%, var(--linen) 100%);
-  z-index:2;
-  pointer-events:none;
-}
+.home-hero::after{ content:none !important; display:none !important; }
 
 /* Magazine-style typography refinements */
 .hero-banner .eyebrow,
@@ -718,9 +710,9 @@ img,video,iframe{max-width:100%;height:auto}
 <nav class="nav">
   <a href="index.html" class="nav-logo"><img src="logo-dark.png" alt="Erica Yolevski Design Studio"></a>
   <ul class="nav-menu">
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html">Home</a></li><li><a href="designer-session.html">1 Hour Designer Session</a></li>
     <li><a href="virtual.html">Virtual Design</a></li>
-    <li><a href="inperson.html">In-Person</a></li><li><a href="designer-session.html">1 Hour Designer Session</a></li>
+    <li><a href="inperson.html">In-Person</a></li>
     <li><a href="gallery.html">Gallery</a></li>
     <li><a href="reviews.html">Reviews</a></li>
     <li><a href="about.html" class="active">About</a></li>

@@ -793,17 +793,9 @@ img,video,iframe{max-width:100%;height:auto}
   pointer-events:none;
 }
 
-/* Soft fade to next section — bottom of hero blends into page */
+/* White bottom-fade removed for a cleaner, more polished hero edge */
 .hero-banner::after,
-.home-hero::after{
-  content:'';
-  position:absolute;
-  left:0;right:0;bottom:0;
-  height:80px;
-  background:linear-gradient(to bottom, transparent 0%, var(--linen) 100%);
-  z-index:2;
-  pointer-events:none;
-}
+.home-hero::after{ content:none !important; display:none !important; }
 
 /* Magazine-style typography refinements */
 .hero-banner .eyebrow,
@@ -870,6 +862,32 @@ img,video,iframe{max-width:100%;height:auto}
   pointer-events:none;
 }
 
+
+/* ══════ HERO BRIGHTNESS FIX — lighter, polished overlays (no muddy darkening) ══════ */
+/* Soften the full-bleed linear darkening so the photo reads clearly */
+.hero-banner::before{
+  background:linear-gradient(to bottom,rgba(10,8,6,.04) 0%,rgba(10,8,6,.16) 100%) !important;
+}
+.home-hero .hb-img::after,
+.virt-hero .hb-img::after,
+.hero-banner .hb-img::after{
+  background:linear-gradient(to top,rgba(10,8,6,.10) 0%,rgba(10,8,6,.02) 100%) !important;
+}
+/* Drop the heavy edge vignette on the image */
+.hero-banner .hb-img::before{
+  background:radial-gradient(ellipse at center, transparent 55%, rgba(10,8,6,.10) 100%) !important;
+}
+/* Keep only a gentle scrim directly behind the headline for legibility */
+.hero-banner .hb-content::before,
+.home-hero .hb-content::before{
+  background:radial-gradient(ellipse at center, rgba(10,8,6,.20) 0%, rgba(10,8,6,.10) 55%, transparent 85%) !important;
+}
+/* Let true colour through — remove the contrast/saturation push that muddied the image */
+.hero-banner .hb-img,
+.home-hero .hb-img{
+  filter:saturate(1.02) !important;
+}
+
 </style>
 </head>
 <body>
@@ -877,10 +895,10 @@ img,video,iframe{max-width:100%;height:auto}
 <nav class="nav">
   <a href="index.html" class="nav-logo"><img src="logo-dark.png" alt="Erica Yolevski Design Studio"></a>
   <ul class="nav-menu">
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html">Home</a></li><li><a href="designer-session.html">1 Hour Designer Session</a></li>
     <li><a href="room-kits.html" class="active">Room Kits</a></li>
     <li><a href="virtual.html">Virtual Design</a></li>
-    <li><a href="inperson.html">In-Person</a></li><li><a href="designer-session.html">1 Hour Designer Session</a></li>
+    <li><a href="inperson.html">In-Person</a></li>
     <li><a href="gallery.html">Gallery</a></li>
     <li><a href="reviews.html">Reviews</a></li>
     <li><a href="about.html">About</a></li>

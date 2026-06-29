@@ -206,7 +206,7 @@ p{text-wrap:pretty}em{font-style:italic;font-weight:400}a{color:inherit;text-dec
 /* ══════ HERO IMAGE FIXES ══════ */
 .home-hero .hb-img{
   position:absolute;inset:0;z-index:0;
-  background-image:url('virtual-hero-living-room.jpg');
+  background-image:url('eyds-virtual-hero-warm-living-room-leather-sofa-midtown-toronto-interior-design.jpg');
   background-size:cover;background-position:center;
 }
 .home-hero .hb-img::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,8,6,.30) 0%,rgba(10,8,6,.05) 100%);pointer-events:none}
@@ -214,12 +214,12 @@ p{text-wrap:pretty}em{font-style:italic;font-weight:400}a{color:inherit;text-dec
   position:absolute !important;
   inset:0 !important;
   z-index:0 !important;
-  background-image:url('virtual-hero-living-room.jpg') !important;
+  background-image:url('eyds-virtual-hero-warm-living-room-leather-sofa-midtown-toronto-interior-design.jpg') !important;
   background-size:cover !important;
   background-position:center !important;
 }
 .hero-banner.virt-hero .hb-img{
-  background-image:url('virtual-hero-living-room.jpg') !important;
+  background-image:url('eyds-virtual-hero-warm-living-room-leather-sofa-midtown-toronto-interior-design.jpg') !important;
 }
 .virt-hero .hb-img::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,8,6,.30) 0%,rgba(10,8,6,.05) 100%);pointer-events:none}
 
@@ -385,9 +385,9 @@ img,video,iframe{max-width:100%;height:auto}
 <nav class="nav">
   <a href="index.html" class="nav-logo"><img src="logo-dark.png" alt="Erica Yolevski Design Studio"></a>
   <ul class="nav-menu">
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html">Home</a></li><li><a href="designer-session.html">1 Hour Designer Session</a></li>
     <li><a href="virtual.html" class="active">Virtual Design</a></li>
-    <li><a href="inperson.html">In-Person</a></li><li><a href="designer-session.html">1 Hour Designer Session</a></li>
+    <li><a href="inperson.html">In-Person</a></li>
     <li><a href="gallery.html">Gallery</a></li>
     <li><a href="reviews.html">Reviews</a></li>
     <li><a href="about.html">About</a></li>
@@ -401,7 +401,7 @@ img,video,iframe{max-width:100%;height:auto}
 ═══════════════════════════════════════════════════════════════ -->
 
 <!-- HERO -->
-<section class="hero-banner virt-hero" style="align-items:center;justify-content:center;background-image:url('virtual-hero-living-room.jpg');background-size:cover;background-position:center">
+<section class="hero-banner virt-hero" style="align-items:center;justify-content:center;background-image:url('eyds-virtual-hero-warm-living-room-leather-sofa-midtown-toronto-interior-design.jpg');background-size:cover;background-position:center">
   <div class="hb-img"></div>
   <div class="hb-content" style="text-align:center;max-width:1100px;width:100%;padding:clamp(32px,5vw,64px);display:flex;flex-direction:column;align-items:center">
     <span class="eyebrow" style="color:var(--alt)">Virtual Interior Design · Available Anywhere</span>
@@ -554,17 +554,9 @@ img,video,iframe{max-width:100%;height:auto}
   pointer-events:none;
 }
 
-/* Soft fade to next section — bottom of hero blends into page */
+/* White bottom-fade removed for a cleaner, more polished hero edge */
 .hero-banner::after,
-.home-hero::after{
-  content:'';
-  position:absolute;
-  left:0;right:0;bottom:0;
-  height:80px;
-  background:linear-gradient(to bottom, transparent 0%, var(--linen) 100%);
-  z-index:2;
-  pointer-events:none;
-}
+.home-hero::after{ content:none !important; display:none !important; }
 
 /* Magazine-style typography refinements */
 .hero-banner .eyebrow,
@@ -631,13 +623,39 @@ img,video,iframe{max-width:100%;height:auto}
   pointer-events:none;
 }
 
+
+/* ══════ HERO BRIGHTNESS FIX — lighter, polished overlays (no muddy darkening) ══════ */
+/* Soften the full-bleed linear darkening so the photo reads clearly */
+.hero-banner::before{
+  background:linear-gradient(to bottom,rgba(10,8,6,.04) 0%,rgba(10,8,6,.16) 100%) !important;
+}
+.home-hero .hb-img::after,
+.virt-hero .hb-img::after,
+.hero-banner .hb-img::after{
+  background:linear-gradient(to top,rgba(10,8,6,.10) 0%,rgba(10,8,6,.02) 100%) !important;
+}
+/* Drop the heavy edge vignette on the image */
+.hero-banner .hb-img::before{
+  background:radial-gradient(ellipse at center, transparent 55%, rgba(10,8,6,.10) 100%) !important;
+}
+/* Keep only a gentle scrim directly behind the headline for legibility */
+.hero-banner .hb-content::before,
+.home-hero .hb-content::before{
+  background:radial-gradient(ellipse at center, rgba(10,8,6,.20) 0%, rgba(10,8,6,.10) 55%, transparent 85%) !important;
+}
+/* Let true colour through — remove the contrast/saturation push that muddied the image */
+.hero-banner .hb-img,
+.home-hero .hb-img{
+  filter:saturate(1.02) !important;
+}
+
 </style>
 
     <div class="svc-cards">
 
       <!-- DIRECTION SESSION -->
       <div class="svc-card-new">
-        <div class="svc-card-img" style="background-image:url('erica-virtual-consultation.jpg');background-position:center top"></div>
+        <div class="svc-card-img" style="background-image:url('eyds-powder-room-floral-wallpaper-brass-faucet-midtown-toronto-virtual-design.jpg');background-position:center"></div>
         <div class="svc-card-body">
           <span class="sc-tag">Done With You · Service 01</span>
           <h3>Design Direction Session</h3>
@@ -660,7 +678,7 @@ img,video,iframe{max-width:100%;height:auto}
 
       <!-- ROOM DESIGN -->
       <div class="svc-card-new">
-        <div class="svc-card-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/68d4679437192f2efe9f7582/031b794f-0c3e-489f-8970-152fc1207f78/Erica+Yolevski+Design+Studio+Interior+Design+Toronto+Home+Decor+Midtown+Lawrence+Park+Leaside+Virtual+Digital+Personal+Edesigner+Whole+Home+Design+Services+Living+Room+North+Toronto.jpg')"></div>
+        <div class="svc-card-img" style="background-image:url('eyds-light-living-room-sectional-fireplace-midtown-toronto-virtual-design.jpg');background-position:center"></div>
         <div class="svc-card-body">
           <span class="sc-tag">Done With You · Service 02</span>
           <h3>Virtual Room Design Experience</h3>
