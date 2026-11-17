@@ -799,7 +799,8 @@ img,video,iframe{max-width:100%;height:auto}
   <div style="max-width:var(--mw);margin:0 auto">
 
     <style>
-    .ip-cards{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--warm)}
+    .ip-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--warm)}
+    @media(max-width:1024px){.ip-cards{grid-template-columns:1fr 1fr}}
     @media(max-width:768px){.ip-cards{grid-template-columns:1fr}}
     .ip-card{background:var(--white);display:flex;flex-direction:column;overflow:hidden;transition:background .2s;position:relative}
     .ip-card:hover{background:var(--linen)}
@@ -967,6 +968,32 @@ img,video,iframe{max-width:100%;height:auto}
 </style>
 
     <div class="ip-cards">
+
+      <!-- SERVICE 0: DESIGNER FOR A DAY -->
+      <div class="ip-card">
+        <span class="ip-badge" style="background:var(--accent)">Most Accessible</span>
+        <div class="ip-card-img" style="background-image:url('eyds-console-table-floral-art-sconces-midtown-toronto-interior-design.jpg');background-position:center"></div>
+        <div class="ip-card-body">
+          <span class="sc-tag">Done With You · In Your Home</span>
+          <h3>In-Person Designer for a Day</h3>
+          <p class="hook">I arrive at your door and we design in real time. Up to five focused hours together, moving room to room, making decisions on the spot and styling your home with what you already own. The fastest way to see and feel a real difference in a single day.</p>
+          <ul class="ip-includes">
+            <li>Up to a 5-hour in-home design intensive</li>
+            <li>We tackle your priority rooms together, in person</li>
+            <li>On-the-spot direction: layout, paint, lighting, scale and flow</li>
+            <li>Hands-on styling with the pieces you already own</li>
+            <li>Live shopping and sourcing, in-store or online, together</li>
+            <li>A curated sourcing list for anything still needed</li>
+            <li>Exclusive designer discounts at select retailers</li>
+            <li>Recap PDF with every recommendation, yours to keep</li>
+          </ul>
+          <p class="ip-promise">You will see and feel the difference by the end of the day.</p>
+          <div class="ip-price-row">
+            <div class="ip-price">$1,299</div>
+          </div>
+          <a href="contact.html" class="btn btn-filled" style="text-align:center">Book Designer for a Day →</a>
+        </div>
+      </div>
 
       <!-- SERVICE 1: IN-PERSON ROOM -->
       <div class="ip-card">
