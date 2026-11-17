@@ -799,6 +799,7 @@ img,video,iframe{max-width:100%;height:auto}
             <label style="display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--warm);background:var(--white);cursor:pointer;font-size:13px;color:var(--ink)"><input type="radio" name="service" value="Design Direction Session — $297" required>Design Direction Session — $297</label>
             <label style="display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--warm);background:var(--white);cursor:pointer;font-size:13px;color:var(--ink)"><input type="radio" name="service" value="Virtual Room Design — $1,497">Virtual Room Design — $1,497</label>
             <label style="display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--warm);background:var(--white);cursor:pointer;font-size:13px;color:var(--ink)"><input type="radio" name="service" value="Virtual Whole Home — $4,997">Virtual Whole Home — $4,997</label>
+            <label style="display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--warm);background:var(--white);cursor:pointer;font-size:13px;color:var(--ink)"><input type="radio" name="service" value="In-Person Designer for a Day — $1,299">In-Person Designer for a Day — $1,299</label>
             <label style="display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--warm);background:var(--white);cursor:pointer;font-size:13px;color:var(--ink)"><input type="radio" name="service" value="In-Person Room Design — $3,500">In-Person Room — $3,500</label>
             <label style="display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--warm);background:var(--white);cursor:pointer;font-size:13px;color:var(--ink)"><input type="radio" name="service" value="In-Person Full Home — $10,000">In-Person Full Home — $10,000</label>
             <label style="display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--warm);background:var(--white);cursor:pointer;font-size:13px;color:var(--ink);grid-column:span 2"><input type="radio" name="service" value="Not sure yet — help me pick">I'm not sure yet — help me pick the right service</label>
@@ -997,6 +998,16 @@ if (form) {
   menu.querySelectorAll('a').forEach(function(a){
     a.addEventListener('click', function(){ open = false; closeMenu(); });
   });
+})();
+</script>
+<script>
+/* Preselect a service when arriving with ?service=... (e.g. from a service page button) */
+(function(){
+  var map={"designer-day":"In-Person Designer for a Day — $1,299","session":"Design Direction Session — $297","inperson-room":"In-Person Room Design — $3,500","inperson-home":"In-Person Full Home — $10,000"};
+  try{
+    var k=new URLSearchParams(location.search).get("service");
+    if(k&&map[k]){var el=document.querySelector('input[name="service"][value="'+map[k]+'"]');if(el){el.checked=true;}}
+  }catch(e){}
 })();
 </script>
 </body>

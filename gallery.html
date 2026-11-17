@@ -848,6 +848,20 @@ img,video,iframe{max-width:100%;height:auto}
   .project-grid{ grid-template-columns:1fr 1fr; gap:10px }
 }
 
+
+/* ══════ INSTAGRAM GRID (Behold, auto-updating) ══════ */
+.ig-section{background:var(--off);padding:clamp(72px,9vw,120px) var(--px) clamp(56px,7vw,96px);border-top:1px solid var(--warm)}
+.ig-inner{max-width:var(--mw);margin:0 auto}
+.ig-divider{width:40px;height:.5px;background:var(--accent);margin:0 auto 24px}
+.ig-title-block{text-align:center;margin-bottom:56px}
+.ig-title-block .eyebrow{display:inline-block;font-size:10.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.ig-title-block h2{font-family:var(--serif);font-size:clamp(40px,5vw,64px);font-weight:400;letter-spacing:-.02em;line-height:1.05;margin-bottom:14px;color:var(--ink)}
+.ig-title-block h2 em{color:var(--accent);font-style:italic}
+.ig-title-block p{font-family:var(--serif);font-size:clamp(15px,1.6vw,18px);font-style:italic;font-weight:300;color:var(--mid);max-width:540px;margin:0 auto;line-height:1.5}
+.ig-feed{display:block;min-height:320px}
+.ig-cta{text-align:center;margin-top:48px;padding-top:36px;border-top:1px solid var(--warm)}
+.ig-cta .handle{font-family:var(--serif);font-size:22px;font-style:italic;color:var(--ink);margin-bottom:6px;display:block}
+.ig-cta .sub{font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--mid);margin-bottom:20px;display:block}
 </style>
 </head>
 <body>
@@ -932,6 +946,30 @@ img,video,iframe{max-width:100%;height:auto}
     <div class="gallery-item"><img src="eyds-classic-bathroom-renovation-toronto-interior-design.jpg" alt="Classic bathroom with sage tile and patterned floor — Toronto interior design by Erica Yolevski Design Studio" loading="lazy" width="998" height="1500"></div>
     <div class="gallery-item"><img src="eyds-entryway-paris-maps-dresser-toronto-interior-design.jpg" alt="Entryway with framed Paris maps and antique dresser — Toronto interior design by Erica Yolevski Design Studio" loading="lazy" width="1000" height="1500"></div>
     <div class="gallery-item"><img src="eyds-marble-bathroom-vanity-built-in-cabinetry-toronto-interior-design.jpg" alt="Marble bathroom with custom vanity and built-in cabinetry — Toronto interior design by Erica Yolevski Design Studio" loading="lazy" width="1000" height="1500"></div>
+  </div>
+</section>
+
+<!-- ═══════════ INSTAGRAM GRID (live, auto-updating via Behold) ═══════════ -->
+<section class="ig-section">
+  <div class="ig-inner">
+    <div class="ig-title-block">
+      <span class="eyebrow">Fresh from the studio</span>
+      <div class="ig-divider"></div>
+      <h2 class="serif">The latest <em>on Instagram.</em></h2>
+      <p>New reveals, works in progress, and the small details that make a home feel designed. Updated every time I post.</p>
+    </div>
+    <behold-widget class="ig-feed" feed-id="hmEst0MaGRkmoY2B0Jc2"></behold-widget>
+    <script>
+      (() => {
+        const d=document,s=d.createElement("script");s.type="module";
+        s.src="https://w.behold.so/widget.js";d.head.append(s);
+      })();
+    </script>
+    <div class="ig-cta">
+      <span class="handle">@ericayolevski</span>
+      <span class="sub">Interior Design · Midtown Toronto</span>
+      <a href="https://instagram.com/ericayolevski" target="_blank" rel="noopener" class="btn btn-filled">Follow on Instagram →</a>
+    </div>
   </div>
 </section>
 
